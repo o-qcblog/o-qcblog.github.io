@@ -1,26 +1,22 @@
----
----
-
 //
 // IMPORTS
 //
-
 @import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
-/**************/
+/**********************/
 /* BASE RULES */
-/**************/
+/**********************/
 
 html {
   font-size: 100%;
 }
 
 body {
-	background: $white;
+  background: $dark-bg; // Changed background color
   font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  color: $light-text; // Changed text color
 }
 
 .container {
@@ -32,13 +28,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $light-headings; // Changed headings color
   font-weight: bold;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-
   @include mobile {
     line-height: 1.4;
   }
@@ -61,7 +55,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: $light-gray; // Changed h4 color
 }
 
 p {
@@ -69,11 +63,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $light-blue; // Changed link color
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $light-blue-hover; // Changed link hover color
   }
 }
 
@@ -117,29 +111,30 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: $light-gray; // Changed date color
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $light-text; // Changed selection text color
+  background: $dark-selection; // Changed selection background color
 }
+
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $light-text; // Changed selection text color
+  background: $dark-selection; // Changed selection background color
 }
 
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -156,8 +151,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-
+  border-bottom: 1px solid $dark-border; // Changed border color
   @include mobile {
     text-align: center;
   }
@@ -168,7 +162,6 @@ img {
   width: 70px;
   height: 70px;
   margin-right: 15px;
-
   @include mobile {
     float: none;
     display: block;
@@ -182,7 +175,6 @@ img {
 
 .site-info {
   float: left;
-
   @include mobile {
     float: none;
     display: block;
@@ -192,7 +184,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $light-text; // Changed site name color
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -202,9 +194,8 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $light-gray; // Changed site description color
   font-size: 16px;
-
   @include mobile {
     margin: 3px 0;
   }
@@ -215,7 +206,6 @@ nav {
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
-
   @include mobile {
     float: none;
     margin-top: 9px;
@@ -225,14 +215,13 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $light-text; // Changed nav link color
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $light-blue; // Changed mobile nav link color
     }
   }
 }
@@ -243,7 +232,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $dark-border; // Changed post border color
 }
 
 .posts > .post:last-child {
@@ -254,9 +243,9 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid $light-gray; // Changed blockquote border color
     padding: 0.1em 1em;
-    color: $gray;
+    color: $light-gray; // Changed blockquote text color
     font-size: 22px;
     font-style: italic;
   }
@@ -273,9 +262,9 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-top: 1px solid $dark-border; // Changed footer border color
+  border-bottom: 1px solid $dark-border; // Changed footer border color
+  background-color: $dark-bg; // Changed footer background color
 }
 
 footer {
@@ -285,5 +274,6 @@ footer {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+
 @import "highlights";
 @import "svg-icons";
