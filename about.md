@@ -15,4 +15,5 @@ Happy reading!
 ### Contact me
 
 Pen name: Olivia
-[olivia.qcblog@gmail.com](mailto:olivia.qcblog@gmail.com)
+
+Email: [olivia.qcblog@gmail.com](mailto:olivia.qcblog@gmail.com)
