@@ -3,5 +3,7 @@ layout: post
 title: Pebbling a Checkerboard
 ---
 
-''' python
-print()
+{% highlight python %}
+def hello_world():
+print('Hello, world!')
+{% endhighlight %}
