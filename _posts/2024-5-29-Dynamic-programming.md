@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Welcome to my blog!
+title: Dynamic Programming
 ---
 
 Welcome all!
