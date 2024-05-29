@@ -3,4 +3,6 @@ layout: post
 title: Dynamic Programming
 ---
 
-Hi!
+''' python
+print()
+'''
