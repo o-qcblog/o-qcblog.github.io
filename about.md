@@ -8,7 +8,7 @@ As long as a branch of science offers an abundance of problems, so long it is al
 a lack of problems foreshadows extinction or the cessation of independent development.                                                   
                                                         - DavidHilbert, 1900
                                                         
-<img src='images/mascot_transparent.png' width='60' height='50'>
+[<img scr="{{site.baseurl}}/images/mascot_transparent.png" alt="" style="width:100;"/>]({{site.baseurl}}/)
 I am a curious learner exploring the interface of Computer Science, Physics and Mathematics. Teaching or communicating ideas is the best way of learning. As I unravel and learn new things in the domain of quantum computing, quantum algorithms and, complexity theory and also its classical counterparts, I will pen down my notes, learning and will make a repository for myself and other fellow learners. 
 
 Happy reading!
