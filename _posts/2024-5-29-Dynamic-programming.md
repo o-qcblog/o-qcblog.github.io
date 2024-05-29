@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Dynamic Programming
+title: Pebbling a Checkerboard
 ---
 
 ''' python
 print()
-'''
