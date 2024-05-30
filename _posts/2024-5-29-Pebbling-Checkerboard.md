@@ -9,4 +9,4 @@ The checkerboard is of dimension $4 \times n$, and there are $2n$ pebbles at you
 
 You realise that the $n$ is too big. You are very hungry and can not afford to solve the puzzle slower than running a linear time algorithm to solve it. How can you write a clever algorithm and make a hearty meal?
 
-<img src="images/P1_1.png" alt="Checkerboard" width="600" />
+[<img src="{{ site.baseurl}}/images/P1_1.png" alt="" width="600" />]({{ site.baseurl}}/)
