@@ -1,4 +1,4 @@
-### Our Qwl!
+# Our Qwl!
 [<img src="{{ site.baseurl}}/images/mascot.png" alt="" width="200" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/exercise.png" alt="" width="200" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/funfact.png" alt="" width="200" />]({{ site.baseurl}}/)
