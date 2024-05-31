@@ -48,7 +48,8 @@ Here the most intutive way of making the problem smaller is by reducing the size
 
 Let $C_j[k]$ = optimal value achieved by pebbling columns 1 to k such that the final column is type j ($j \in {1,2 \dots 8}$ i.e one among the above 8 patterns). We want to maximise the sum. So we need to find maximum over all possible $j\prime$ on the i th column, that are compatable with the j in i+1 th column. 
 
-$C_j[i+1] = max \{ value ( C_{j, i+1}) + C_{j\prime}[i] \}$
+$C_j[i+1] =$ max $\{ value ( C_{j, i+1}) + C_{j\prime}[i] \}$
+
 Where $value( C_{j, i+1})$ is the value of square(s) covered by j in column i+1.
 
 Note that the maximum is over all $j\prime =$ all columns compatible with j. 
