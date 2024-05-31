@@ -46,11 +46,19 @@ A natural way of solving any big problem is to look at smaller subproblems. Thes
 
 Here the most intutive way of making the problem smaller is by reducing the size of the checkerboard. So, let us consider the subproblems consisting of pebbling the first $k$ columns ($1 \leq k \leq n$) of the checkerboard. Each subproblem can be assigned a type, which is the pattern occurring in the last column.
 
-Let $C_j[k] =$ optimal value achieved by pebbling columns 1 to $k$ such that the final column is type $j$ ($j \in \{1,2 \dots 8\}$ i.e one among the above 8 patterns). We want to maximise the sum. So we need to find maximum over all possible $j\prime$ on the i th column, that are compatable with the $j$ in $i+1$ th column. 
+Let $C_j[k] =$ optimal value achieved by pebbling columns 1 to $k$ such that the final column is type $j$ ($j \in ${$1,2 \dots 8$} i.e one among the above 8 patterns). 
+
+One important step in dynamic programming or recursion is to give the base case. Here $C_j[0] = 0$ for all $j$.
+
+We want to maximise the sum. So we need to find maximum over all possible $j\prime$ on the i th column, that are compatable with the $j$ in $i+1$ th column. 
 
 $C_j[i+1] =$ max $\{ value ( C_{j, i+1}) + C_{j\prime}[i] \}$
 
 Where $value( C_{j, i+1})$ is the value of square(s) covered by $j$ in column $i+1$.
 
-Note that the maximum is over all $j\prime =$ all columns compatible with $j$. 
+Note that the maximum is over all $j\prime =$ all columns compatible with $j$ and for each pattern there are only constant number of patterns compatible with it. So this running over all compatible $j\prime =$ costs $\bigO (1)$.
+
+We need to return $max_j$ $C_j[n]$. Which involves computing $C_j[i]$ for all $i$ from 1 to $n$. Therefore computing $C_j[n]$ is $\bigO (n)$. Again max over $j$ just takes constant number of steps.
+
+This completes our linear time algorithm:) Now you can have a hearthy meal!
 
