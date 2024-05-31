@@ -15,6 +15,11 @@ The checkerboard is of dimension $4 \times n$, and there are $2n$ pebbles at you
 
 You realise that the $n$ is too big. You are very hungry and can not afford to solve the puzzle slower than running a linear time algorithm to solve it. How can you write a clever algorithm and make a hearty meal?
 
+### Hint
+<div class="hint-box info">
+  Consider just one column and enumarate the number of possible pebbling. Now think about which two can come adjacent..... 
+</div>
+
 ### Solution
 
 Let's first look into what legal patterns that can occur in any column (in isolation, ignoring
