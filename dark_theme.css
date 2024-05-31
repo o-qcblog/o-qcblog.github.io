@@ -1,7 +1,7 @@
 /* dark-theme.css */
 
 body {
-  background-color: #121212;
+  background-color: #2e2e2e;
   color: #e0e0e0;
 }
 
@@ -10,7 +10,7 @@ a {
 }
 
 nav, footer {
-  background-color: #121212;
+  background-color: #2e2e2e;
 }
 
 /* Add more styles to adjust all elements for dark mode */
