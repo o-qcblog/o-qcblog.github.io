@@ -16,7 +16,7 @@ nav, footer {
 /* Add more styles to adjust all elements for dark mode */
 
 body {
-  background-color: #121212;
+  background-color: #2e2e2e;
   color: #d4d4d4;
 }
 
@@ -32,31 +32,32 @@ body {
   cursor: pointer;
   color: #d4d4d4;
   border-radius: 4px;
+  border: 1px solid #d4d4d4; /* Border color without solid background */
 }
 
 .hint-box-content {
   padding: 15px;
   display: none;
   color: #d4d4d4;
+  border: 1px solid transparent;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
 }
 
 .hint-box.info .hint-box-header {
-  background-color: #00529B;
-  border-color: #004080;
+  border-color: #00529B;
 }
 
 .hint-box.warning .hint-box-header {
-  background-color: #FFA500;
-  border-color: #CC8400;
+  border-color: #FFA500;
 }
 
 .hint-box.danger .hint-box-header {
-  background-color: #D8000C;
-  border-color: #B00000;
+  border-color: #D8000C;
 }
 
 .hint-box.success .hint-box-header {
-  background-color: #4BB543;
-  border-color: #3A9233;
+  border-color: #4BB543;
 }
+
 
