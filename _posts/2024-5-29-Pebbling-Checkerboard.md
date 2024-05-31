@@ -21,15 +21,18 @@ the pebbles in adjacent columns).
 8 patters are possible:
 
 1 is leaving the blocks empty:
+
 [<img src="{{ site.baseurl}}/images/Post1/P1_2.png" alt="1" width="60" />]({{ site.baseurl}}/)
 
 
 3 patters with 2 pebbles:
+
 [<img src="{{ site.baseurl}}/images/Post1/P1_3.png" alt="2" width="60" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/Post1/P1_4.png" alt="3" width="60" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/Post1/P1_5.png" alt="4" width="60" />]({{ site.baseurl}}/)
 
 4 patterns with 1 pebble:
+
 [<img src="{{ site.baseurl}}/images/Post1/P1_6.png" alt="5" width="60" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/Post1/P1_7.png" alt="6" width="60" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/Post1/P1_8.png" alt="7" width="60" />]({{ site.baseurl}}/)
