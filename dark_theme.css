@@ -21,32 +21,42 @@ body {
 }
 
 .hint-box {
-  padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
+  padding: 0;
 }
 
-.hint-box.info {
+.hint-box-header {
+  padding: 15px;
+  cursor: pointer;
+  color: #d4d4d4;
+  border-radius: 4px;
+}
+
+.hint-box-content {
+  padding: 15px;
+  display: none;
+  color: #d4d4d4;
+}
+
+.hint-box.info .hint-box-header {
   background-color: #00529B;
   border-color: #004080;
-  color: #d4d4d4;
 }
 
-.hint-box.warning {
+.hint-box.warning .hint-box-header {
   background-color: #FFA500;
   border-color: #CC8400;
-  color: #2e2e2e;
 }
 
-.hint-box.danger {
+.hint-box.danger .hint-box-header {
   background-color: #D8000C;
   border-color: #B00000;
-  color: #d4d4d4;
 }
 
-.hint-box.success {
+.hint-box.success .hint-box-header {
   background-color: #4BB543;
   border-color: #3A9233;
-  color: #d4d4d4;
 }
+
