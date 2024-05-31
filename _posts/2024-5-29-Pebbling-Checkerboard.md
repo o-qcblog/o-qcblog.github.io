@@ -42,5 +42,5 @@ the pebbles in adjacent columns).
 
 Now let us call two patterns compatible if they can be placed on adjacent columns to form a legal placement.
 
-A natural way of solving any big problem is to look at smaller subproblems. These smaller problem may or may not be exactly the same as the actual problem. Such a algorithmic technique which considers subproblems whose solution is used in solving the bigger problem is called \textbf(Dynamic Programming). 
+A natural way of solving any big problem is to look at smaller subproblems. These smaller problem may or may not be exactly the same as the actual problem. Such a algorithmic technique which considers subproblems whose solution is used in solving the bigger problem is called **Dynamic Programming**. 
 
