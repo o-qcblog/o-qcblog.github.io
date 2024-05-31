@@ -23,6 +23,7 @@ the pebbles in adjacent columns).
 1 is leaving the blocks empty:
 [<img src="{{ site.baseurl}}/images/Post1/P1_2.png" alt="1" width="60" />]({{ site.baseurl}}/)
 
+
 3 patters with 2 pebbles:
 [<img src="{{ site.baseurl}}/images/Post1/P1_3.png" alt="2" width="60" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/Post1/P1_4.png" alt="3" width="60" />]({{ site.baseurl}}/)
