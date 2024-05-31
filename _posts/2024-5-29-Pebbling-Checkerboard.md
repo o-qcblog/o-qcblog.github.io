@@ -61,7 +61,7 @@ One important step in dynamic programming or recursion is to give the base case.
 
 We want to maximise the sum. So we need to find maximum over all possible $j\prime$ on the i th column, that are compatable with the $j$ in $i+1$ th column. 
 
-$C_j[i+1] =$ max $\{ value ( C_{j, i+1}) + C_{j\prime}[i] \}$
+$C_j[i+1] =$ max {$ value ( C_{j, i+1}) + C_{j\prime}[i] $}
 
 Where $value( C_{j, i+1})$ is the value of square(s) covered by $j$ in column $i+1$.
 
