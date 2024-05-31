@@ -17,7 +17,12 @@ You realise that the $n$ is too big. You are very hungry and can not afford to s
 
 ### Hint
 <div class="hint-box info">
-  Consider just one column and enumarate the number of possible pebbling. Now think about which two can come adjacent..... 
+  <div class="hint-box-header">
+    <strong>Info:</strong> Click to expand.
+  </div>
+  <div class="hint-box-content">
+    Consider just one column and enumarate the number of possible pebbling. Now think about which two can come adjacent..... 
+  </div>
 </div>
 
 ### Solution
