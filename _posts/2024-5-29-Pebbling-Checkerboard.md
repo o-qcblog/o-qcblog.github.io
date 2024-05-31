@@ -4,7 +4,7 @@ mathjax: true
 title: Pebbling a Checkerboard
 ---
 
-**Puzzle** *A problem from the textbook [Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.](https://dl.acm.org/doi/10.5555/1177299#cited-by-sec); Chapter 6, problem 6.5. I have rephrased the problem and have given a very elaborate solution.*
+[<img src="{{ site.baseurl}}/images/funfact.png" alt="1" width="50" />]({{ site.baseurl}}/)**Puzzle** *A problem from the textbook [Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.](https://dl.acm.org/doi/10.5555/1177299#cited-by-sec); Chapter 6, problem 6.5. I have rephrased the problem and have given a very elaborate solution.*
 
 ### Puzzle
 After a long day of work, you and your friend go to a cafe. There is a checkerboard on the cafe table. Some pebbles lie around to enhance the ambience. Seeing this, your friend challenges you with a task. She is willing to bear a huge chunk of the bill depending on how well you complete the task. You, who love taking up challenges, readily agree. 
