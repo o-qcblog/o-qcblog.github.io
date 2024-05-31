@@ -16,3 +16,26 @@ You realise that the $n$ is too big. You are very hungry and can not afford to s
 
 ### Solution
 
+Let's first look into what legal patterns that can occur in any column (in isolation, ignoring
+the pebbles in adjacent columns).
+8 patters are possible:
+
+1 is leaving the blocks empty:
+[<img src="{{ site.baseurl}}/images/Post1/P1_2.png" alt="1" width="60" />]({{ site.baseurl}}/)
+
+3 patters with 2 pebbles:
+[<img src="{{ site.baseurl}}/images/Post1/P1_3.png" alt="2" width="60" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post1/P1_4.png" alt="3" width="60" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post1/P1_5.png" alt="4" width="60" />]({{ site.baseurl}}/)
+
+4 patterns with 1 pebble:
+[<img src="{{ site.baseurl}}/images/Post1/P1_6.png" alt="5" width="60" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post1/P1_7.png" alt="6" width="60" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post1/P1_8.png" alt="7" width="60" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post1/P1_9.png" alt="8" width="60" />]({{ site.baseurl}}/)
+
+
+Now let us call two patterns compatible if they can be placed on adjacent columns to form a legal placement.
+
+A natural way of solving any big problem is to look at smaller subproblems. These smaller problem may or may not be exactly the same as the actual problem. Such a algorithmic technique which considers subproblems whose solution is used in solving the bigger problem is called \textbf(Dynamic Programming). 
+
