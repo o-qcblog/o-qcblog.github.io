@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: "[<img src="{{ site.baseurl}}/images/funfact.png" alt="1" width="50" />] Pebbling a Checkerboard"
+title: "<img src='{{ site.baseurl}}/images/funfact.png' alt='icon' width='50' /> Pebbling a Checkerboard"
 ---
 
 **Puzzle** *A problem from the textbook [Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.](https://dl.acm.org/doi/10.5555/1177299#cited-by-sec); Chapter 6, problem 6.5. I have rephrased the problem and have given a very elaborate solution.*
