@@ -4,7 +4,7 @@ permalink: /categories/
 title: Posts by category
 ---
 
-Search blog posts by category.
+Search blog posts by type:
 
 <h3>Note</h3>
 
@@ -15,5 +15,13 @@ Search blog posts by category.
 <h3>Puzzle</h3>
 
 {% for post in site.categories.Puzzle %}
+ <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+ {% endfor %}
+
+Search blog posts by Topic:
+
+<h3>Algorithms</h3>
+
+{% for post in site.categories.Algorithms %}
  <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
  {% endfor %}
