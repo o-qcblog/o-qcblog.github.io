@@ -7,3 +7,6 @@
 [<img src="{{ site.baseurl}}/images/note.png" alt="" width="200" />]({{ site.baseurl}}/)
 [<img src="{{ site.baseurl}}/images/404.png" alt="" width="200" />]({{ site.baseurl}}/)
 
+**Elements**
+[<img src="{{ site.baseurl}}/images/favicon.png" alt="" width="200" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/sign.png" alt="" width="200" />]({{ site.baseurl}}/)
