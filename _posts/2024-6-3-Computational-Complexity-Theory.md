@@ -13,9 +13,9 @@ Computational complexity theory field can be broudly classified into two parts.
 
 [<img src="{{ site.baseurl}}/images/Post3/P3_1.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-Structural complexity deals with high-level complexity questions. To name a few, it deals with questions like: Is space a more powerful resource than time? Does randomness enhance the power of efficient computation? Is it easier to verify a proof than to construct one? etc. 
+**Structural complexity** deals with high-level complexity questions. To name a few, it deals with questions like: Is space a more powerful resource than time? Does randomness enhance the power of efficient computation? Is it easier to verify a proof than to construct one? etc. 
 So far we do not know the answers to many of these questions; thus most results in structural complexity are conditional results that rely on varipus unproven assumptions like $P \neq NP$
 
-Concrete complexity or circuit complexity as opposed to structural complexity is essentially a low- level study of computation. It deals with established lower bounds on the computational complexity of specific problems, like multiplication of matrices or detecting large cliques in graph or sorting a list (future blog link). It typically centers around particular models of computation such as decision trees, branching programs, boolean formulas, various classes of boolean circuits, and the like. This line of research aims to establish unconditonal lower bounds, which rely on no unproven assumptions. 
+**Concrete complexity** or circuit complexity as opposed to structural complexity is essentially a low- level study of computation. It deals with established lower bounds on the computational complexity of specific problems, like multiplication of matrices or detecting large cliques in graph or sorting a list (future blog link). It typically centers around particular models of computation such as decision trees, branching programs, boolean formulas, various classes of boolean circuits, and the like. This line of research aims to establish unconditonal lower bounds, which rely on no unproven assumptions. 
 
 In the future you can hope to find individual blog post on each of the above stated examples and models of both structural and concrete complexity:)
