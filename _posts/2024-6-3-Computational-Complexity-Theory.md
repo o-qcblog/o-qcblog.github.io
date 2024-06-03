@@ -1,4 +1,11 @@
-What is computation? In loose terms computation is making a physical device (a computer) do some task for us. Things that as hard for humans can be easily done on a computer. So, can computers do anything and everything? Are there things that are hard even for computers? If so, how to quantify the hardness? Computational complexity theory trys to answer these and even more intreguing questions. I wish to give a really short bird's eye view of the field in this blog post. 
+---
+layout: post
+mathjax: true
+title: "Computational Complexity Theory"
+categories: [Note, ComplexityTheory]
+---
+
+*What is computation? In loose terms computation is making a physical device (a computer) do some task for us. Things that as hard for humans can be easily done on a computer. So, can computers do anything and everything? Are there things that are hard even for computers? If so, how to quantify the hardness? Computational complexity theory trys to answer these and even more intreguing questions. I wish to give a really short bird's eye view of the field in this blog post.*
 
 Computational complexity theory is the study of the inherent hardness or easiness of computational task. Given a task, the field of Algorithms tries to give a clever way of doing that task. There are multiple algorithms for doing the same task. On the other hand Complexity Theory is interested in giving bounds on a computational task such that no matter how clever one is, for a given task, they can never come up with an algorithm better then this bound. 
 
