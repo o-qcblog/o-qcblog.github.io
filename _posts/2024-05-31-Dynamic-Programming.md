@@ -71,23 +71,27 @@ So, what should we output now?
    <div class="hint-box-header">
     <strong> Pause and ponder: Do we need to output the last computed value, i.e., the longest increasing subsequence ending at 𝑥8?</strong> (Click on the answer)
   </div>
-  
-  <div class="hint-box.correct">
-    <div class="hint-box-header">
-      Yes!
-    </div>
-    <div class="hint-box-content">
-      Oops:( Go back and refer to the problem statement once.
-    </div>
-  </div>
 
-  <div class="hint-box.wrong">
-    <div class="hint-box-header">
-      No
+  <div class="hint-box-content">
+    
+    <div class="hint-box.correct">
+      <div class="hint-box-header">
+        Yes!
+      </div>
+      <div class="hint-box-content">
+        Oops:( Go back and refer to the problem statement once.
+      </div>
     </div>
-    <div class="hint-box-content">
-      You are right! The question is to find the longest increasing subsequence of the given sequence and not the one ending at the last index.
+  
+    <div class="hint-box.wrong">
+      <div class="hint-box-header">
+        No
+      </div>
+      <div class="hint-box-content">
+        You are right! The question is to find the longest increasing subsequence of the given sequence and not the one ending at the last index.
+      </div>
     </div>
+    
   </div>
   
 </div>
