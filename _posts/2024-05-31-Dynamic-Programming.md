@@ -33,7 +33,8 @@ Here are all possible increasing subsequences:
 
 <div class="hint-box info">
   <div class="hint-box-header">
-    <strong> Pause and ponder: Do you notice any stark features of these arrows?</strong> Click to expand
+    <strong> Pause and ponder: Do you notice any stark features of these arrows?</strong> 
+    Click to expand
   </div>
   <div class="hint-box-content">
     They always go from left to right. In graph theory, such a structure is called a Directed Acyclic Graph (DAG). Notice that as the arrows always go from left to right, there are no cycles in such a graph. (No arrows go from right to left to complete a cycle.)  
