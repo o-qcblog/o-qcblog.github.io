@@ -19,7 +19,7 @@ nav, footer {
 
 body {
   background-color: #2e2e2e;
-  color: #d4d4d4;
+  color: #e0e0e0;
 }
 
 .hint-box {
@@ -32,7 +32,6 @@ body {
 .hint-box-header {
   padding: 15px;
   cursor: pointer;
-  color: #d4d4d4;
   border-radius: 4px;
   border: 1px solid transparent; /* Border color without solid background */
 }
@@ -40,7 +39,6 @@ body {
 .hint-box-content {
   padding: 15px;
   display: none;
-  color: #d4d4d4;
   border: 1px solid transparent;
   border-top: none;
   border-radius: 0 0 4px 4px;
