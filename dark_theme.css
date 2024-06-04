@@ -24,7 +24,7 @@ body {
 
 .hint-box {
   margin-bottom: 20px;
-  border: 1px solid #00529B
+  border: 1px solid transparent;
   border-radius: 4px;
   padding: 0;
 }
@@ -41,7 +41,7 @@ body {
   padding: 15px;
   display: none;
   color: #d4d4d4;
-  border: 1px solid #00529B;
+  border: 1px solid transparent;
   border-top: none;
   border-radius: 0 0 4px 4px;
 }
