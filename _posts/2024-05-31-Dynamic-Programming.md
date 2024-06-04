@@ -34,6 +34,7 @@ Here are all possible increasing subsequences:
 <div class="hint-box info">
   <div class="hint-box-header">
     <strong> Pause and ponder: Do you notice any stark features of these arrows?</strong> 
+    
     Click to expand
   </div>
   <div class="hint-box-content">
