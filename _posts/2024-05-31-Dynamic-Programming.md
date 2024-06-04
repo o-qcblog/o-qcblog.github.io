@@ -97,11 +97,9 @@ Algorithm pseudo code:
 Let L(j) = length of the longest increasing subsequence ending at j
 
 {% highlight latex %}
-For j = 1, 2, \$\dots\$ n:
-
-L(j) = 1 + $max_i${ $L(i) : (i,j) \in E$}
-
-return $max_j$(L(j))
+For j = 1, 2, ... n:
+  L(j) = 1 + max_i{ L(i) : (i,j) ϵ E}
+return max_j(L(j))
 {% endhighlight %}
 
 $(i,j) \in E$ refers to all i with an arrow to j, i.e. all numbers to the right of $x_j$ less than $x_j$.
