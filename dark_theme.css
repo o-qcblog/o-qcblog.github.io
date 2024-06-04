@@ -22,7 +22,7 @@ body {
 
 .hint-box {
   margin-bottom: 20px;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #00529B
   border-radius: 4px;
   padding: 0;
 }
@@ -32,14 +32,14 @@ body {
   cursor: pointer;
   color: #d4d4d4;
   border-radius: 4px;
-  border: 1px solid #d4d4d4; /* Border color without solid background */
+  border: 1px solid #00529B; /* Border color without solid background */
 }
 
 .hint-box-content {
   padding: 15px;
   display: none;
   color: #d4d4d4;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #00529B;
   border-top: none;
   border-radius: 0 0 4px 4px;
 }
