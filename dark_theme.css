@@ -50,15 +50,11 @@ body {
   border-color: #00529B;
 }
 
-.hint-box.warning .hint-box-header {
-  border-color: #FFA500;
-}
-
-.hint-box.danger .hint-box-header {
+.hint-box.wrong .hint-box-header {
   border-color: #D8000C;
 }
 
-.hint-box.success .hint-box-header {
+.hint-box.correct .hint-box-header {
   border-color: #4BB543;
 }
 
