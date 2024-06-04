@@ -14,7 +14,7 @@ Let us consider a standard example of a dynamic programming algorithm.
 
 ### Longest increasing subsequence
 
-Given a sequence of positive integers $x_1, x_2, \dots x_n$, find the longest common increasing subsequence i.e $x_{i_1} < x_{i_2} \dots x_{i_m}$ where $i_1 < i_2 \dots < i_m$. 
+Given a sequence of positive integers $x_1, x_2, \dots x_n$, find the longest increasing subsequence i.e $x_{i_1} < x_{i_2} \dots x_{i_m}$ where $i_1 < i_2 \dots < i_m$. 
 
 ### Dynamic programming solution:
 
