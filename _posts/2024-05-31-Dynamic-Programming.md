@@ -42,7 +42,7 @@ Here are all possible increasing subsequences:
 
 Is there a better way to solve this without trial and error? Most big problems become easy if we make the problem size small. 
 
-So, let us start by considering a smaller subproblem. Note that the subproblem does not need to be the same problem. It can be a modified new problem on a smaller size of input that ultimately leads to solving our main problem.
+So, let us start by considering a smaller subproblem. Note that the subproblem does not need to be the same as our orginal problem. It can be a modified new problem on a smaller size of input that ultimately leads to solving our main problem.
 
 In this case, let us terminate our sequence at some point and fine the longest subsequence ending at that point.
 
