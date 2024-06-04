@@ -54,7 +54,7 @@ The longest increasing subsequence ending at index 1 is the number itself. So th
 Now, we can increase the value of $n$ one by one and see the length of the longest increasing sequence. 
 For instance, when $n=i$, say 6 (at this point, we assume we have computed the length of the longest increasing subsequence ending at $x_i$ for all $i\leq 5$). 
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_5.png" alt="" width="600" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post2/P2_5.jpg" alt="" width="600" />]({{ site.baseurl}}/)
 
 How would one naturally go about finding the longest increasing subsequence ending at index 6? We have the number 6 at position 6. If our sequence should necessarily end at 6, then (as it is an increasing sequence) all numbers to the left of 6 in the sequence shoule be $x_i < 6$. So, either 3, 2 or 5 can come before 6. We want to get the longest sequence possible.
 
