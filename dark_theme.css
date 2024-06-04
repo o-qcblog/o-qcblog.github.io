@@ -39,7 +39,7 @@ body {
   padding: 15px;
   display: none;
   color: #d4d4d4;
-  border: 1px solid transparent;
+  border: 1px solid #000000;
   border-top: none;
   border-radius: 0 0 4px 4px;
 }
