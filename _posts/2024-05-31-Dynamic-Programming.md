@@ -96,7 +96,7 @@ Algorithm pseudo code:
 
 Let L(j) = length of the longest increasing subsequence ending at j
 
-{% highlight language %}
+{% highlight latex %}
 For j = 1, 2, $\dots$ n:
 
 L(j) = 1 + $max_i${ $L(i) : (i,j) \in E$}
