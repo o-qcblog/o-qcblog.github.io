@@ -14,7 +14,7 @@ Let us consider a standard example of a dynamic programming algorithm.
 
 ### Longest increasing subsequence
 
-Given a sequence of positive integers $x_1, x_2, \dots x_n$, find the longest increasing subsequence i.e $x_{i_1} < x_{i_2} \dots x_{i_m}$ where $i_1 < i_2 \dots < i_m$. 
+Given a sequence of positive integers $x_1, x_2, \dots x_n$, find the longest increasing subsequence i.e $x_{i_1} < x_{i_2} \dots < x_{i_m}$ where $i_1 < i_2 \dots < i_m$. 
 
 ### Dynamic programming solution:
 
@@ -26,14 +26,14 @@ Here, as the size of the input is small, just by trial and error, we can see tha
 
 [<img src="{{ site.baseurl}}/images/Post2/P2_2.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-Here all possible increasing subsequences can be:
+Here are all possible increasing subsequences:
 
 [<img src="{{ site.baseurl}}/images/Post2/P2_3.png" alt="" width="600" />]({{ site.baseurl}}/)
 
 
 <div class="hint-box info">
   <div class="hint-box-header">
-    <strong>Do you notice any stark features of these arrows?</strong> 
+    <strong> Pause and ponder: Do you notice any stark features of these arrows?</strong> Click to expand
   </div>
   <div class="hint-box-content">
     They always go from left to right. In graph theory, such a structure is called a Directed Acyclic Graph (DAG). Notice that as the arrows always go from left to right, there are no cycles in such a graph. (No arrows go from right to left to complete a cycle.)  
