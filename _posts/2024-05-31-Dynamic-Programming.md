@@ -91,21 +91,24 @@ We need to output the maximum value of the longest increasing subsequence ending
 
 Thus, the above idea can be formalised as follows:
 
+
 Algorithm pseudo code:
 
 Let L(j) = length of the longest increasing subsequence ending at j
 
+{% highlight language %}
 For j = 1, 2, $\dots$ n:
 
 L(j) = 1 + $max_i${ $L(i) : (i,j) \in E$}
 
 return $max_j$(L(j))
+{% endhighlight %}
 
 $(i,j) \in E$ refers to all i with an arrow to j, i.e. all numbers to the right of $x_j$ less than $x_j$.
 
 
 ### Analysing the time complexity
 
-In the above pseudo-code, j goes over all n, and the $max_i$ goes over all i that has an arrow to j (at max the degree of j, in graph theory terms), so it can be at max $n$.
+In the above pseudo-code, $j$ goes over all n, and the $max_i$ goes over all $i$ that has an arrow to $j$ (at max the degree of $j$, in graph theory terms), so it can be at max $n$.
 
 Thus the overall time complexity is $O(n^2)$ 
