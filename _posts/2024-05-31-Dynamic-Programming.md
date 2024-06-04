@@ -22,7 +22,7 @@ Consider the following example:
 
 [<img src="{{ site.baseurl}}/images/Post2/P2_1.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-Here, as the size of the input is small, just by trial and error, we can see that the longest non-decreasing subsequence is 
+Here, as the size of the input is small, just by trial and error, we can see that the longest increasing subsequence is 
 
 [<img src="{{ site.baseurl}}/images/Post2/P2_2.png" alt="" width="600" />]({{ site.baseurl}}/)
 
