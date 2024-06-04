@@ -52,7 +52,7 @@ the pebbles in adjacent columns).
 
 Now let us call two patterns compatible if they can be placed on adjacent columns to form a legal placement.
 
-A natural way of solving any big problem is to look at smaller subproblems. These smaller problem may or may not be exactly the same as the actual problem. Such an algorithmic technique which considers subproblems whose solution is used in solving the bigger problem is called [Dynamic Programming](https://o-qcblog.github.io/Dynamic-Programming/). 
+A natural way of solving any big problem is to look at smaller subproblems. These smaller problem may or may not be exactly the same as the actual problem. Such an algorithmic technique which considers subproblems whose solution is used in solving the bigger problem is called [Dynamic Programming](https://o-qcblog.github.io/note/algorithms/Dynamic-Programming/). 
 
 Here the most intutive way of making the problem smaller is by reducing the size of the checkerboard. So, let us consider the subproblems consisting of pebbling the first $k$ columns ($1 \leq k \leq n$) of the checkerboard. Each subproblem can be assigned a type, which is the pattern occurring in the last column.
 
