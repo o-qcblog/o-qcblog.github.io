@@ -46,7 +46,7 @@ So, let us start by considering a smaller subproblem. Note that the subproblem d
 
 In this case, let us terminate our sequence at some point and fine the longest subsequence ending at that point.
 
-For the base case, i.e. when 𝑛=1
+For the first of such case (base case), i.e. when 𝑛=1
 The longest increasing subsequence ending at index 1 is the number itself. So the length is 1.
 
 [<img src="{{ site.baseurl}}/images/Post2/P2_4.png" alt="" width="600" />]({{ site.baseurl}}/)
