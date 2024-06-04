@@ -48,22 +48,22 @@ body {
   border-color: #00529B;
 }
 
-.hint-box.correct .hint-box-header {
+.hint-box.info .hint-box.correct .hint-box-header {
   border-color: #4BB543;
   background-color: #dbf0d9;
 }
 
-.hint-box.wrong .hint-box-header {
+.hint-box.info .hint-box.wrong .hint-box-header {
   border-color: #D8000C;
   background-color: #f7ccce;
 }
 
-.hint-box.correct .hint-box-content {
+.hint-box.info .hint-box.correct .hint-box-content {
   border-color: #4BB543;
   background-color: #dbf0d9;
 }
 
-.hint-box.wrong .hint-box-content {
+.hint-box.info .hint-box.wrong .hint-box-content {
   border-color: #D8000C;
   background-color: #f7ccce;
 }
