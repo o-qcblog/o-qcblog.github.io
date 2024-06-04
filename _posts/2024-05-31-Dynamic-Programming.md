@@ -34,7 +34,6 @@ Here are all possible increasing subsequences:
 <div class="hint-box info">
   <div class="hint-box-header">
     <strong> Pause and ponder: Do you notice any stark features of these arrows?</strong> 
-    
     Click to expand
   </div>
   <div class="hint-box-content">
@@ -67,6 +66,24 @@ So, it makes sense to pick 3 as it has the longest subsequence ending where it i
 Like this we can keep going and find the longest increasing subsequence ending at the last number, here $x_8 = 7$.
 
 So, what should we output now?
+
+<div class="hint-box info">
+  <strong> Pause and ponder: Do we need to output the last computed value, i.e., the longest increasing subsequence ending at 𝑥8?</strong> (Click on the answer)
+  
+  <div class="hint-box-header">
+    Yes!
+  </div>
+  <div class="hint-box-content">
+    Oops:( Go back and refer to the problem statement once.
+  </div>
+
+  <div class="hint-box-header">
+    No
+  </div>
+  <div class="hint-box-content">
+    You are right! The question is to find the longest increasing subsequence of the given sequence and not the one ending at the last index.
+  </div>
+</div>
 
 We need to output the maximum value of the longest increasing subsequence ending at $x_i$ where $i$ ranges from 1 to 8.
 
