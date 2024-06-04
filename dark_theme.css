@@ -50,12 +50,14 @@ body {
   border-color: #00529B;
 }
 
-.hint-box.wrong .hint-box-header {
-  border-color: #D8000C;
-}
-
 .hint-box.correct .hint-box-header {
   border-color: #4BB543;
+  background-color: #dbf0d9;
+}
+
+.hint-box.wrong .hint-box-header {
+  border-color: #D8000C;
+  background-color: #f7ccce;
 }
 
 /* Code Highlights */
