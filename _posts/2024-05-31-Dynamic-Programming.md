@@ -45,7 +45,7 @@ Is there a better way to solve this without trial and error? Most big problems b
 
 So, let us start by considering a smaller subproblem. Note that the subproblem does not need to be the same as our orginal problem. It can be a modified new problem on a smaller size of input that ultimately leads to solving our main problem.
 
-In our example problem, let us terminate our sequence at some point and fine the longest subsequence ending at that point.
+In our example problem, let us terminate our sequence at some point and find the longest subsequence ending at that point.
 
 For the first of such case (base case), i.e. when 𝑛=1
 The longest increasing subsequence ending at index 1 is the number itself. So the length is 1.
