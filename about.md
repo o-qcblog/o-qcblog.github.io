@@ -14,9 +14,9 @@ Happy reading!
 
 ### Contact me
 
-Pen name: Olivia
+Padmapriya S
 
-Email: [olivia.qcblog@gmail.com](mailto:olivia.qcblog@gmail.com)
+Email: [quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
 
 
 *Blog started on May, 2024*
