@@ -5,7 +5,7 @@ title:  "Deterministic Query Algorithms"
 categories: [Note, ComplexityTheory]
 ---
 
-*This is a introduction to Query Complexity Model (aka Black Box Model). The post is inspired from the lecture notes [Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html) *
+*This is a introduction to Query Complexity Model (aka Black Box Model). The post is inspired from the lecture notes [Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)*
 
 In complexity theory, we are interested in quantifying how easy or hard a problem is.
 Consider your favorite problem. Is the problem easy to solve on your mobile phone or your computer? What if I give you a supercomputer now?
