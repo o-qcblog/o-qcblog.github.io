@@ -40,20 +40,19 @@ Let us see how one can describe a deterministic algorithm in a query complexity 
 
 A deterministic algorithm for a given input $x$, irrespective of when and where the algorithm is run, always computes the value of $f(x)$ correctly and in a deterministic way. In query complexity language: In a Deterministic query algorithm, we query a bit based on the results of a previously queried bit. Given an input $x$, it follows an entirely Deterministic path querying bits of $x$ and, in the end, outputs $f(x)$. This idea can be captured in terms of a decision tree.
 
-\begin{definition}
-    A (Deterministic) decision tree on the input of size n is either a leaf in \{0,1\} or a tuple $(i, D_0, D_1)$ (represented as a node $x_i$, when its value is 0, it is attached to subtree $D_0$ and when 1, subtree $D_1$) where $i \in [n]$ and $D_0$ and $D_1$ are decision trees which do not use $i$ in any intermediate tuple. 
-\end{definition}
+**Definition:**
+    A *(Deterministic) decision tree* on the input of size n is either a leaf in {0,1} or a tuple $(i, D_0, D_1)$ (represented as a node $x_i$, when its value is 0, it is attached to subtree $D_0$ and when 1, subtree $D_1$) where $i \in [n]$ and $D_0$ and $D_1$ are decision trees which do not use $i$ in any intermediate tuple. 
+
 
 [<img src="{{ site.baseurl}}/images/Post4/P4_3.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-\textit{A decision tree $T$ is said to compute the value of a function $f$ if and only if $T(x) = f(x) \forall x \in$ domain($f$).}
+*A decision tree $T$ is said to compute the value of a function $f$ if and only if $T(x) = f(x) \forall x \in$ domain($f$).*
 
-\textit{Height of a decision tree $T$ is the longest root-to-leaf path in $T$.}
+*Height of a decision tree $T$ is the longest root-to-leaf path in $T$.*
 
 Note that there can be multiple decision trees computing the function $f$. In this entire query complexity set-up, as our goal is to minimise the number of queries, we pick the decision tree with the least height. 
 
-\begin{definition}
-    The Deterministic tree complexity of a function $f$, denoted as $D(f)$, is defined as the height of the best tree computing $f$. The best tree is the tree that makes the minimum number of queries. 
+**Definition:**
+    The *Deterministic tree complexity of a function $f$*, denoted as $D(f)$, is defined as the height of the best tree computing $f$. The best tree is the tree that makes the minimum number of queries. 
     $$ D(f) = \min_{T} ( \max_x (path (T,x)) )$$
-    Here, we are taking $\min$ over only those trees $T$ that compute $f$. And $path(T,x)$ is the number of nodes from root to leaf in the path x traces.  
-\end{definition}
+    Here, we are taking $\min$ over only those trees $T$ that compute $f$. And $path(T,x)$ is the number of nodes from root to leaf in the path $x$ traces. 
