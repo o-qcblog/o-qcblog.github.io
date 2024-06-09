@@ -24,14 +24,15 @@ In the following section, I will define the query model more formally and discus
 
 The query complexity model is also called the black box model. One can describe this model in the following way:\\
 
-\noindent \textsc{Given:} a black box $x$ 
-\noindent Typically, we will be dealing with Boolean functions, so here $x \in \{0,1\}^n$\\
+*Given:* a black box $x$ 
+
+Typically, we will be dealing with Boolean functions, so here $x \in$ {0,1}$^n$
 
 [<img src="{{ site.baseurl}}/images/Post4/P4_2.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-\noindent On an input $i$ the black box outputs $x_i$ (this counts as one query), the $i^{th}$ bit of the input string $x$\\
+On an input $i$ the black box outputs $x_i$ (this counts as one query), the $i^{th}$ bit of the input string $x$\\
 
-\noindent \textsc{Goal:} To compute $f(x)$, some boolean function $f: \{0,1\}^n \xrightarrow{} \{0,1\}$, with a minimum number of queries to the black box. 
+*Goal:* To compute $f(x)$, some boolean function $f:${0,1}$^n \xrightarrow{}${0,1}, with a minimum number of queries to the black box. 
 
 Let us see how one can describe a deterministic algorithm in a query complexity model.
 
