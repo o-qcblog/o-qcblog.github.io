@@ -22,7 +22,7 @@ In the following section, I will define the query model more formally and discus
 
 ### Query Complexity Model
 
-The query complexity model is also called the black box model. One can describe this model in the following way:\\
+The query complexity model is also called the black box model. One can describe this model in the following way:
 
 *Given:* a black box $x$ 
 
