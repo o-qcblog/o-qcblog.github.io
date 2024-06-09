@@ -1,1 +1,9 @@
+---
+Layout: post
+mathjax: true
+title:  "Dynamic Programming"
+categories: [Note, Algorithms]
+---
+
+*This is a introduction to Query Complexity Model (aka Black Box Model). It is inspired from the lecture notes *
 
