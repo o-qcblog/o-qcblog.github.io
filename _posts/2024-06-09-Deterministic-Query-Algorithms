@@ -1,8 +1,8 @@
 ---
 Layout: post
 mathjax: true
-title:  "Dynamic Programming"
-categories: [Note, Algorithms]
+title:  "Deterministic Query Algorithms"
+categories: [Note, ComplexityTheory]
 ---
 
 *This is a introduction to Query Complexity Model (aka Black Box Model). The post is inspired from the lecture notes [Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html) *
