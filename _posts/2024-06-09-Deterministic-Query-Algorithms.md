@@ -30,7 +30,7 @@ Typically, we will be dealing with Boolean functions, so here $x \in$ {0,1}$^n$
 
 [<img src="{{ site.baseurl}}/images/Post4/P4_2.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-On an input $i$ the black box outputs $x_i$ (this counts as one query), the $i^{th}$ bit of the input string $x$\\
+On an input $i$ the black box outputs $x_i$ (this counts as one query), the $i^{th}$ bit of the input string $x$
 
 *Goal:* To compute $f(x)$, some boolean function $f:${0,1}$^n \xrightarrow{}${0,1}, with a minimum number of queries to the black box. 
 
