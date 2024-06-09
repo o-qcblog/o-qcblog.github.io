@@ -12,7 +12,7 @@ Consider your favorite problem. Is the problem easy to solve on your mobile phon
 
 [<img src="{{ site.baseurl}}/images/Post4/P4_1.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-Depending on the device, if your answer changes, given zillion models of electronic devices, we can never objectively classify. 
+Depending on the device, if your answer changes, given zillion models of electronic devices, we can never objectively classify a problem as easy or hard. 
 
 Thus, in complexity theory, we study abstract models of computation. They allow us to compare the hardness of the problem independent of the performing capabilities of a physical computer and enable a clean mathematical description of the problem. In this blog post, I will introduce one such model - Query complexity.
 
