@@ -46,6 +46,8 @@ A deterministic algorithm for a given input $x$, irrespective of when and where 
 
 [<img src="{{ site.baseurl}}/images/Post4/P4_3.png" alt="" width="600" />]({{ site.baseurl}}/)
 
+The way this works is as follows: on input $x$, the algorithm starts at the top of the tree, and if the node looks like $(i, D_0, D_1)$, the algorithm queries bit $i$ of $x$ to get the answer $x_i \in ${ 0, 1}. The algorithm then goes to $D_0$ if $x_i = 0$ and to $D_1$ if $x_i = 1$, and repeats the same process there.
+
 *A decision tree $T$ is said to compute the value of a function $f$ if and only if $T(x) = f(x) \forall x \in$ domain($f$).*
 
 *Height of a decision tree $T$ is the longest root-to-leaf path in $T$.*
@@ -54,5 +56,5 @@ Note that there can be multiple decision trees computing the function $f$. In th
 
 **Definition:**
     The *Deterministic tree complexity of a function $f$*, denoted as $D(f)$, is defined as the height of the best tree computing $f$. The best tree is the tree that makes the minimum number of queries. 
-    $$ D(f) = \min_{T} ( \max_x (path (T,x)) )$$
+    $$ D(f) = \min_{T} \ \ ( \max_x \ \ (path (T,x)) )$$
     Here, we are taking $\min$ over only those trees $T$ that compute $f$. And $path(T,x)$ is the number of nodes from root to leaf in the path $x$ traces. 
