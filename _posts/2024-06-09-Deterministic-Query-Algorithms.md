@@ -5,7 +5,7 @@ title:  "Deterministic Query Algorithms"
 categories: [Note, ComplexityTheory]
 ---
 
-*This is a introduction to Query Complexity Model (also known as Black Box Model). This post is inspired from the lecture notes [Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)*
+*This is a introduction to Query Complexity Model (also known as Black Box Model).*
 
 In complexity theory, we are interested in quantifying how easy or hard a problem is.
 Consider your favorite problem. Is the problem easy to solve on your mobile phone or your computer? What if I give you a supercomputer now?
@@ -58,3 +58,6 @@ Note that there can be multiple decision trees computing the function $f$. In th
     The *Deterministic tree complexity of a function $f$*, denoted as $D(f)$, is defined as the height of the best tree computing $f$. The best tree is the tree that makes the minimum number of queries. 
     $$ D(f) = \min_{T} \ \ ( \max_x \ \ (path (T,x)) )$$
     Here, we are taking $\min$ over only those trees $T$ that compute $f$. And $path(T,x)$ is the number of nodes from root to leaf in the path $x$ traces. 
+
+### References
+*This post is inspired from the lecture notes [Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)*
