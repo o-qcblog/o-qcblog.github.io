@@ -12,11 +12,18 @@ I am a curious learner exploring the interface of Computer Science, Physics and 
 
 Happy reading!
 
-### Contact me
+## Contact me
 
 Padmapriya S
 
 Email: [quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
+
+## Subscribe to My Newsletter!
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTJ_nCEkPI9-DMx0voILUG8t2czAgns4gOWU3Fy2d-Ptqj8A/viewform?embedded=true" width="640" height="672" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+Feel free to reach out if you have any questions or comments!
+
 
 
 *Blog started on May, 2024*
