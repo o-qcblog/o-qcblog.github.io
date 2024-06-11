@@ -38,7 +38,7 @@ Let us see how one can describe a deterministic algorithm in a query complexity 
 
 ### Deterministic Algorithms
 
-A deterministic algorithm for a given input $x$, irrespective of when and where the algorithm is run, always computes the value of $f(x)$ correctly and in a deterministic way. In query complexity language: In a Deterministic query algorithm, we query a bit based on the results of a previously queried bit. Given an input $x$, it follows an entirely Deterministic path querying bits of $x$ and, in the end, outputs $f(x)$. This idea can be captured in terms of a decision tree.
+A deterministic algorithm for a given input $x$, irrespective of when and where the algorithm is run, always computes the value of $f(x)$ correctly and in a deterministic way. Given an input $x$, it follows an entirely Deterministic path querying bits of $x$ and, in the end, outputs $f(x)$. This idea can be captured in terms of a decision tree.
 
 **Definition:**
     A *(Deterministic) decision tree* on the input of size n is either a leaf in {0,1} or a tuple $(i, D_0, D_1)$ (represented as a node $x_i$, when its value is 0, it is attached to subtree $D_0$ and when 1, subtree $D_1$) where $i \in [n]$ and $D_0$ and $D_1$ are decision trees which do not use $i$ in any intermediate tuple. 
