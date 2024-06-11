@@ -19,6 +19,13 @@ Padmapriya S
 Email: [quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
 
 ## Subscribe to My Newsletter!
+
+Subscribe for:
+
+**Regular Updates:** Get the latest posts delivered straight to your inbox.
+
+**Exclusive Content:** Access to subscriber-only content, *quarterly newsletter* and *additional pause and ponder questions*.
+
 <div class="form-container">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTJ_nCEkPI9-DMx0voILUG8t2czAgns4gOWU3Fy2d-Ptqj8A/viewform?embedded=true" width="640" height="672" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
