@@ -52,7 +52,7 @@ The way this works is as follows: on input $x$, the algorithm starts at the top 
 
 *Height of a decision tree $T$ is the longest root-to-leaf path in $T$.*
 
-Note that there can be multiple decision trees computing the function $f$. In this entire query complexity set-up, as our goal is to minimise the number of queries, we pick the decision tree with the least height. 
+Note that there can be multiple decision trees computing the function $f$. In this entire query complexity set-up, as our goal is to minimise the number of queries, therefore we pick the decision tree with the least height. 
 
 **Definition:**
     The *Deterministic tree complexity of a function $f$*, denoted as $D(f)$, is defined as the height of the best tree computing $f$. The best tree is the tree that makes the minimum number of queries. 
