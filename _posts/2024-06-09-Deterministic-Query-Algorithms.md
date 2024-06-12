@@ -48,7 +48,7 @@ A deterministic algorithm for a given input $x$, irrespective of when and where 
 
 The way this works is as follows: on input $x$, the algorithm starts at the top of the tree, and if the node looks like $(i, D_0, D_1)$, the algorithm queries bit $i$ of $x$ to get the answer $x_i \in ${ 0, 1}. The algorithm then goes to $D_0$ if $x_i = 0$ and to $D_1$ if $x_i = 1$, and repeats the same process there.
 
-*A decision tree $T$ is said to compute the value of a function $f$ if and only if $T(x) = f(x) \ \ \forall \ \ x \ \ \in$ \ \ domain($f$).*
+*A decision tree $T$ is said to compute the value of a function $f$ if and only if $T(x) = f(x) \ \forall \ \ x \ \in$ \ domain($f$).*
 
 *Height of a decision tree $T$ is the longest root-to-leaf path in $T$.*
 
