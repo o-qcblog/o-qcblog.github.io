@@ -59,5 +59,16 @@ Note that there can be multiple decision trees computing the function $f$. In th
     $$ D(f) = \min_{T} \ ( \max_x \ (path (T,x)) )$$
     Here, we are taking $\min$ over only those trees $T$ that compute $f$. And $path(T,x)$ is the number of nodes from root to leaf in the path $x$ traces. 
 
+<div class="hint-box info">
+  <div class="hint-box-header">
+    <strong> Pause and ponder: Come with a decision tree computing OR function on n = 3 bits</strong> 
+    Click to expand
+  </div>
+  <div class="hint-box-content">
+      If we find 1 at any index then we can halt and output 1 (true).
+     [<img src="{{ site.baseurl}}/images/Post4/P4_4.png" alt="" width="600" />]({{ site.baseurl}}/)
+  </div>
+</div>
+
 ### References
 *This post is inspired from the lecture notes [Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)*
