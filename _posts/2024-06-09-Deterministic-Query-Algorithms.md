@@ -66,7 +66,7 @@ Note that there can be multiple decision trees computing the function $f$. In th
   </div>
   <div class="hint-box-content">
       If we find 1 at any index then we can halt and output 1 (true).
-     [<img src="{{ site.baseurl}}/images/Post4/P4_4.png" alt="" width="600" />]({{ site.baseurl}}/)
+     <img src="{{ site.baseurl}}/images/Post4/P4_4.png" alt="" width="600" />({{ site.baseurl}}/)
   </div>
 </div>
 
