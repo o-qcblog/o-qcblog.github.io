@@ -129,6 +129,6 @@ In the above pause and ponder, I highlighted that the arrows always go from left
 [<img src="{{ site.baseurl}}/images/Post2/P2_7.png" alt="" width="600" />]({{ site.baseurl}}/)
 
 ## References
-
+[Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.](https://dl.acm.org/doi/10.5555/1177299#cited-by-sec)
 
 
