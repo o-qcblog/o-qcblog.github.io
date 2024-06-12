@@ -70,5 +70,6 @@ Note that there can be multiple decision trees computing the function $f$. In th
   </div>
 </div>
 
-### References
-*This post is inspired from the lecture notes [Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)*
+## References
+[Query Complexity Basis, by Professor Shalev Ben-David](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)
+
