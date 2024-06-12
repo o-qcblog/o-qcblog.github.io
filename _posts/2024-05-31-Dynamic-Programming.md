@@ -121,3 +121,14 @@ $(i,j) \in E$ refers to all i with an arrow to j, i.e. all numbers to the right 
 In the above pseudo-code, $j$ goes over all n, and the $max_i$ goes over all $i$ that has an arrow to $j$ (at max the degree of $j$, in graph theory terms), so it can be at max $n$.
 
 Thus the overall time complexity is $O(n^2)$ 
+
+### DAG structure
+
+In the above pause and ponder, I highlighted that the arrows always go from left to right, forming a DAG structure. This is not unique to this problem alone. In fact, for every dynamic programming problem, there will be an underlying DAG structure - either directly seen or hidden in disguise. This is because the core idea of dynamic programming is first solving a sub-problem and using its solution to solve the next sub-problem, thereby finally building to solving our original problem. The ith subproblem can depend only on previously solved i-1 subproblems and not on something which is not yet solved. Thus, the DAG structure arises as a natural consequence of the core idea of dynamic programming. 
+
+[<img src="{{ site.baseurl}}/images/Post2/P2_7.png" alt="" width="600" />]({{ site.baseurl}}/)
+
+## References
+
+
+
