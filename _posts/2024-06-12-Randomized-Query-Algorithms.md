@@ -89,4 +89,9 @@ Note that at $\epsilon = 1/2$, this error can be achieved via randomly guessing 
 
 ## References
 
+[Shalev Ben-David. Query complexity basis. Lecture notes.](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)
+
+[Harry Buhrman and Ronald de Wolf. Complexity measures and decision tree complexity: a survey. In: Theoretical Computer Science, 288.1, 2002.](https://dl.acm.org/doi/10.1145/502090.502097)
+
+[Rajat Mittal. Decision tree complexity. Lecture notes](https://www.cse.iitk.ac.in/users/rmittal/prev_course/f21/reports/4_dt.pdf)
 
