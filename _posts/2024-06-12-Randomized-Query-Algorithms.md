@@ -51,20 +51,29 @@ One option is to take the worst case of $height(D,x)$ over both decision trees $
 
 **Definition:**
 
-$$height(R) = \max_x \max_D path(D,x)$$
-$$\overline{height(R)} = \max_x \mathbb{E} [height(D, x)] $$ here $D$ is a Deterministic decision tree such that $D$ computes $f$ and $D$ is in support of R.
+$height(R) = \max_x \max_D path(D,x)$
+
+$\overline{height(R)} = \max_x \mathbb{E} [height(D, x)] $
+
+here $D$ is a Deterministic decision tree such that $D$ computes $f$ and $D$ is in support of R.
 
 When we relax the cost (how we count the worst case queries?) but not the correctness (how much error we allow?):
 
 **Definition:**
-    Zero error randomized algorithm, $R_0(f)$, is defined as 
-    $$ R_0(f) = \min_R \overline{height(R)}$$ such that $R$ computes $f$ with zero error. (Las Vegas algorithm)
+Zero error randomized algorithm, $R_0(f)$, is defined as 
+    
+$R_0(f) = \min_R \overline{height(R)}$ 
+    
+such that $R$ computes $f$ with zero error. (Las Vegas algorithm)
 
 
 When we relax the correctness but not the cost:
 
 **Definition:**
-    $$ R_{1/3}(f) = \min_R height(R)$$ here $R$ is such that it computes f with error $\epsilon \leq \frac{1}{3}$ (Monte Carlo algorithm)
+
+$ R_{1/3}(f) = \min_R height(R)$
+    
+here $R$ is such that it computes f with error $\epsilon \leq \frac{1}{3}$ (Monte Carlo algorithm)
     
 Note that at $\epsilon = 1/2$, this error can be achieved via randomly guessing $f(x)$ without reading the input at all. This means that to get a nontrivial new measure, we should pick $\epsilon \in (0, 1/2)$. As it turns out, within that range, we can move from one error level to another by amplifying: we can repeat a high-error algorithm several times on the same input $x$, take the majority vote of the outputs, and get an estimate for $f(x)$ whose error is smaller than the original error level.
 
