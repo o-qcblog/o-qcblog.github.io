@@ -5,7 +5,7 @@ title:  "Randomized Query Algorithms"
 categories: [Note, ComplexityTheory]
 ---
 
-*Like many other models of computation, can we add the power of randomization to decision trees? With the power of randomness, can we reduce the number of queries? This blog post discusses randomized query algorithm, introducing it from two different lenses.*
+*Like many other models of computation, can we add the power of randomization to decision trees? Can this reduce the number of queries? This blog post discusses randomized query algorithm, introducing it from two different lenses.*
 
 Given that we are familiar with decision trees (if not, check out my post on [Deterministic Query Algorithms](https://o-qcblog.github.io/note/complexitytheory/Deterministic-Query-Algorithms/)), how would one incorporate randomness into this?
 
