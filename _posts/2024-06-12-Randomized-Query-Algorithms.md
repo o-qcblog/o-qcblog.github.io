@@ -26,3 +26,13 @@ Another way is to define a randomized decision tree as a probability distributio
      Here in this example we are considering probability distribution over two deterministic trees $T_1$ and $T_2$ and the algorithm runs on input $x = 10 $
   </video>
 </div>
+
+<div class="hint-box info">
+  <div class="hint-box-header">
+    <strong> Pause and ponder: These two interpretations are equivalent. Guess why?</strong> 
+    Click to expand
+  </div>
+  <div class="hint-box-content">
+    Depending on the value of the random bit, either the subtree on the left T1 (say) or right T2 (say) will be evaluated. If r1 can be 0 or 1 with equal probability, then T1 and T2 can be thought of as coming from a uniform probability distribution from {T1, T2}. By induction, we can see this equivalence for random bits of any size.
+  </div>
+</div>
