@@ -57,7 +57,7 @@ $\overline{height(R)} = \max_x \mathbb{E} [height(D, x)] $
 
 here $D$ is a Deterministic decision tree such that $D$ computes $f$ and $D$ is in support of $R$.
 
-When we relax the cost (how we count the worst case queries?) but not the correctness (how much error we allow?):
+When we relax the *cost* (*how we count the worst case queries?*) but not the *correctness* (*how much error we allow?*):
 
 **Definition:**
 Zero error randomized algorithm, $R_0(f)$, is defined as 
