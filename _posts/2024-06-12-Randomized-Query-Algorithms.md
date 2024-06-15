@@ -17,9 +17,9 @@ One way of doing this will be, along with querying the input bits, in the interm
   </video>
 </div>
 
-Here in this example we are considering a random register of size 1 (i.e. 1 bit) and an algorithm running on input $x = 10 $
+Here, in this example, we are considering a random register of size 1 (i.e. 1 bit) and an algorithm running on input $x = 10 $
 
-Note that you can choose to toss the coin at any node and any number of times. You may also choose not to toss at all at a particular level of nodes. 
+Note that you can choose to toss the coin at any node and at any number of times. You may also choose not to toss at all at a particular level of nodes.
 
 Another way is to define a randomized decision tree as a probability distribution over deterministic decision trees. All the trees that occur with a non zero probability is called trees *in support of* the randomized algorithm.
 
@@ -29,7 +29,7 @@ Another way is to define a randomized decision tree as a probability distributio
   </video>
 </div>
 
-Here in this example we are considering probability distribution over two deterministic trees $T_1$ and $T_2$ and the algorithm runs on input $x = 10 $
+Here, in this example, we are considering probability distribution over two deterministic trees $T_1$ and $T_2$ and the algorithm runs on input $x = 10 $
 
 <div class="hint-box info">
   <div class="hint-box-header">
@@ -76,4 +76,17 @@ $ R_{1/3}(f) = \min_R height(R)$
 here $R$ is such that it computes f with error $\epsilon \leq \frac{1}{3}$ (Monte Carlo algorithm)
     
 Note that at $\epsilon = 1/2$, this error can be achieved via randomly guessing $f(x)$ without reading the input at all. This means that to get a nontrivial new measure, we should pick $\epsilon \in (0, 1/2)$. As it turns out, within that range, we can move from one error level to another by amplifying: we can repeat a high-error algorithm several times on the same input $x$, take the majority vote of the outputs, and get an estimate for $f(x)$ whose error is smaller than the original error level.
+
+<div class="hint-box info">
+  <div class="hint-box-header">
+    <strong> Pause and ponder: Come up with an randomized algorithm with error <= 1/3 to compute the gap majority function.</strong> 
+    Click to expand
+  </div>
+  <div class="hint-box-content">
+    
+  </div>
+</div>
+
+## References
+
 
