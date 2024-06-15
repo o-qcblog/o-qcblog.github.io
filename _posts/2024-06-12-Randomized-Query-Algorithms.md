@@ -64,7 +64,7 @@ Zero error randomized algorithm, $R_0(f)$, is defined as
     
 $R_0(f) = \min_R \overline{height(R)}$ 
     
-such that $R$ computes $f$ with zero error. (Las Vegas algorithm)
+such that $R$ computes $f$ with zero error. (also called Las Vegas algorithm)
 
 
 When we relax the correctness but not the cost:
@@ -73,7 +73,7 @@ When we relax the correctness but not the cost:
 
 $ R_{1/3}(f) = \min_R height(R)$
     
-here $R$ is such that it computes f with error $\epsilon \leq \frac{1}{3}$ (Monte Carlo algorithm)
+here $R$ is such that it computes f with error $\epsilon \leq \frac{1}{3}$ (also called Monte Carlo algorithm)
     
 Note that at $\epsilon = 1/2$, this error can be achieved via randomly guessing $f(x)$ without reading the input at all. This means that to get a nontrivial new measure, we should pick $\epsilon \in (0, 1/2)$. As it turns out, within that range, we can move from one error level to another by amplifying: we can repeat a high-error algorithm several times on the same input $x$, take the majority vote of the outputs, and get an estimate for $f(x)$ whose error is smaller than the original error level.
 
