@@ -11,12 +11,16 @@ Given that we are familiar with decision trees (if not, check out my post on [De
 
 One way of doing this will be, along with querying the input bits, in the intermediate nodes toss a coin (can also be a biased coin) and depending on whether it is head or tail, we can choose to go to either the left or right node of the tree. 
 
-<video width="640" height="360" controls>
+<div class="video-container">
+  <video controls>
   <source src="{{ site.baseurl }}/images/Post5/P5_1.mp4" type="video/mp4">
-</video>
+  </video>
+</div>
 
 Another way is to define a randomized decision tree as a probability distribution over deterministic decision trees.
 
-<video width="640" height="360" controls>
+<div class="video-container">
+  <video controls>
   <source src="{{ site.baseurl }}/images/Post5/P5_2.mp4" type="video/mp4">
-</video>
+  </video>
+</div>
