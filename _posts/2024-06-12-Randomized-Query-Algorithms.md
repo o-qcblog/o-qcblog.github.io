@@ -77,16 +77,6 @@ here $R$ is such that it computes f with error $\epsilon \leq \frac{1}{3}$ (Mont
     
 Note that at $\epsilon = 1/2$, this error can be achieved via randomly guessing $f(x)$ without reading the input at all. This means that to get a nontrivial new measure, we should pick $\epsilon \in (0, 1/2)$. As it turns out, within that range, we can move from one error level to another by amplifying: we can repeat a high-error algorithm several times on the same input $x$, take the majority vote of the outputs, and get an estimate for $f(x)$ whose error is smaller than the original error level.
 
-<div class="hint-box info">
-  <div class="hint-box-header">
-    <strong> Pause and ponder: Come up with an randomized algorithm with error <= 1/3 to compute the gap majority function.</strong> 
-    Click to expand
-  </div>
-  <div class="hint-box-content">
-    
-  </div>
-</div>
-
 ## References
 
 [Shalev Ben-David. Query complexity basis. Lecture notes.](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)
