@@ -14,18 +14,20 @@ One way of doing this will be, along with querying the input bits, in the interm
 <div class="video-container">
   <video controls>
   <source src="{{ site.baseurl }}/images/Post5/P5_1.mp4" type="video/mp4">
-    Here in this example we are considering a random register of size 1 (i.e. 1 bit) and an algorithm running on input $x = 10 $
   </video>
 </div>
+
+Here in this example we are considering a random register of size 1 (i.e. 1 bit) and an algorithm running on input $x = 10 $
 
 Another way is to define a randomized decision tree as a probability distribution over deterministic decision trees.
 
 <div class="video-container">
   <video controls>
   <source src="{{ site.baseurl }}/images/Post5/P5_2.mp4" type="video/mp4">
-     Here in this example we are considering probability distribution over two deterministic trees $T_1$ and $T_2$ and the algorithm runs on input $x = 10 $
   </video>
 </div>
+
+Here in this example we are considering probability distribution over two deterministic trees $T_1$ and $T_2$ and the algorithm runs on input $x = 10 $
 
 <div class="hint-box info">
   <div class="hint-box-header">
