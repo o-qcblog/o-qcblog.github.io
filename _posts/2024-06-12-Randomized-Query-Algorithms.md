@@ -19,7 +19,9 @@ One way of doing this will be, along with querying the input bits, in the interm
 
 Here in this example we are considering a random register of size 1 (i.e. 1 bit) and an algorithm running on input $x = 10 $
 
-Another way is to define a randomized decision tree as a probability distribution over deterministic decision trees.
+Note that you can choose to toss the coin at any node and any number of times. You may also choose not to toss at all at a particular level of nodes. 
+
+Another way is to define a randomized decision tree as a probability distribution over deterministic decision trees. All the trees that occur with a non zero probability is called trees *in support of* the randomized algorithm.
 
 <div class="video-container">
   <video controls>
@@ -35,6 +37,34 @@ Here in this example we are considering probability distribution over two determ
     Click to expand
   </div>
   <div class="hint-box-content">
-    Depending on the value of the random bit, either the subtree on the left T1 (say) or right T2 (say) will be evaluated. If r1 can be 0 or 1 with equal probability, then $T_1$ and T2 can be thought of as coming from a uniform probability distribution from {T1, T2}. By induction, we can see this equivalence for random bits of any size.
+    Depending on the value of the random bit, either the subtree on the left $T_1$ (say) or right $T_2$ (say) will be evaluated. If $r_1$ can be 0 or 1 with equal probability, then $T_1$ and $T_2$ can be thought of as coming from a uniform probability distribution from {$T_1$, $T_2$}. By induction, we can see this equivalence for random bits of any size.
   </div>
 </div>
+
+We say that a randomized decision tree computes $f$ with bounded-error if its output equals $f(x)$ with probability at least 2/3, for all $x \in ${0,1}$^n$. 
+
+Formally, going by the first interpretation, we can view a randomized decision tree as one with input, not just $x$ but $(x,r)$ where $r$ is $k$ bit random string. (so there are $2^k$ possible random string). The randomized algorithm $A(x,r)$ computes $f$ if $A(x,r) = f(x)$ for all $x$ and for most ($> 2/3$) of the $r$.
+
+Now we need to come up with a notion of randomized querry complexity. For randomized algorithms, we have two reasonable options for defining the worst-case number of queries:
+
+One option is to take the worst case of $height(D,x)$ over both decision trees $D$ in the support of $R$ and over inputs $x$. The other option is to take the worst case of $\mathbb{E} [height(R, x)]$, expectation value computed over the deterministic trees in support of R.
+
+**Definition:**
+
+$$height(R) = \max_x \max_D path(D,x)$$
+$$\overline{height(R)} = \max_x \mathbb{E} [height(D, x)] $$ here $D$ is a Deterministic decision tree such that $D$ computes $f$ and $D$ is in support of R.
+
+When we relax the cost (how we count the worst case queries?) but not the correctness (how much error we allow?):
+
+**Definition:**
+    Zero error randomized algorithm, $R_0(f)$, is defined as 
+    $$ R_0(f) = \min_R \overline{height(R)}$$ such that $R$ computes $f$ with zero error. (Las Vegas algorithm)
+
+
+When we relax the correctness but not the cost:
+
+**Definition:**
+    $$ R_{1/3}(f) = \min_R height(R)$$ here $R$ is such that it computes f with error $\epsilon \leq \frac{1}{3}$ (Monte Carlo algorithm)
+    
+Note that at $\epsilon = 1/2$, this error can be achieved via randomly guessing $f(x)$ without reading the input at all. This means that to get a nontrivial new measure, we should pick $\epsilon \in (0, 1/2)$. As it turns out, within that range, we can move from one error level to another by amplifying: we can repeat a high-error algorithm several times on the same input $x$, take the majority vote of the outputs, and get an estimate for $f(x)$ whose error is smaller than the original error level.
+
