@@ -9,7 +9,7 @@ categories: [Note, ComplexityTheory]
 
 Given that we are familiar with decision trees (if not, check out my post on [Deterministic Query Algorithms](https://o-qcblog.github.io/note/complexitytheory/Deterministic-Query-Algorithms/)), how would one incorporate randomness into this?
 
-One way of doing this will be, along with querying the input bits, in the intermediate nodes toss a coin (can also be a biased coin) and depending on whether it is head or tail, we can choose to go to either the left or right node of the tree. The value of the coin tosses we can store as a random register r (0 for Head and 1 for Tail). 
+One way of doing this will be, along with querying the input bits, in the intermediate nodes toss a coin (can also be a biased coin) and depending on whether it is head or tail, we can choose to go to either the left or right node of the tree. The value of the coin tosses we can store as a random register r (0 for Head and 1 for Tail). This way, the input $x$ no longer Determines with certainty which leaf of the tree will be reached but instead induces a probability distribution over the set of all leaves. Thus, the tree outputs 0 or 1 with a certain probability.
 
 <div class="video-container">
   <video controls>
