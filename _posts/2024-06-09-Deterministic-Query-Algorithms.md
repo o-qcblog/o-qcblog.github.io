@@ -5,7 +5,7 @@ title:  "Deterministic Query Algorithms"
 categories: [Note, ComplexityTheory]
 ---
 
-*This is a introduction to Query Complexity Model (also known as Black Box Model).*
+*This is a introduction to Query Complexity Model (also known as Black Box Model). This blog will specifically focus on deterministic algorithms in query model.*
 
 In complexity theory, we are interested in quantifying how easy or hard a problem is.
 Consider your favorite problem. Is the problem easy to solve on your mobile phone or your computer? What if I give you a supercomputer now?
