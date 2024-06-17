@@ -37,10 +37,10 @@ As the second oracle maps $\lvert i \rangle \lvert b \oplus x_i \rangle \rightar
   </div>
   <div class="hint-box-content">
 
-<p> Note that we can then represent the map $\lvert  i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i \rangle$ by a matrix $U_x$, which will be a *permutation matrix*, and therefore is unitary. </p>
+<p> Note that we can then represent the map $\lvert  i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i \rangle$ by a matrix $U_x$, which will be a <i>permutation matrix</i>, and therefore is unitary. </p>
 
 
-<p> A **permutation matrix** is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dagger = \mathbb{1}$). </p>
+<p> A <b>permutation matrix</b> is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dagger = \mathbb{1}$). </p>
 
 
 <p> For an oracle that does this </p>
