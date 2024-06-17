@@ -31,6 +31,9 @@ The point of defining a query this way is that it can be reversed. In fact, appl
 
 As the second oracle maps $$|i \rangle |b \oplus x_i \rangle \rightarrow |i \rangle | x_i \oplus b \oplus x_i\rangle = | i\rangle | b \rangle$$
 
+... a given wire happens to be carrying "$$\lvert 0\rangle$$."
+By that we mean that it's carrying the linear combination
+$$\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix}$$
 
 For more mathematically inclined readers,
 
