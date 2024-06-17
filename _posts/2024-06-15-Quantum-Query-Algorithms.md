@@ -33,42 +33,44 @@ As the second oracle maps $\lvert i \rangle \lvert b \oplus x_i \rangle \rightar
 
 <div class="hint-box info">
   <div class="hint-box-header">
-    <strong> Extras: </strong> For more mathematically inclined readers,
+    <strong> Extras: </strong> For more mathematically inclined readers (click to expand)
+  </div>
+  <div class="hint-box-content">
 
-    Note that we can then represent the map $\lvert  i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i \rangle$ by a matrix $U_x$, which will be a *permutation matrix*, and therefore is unitary.
-
-
-A **permutation matrix** is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dagger = \mathbb{1}$).
-
-
-For an oracle that does this 
+<p> Note that we can then represent the map $\lvert  i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i \rangle$ by a matrix $U_x$, which will be a *permutation matrix*, and therefore is unitary. </p>
 
 
-$\lvert i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i\rangle$
+<p> A **permutation matrix** is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dagger = \mathbb{1}$). </p>
 
 
-The matrix element of the oracle $O_x$, $\langle j, c \rvert O_x \lvert i, b \rangle =$
+<p> For an oracle that does this </p>
 
 
-$= \langle j, c \lvert b \oplus x_i \rangle$ (By the action of the oracle, which follows from its definition)
+<p> $\lvert i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i\rangle$ </p>
 
 
-$= \delta_{I,j} \langle j, c \lvert b \oplus x_i \rangle$ 
+<p> The matrix element of the oracle $O_x$, $\langle j, c \rvert O_x \lvert i, b \rangle =$ </p>
 
 
-$= \delta_{ij} \delta_{c, b \oplus x_i }$
+<p> $= \langle j, c \lvert b \oplus x_i \rangle$ (By the action of the oracle, which follows from its definition) </p>
 
 
-Thus, it is a permutation matrix.
+<p> $= \delta_{I,j} \langle j, c \lvert b \oplus x_i \rangle$ </p>
 
 
-Note that $\delta_{c, b \oplus x_i } = 1$ when $c = b \oplus x_i$ 
+<p> $= \delta_{ij} \delta_{c, b \oplus x_i }$ </p>
 
 
-$\implies b \oplus c = b \oplus b \oplus x_i = 0 \oplus x_i = x_i$
+<p> Thus, it is a permutation matrix. </p>
 
 
-Therefore for each block corresponding to a given i, $\delta{ c, b \oplus x_i }$ connects all and only the indices $b,c$ such that $b \oplus c = x_i$
+<p> Note that $\delta_{c, b \oplus x_i } = 1$ when $c = b \oplus x_i$ </p>
+
+
+<p> $\implies b \oplus c = b \oplus b \oplus x_i = 0 \oplus x_i = x_i$ </p>
+
+
+<p> Therefore for each block corresponding to a given i, $\delta{ c, b \oplus x_i }$ connects all and only the indices $b,c$ such that $b \oplus c = x_i$ </p>
     
   </div>
 </div>
