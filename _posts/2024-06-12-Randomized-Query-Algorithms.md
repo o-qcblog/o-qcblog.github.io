@@ -19,9 +19,9 @@ One way of doing this will be, along with querying the input bits, in the interm
 
 Here, in this example, we are considering a random register of size 1 (i.e. 1 bit) and an algorithm running on input $x = 10 $
 
-Note that you can choose to toss the coin at any node and at any number of times. You may also choose not to toss at all at a particular level of nodes.
+Note that you can choose to toss the coin at any node and any number of times. You may also choose not to toss at all at a particular level of nodes.
 
-Another way is to define a randomized decision tree as a probability distribution over deterministic decision trees. All the trees that occur with a non zero probability is called trees *in support of* the randomized algorithm.
+Another way is to define a randomized decision tree as a probability distribution over deterministic decision trees. All the trees that occur with a non-zero probability are called trees *in support of* the randomized algorithm.
 
 <div class="video-container">
   <video controls>
