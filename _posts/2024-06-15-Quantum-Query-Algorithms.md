@@ -41,7 +41,7 @@ For an oracle that does this
 $| i\rangle | b\rangle \rightarrow | i\rangle | b \oplus x_i\rangle$
 
 
-The matrix element of the oracle $O_x$, $ \langle j, c | O_x | i, b \rangle = $
+The matrix element of the oracle $O_x$, $\langle j, c | O_x | i, b \rangle =$
 
 
 $= \langle j, c | b \oplus x_i \rangle$ (By the action of the oracle, which follows from its definition)
