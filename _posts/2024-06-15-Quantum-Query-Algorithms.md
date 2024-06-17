@@ -4,7 +4,7 @@ title:  "Quantum Query Algorithms"
 categories: [Note, ComplexityTheory, QuantumComputing]
 ---
 
-*How can we mathematically describe a quantum algorithm? Can quantum advantage help reduce the quary complexity to a significant level? What is a quantum oracle? In this blog I have will address these and many other questions about Quantum Query Algorithms.*
+*How can we mathematically describe a quantum algorithm? Can quantum advantage help reduce the query complexity to a significant level? What is a quantum oracle? In this blog, I will address these and many other questions about Quantum Query Algorithms.*
 
 For people familiar with quantum mechanics, you may know that the time evolution operator is unitary. When quantum states evolve, no two input states will evolve to the same output state given a particular Hamiltonian. Thus, in quantum computing, all the gates are unitary transformations. But is classical computing reversible? Are all the classical gates (NOT, AND, OR) reversible in nature? The answer is no.
 
