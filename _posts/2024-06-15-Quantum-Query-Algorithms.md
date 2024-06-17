@@ -28,33 +28,32 @@ The point of defining a query this way is that it can be reversed. In fact, appl
 
 [<img src="{{ site.baseurl}}/images/Post6/P6_2.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-As the second oracle maps $ | i\rangle | b \oplus x_i \rangle \rightarrow | i\rangle | x_i \oplus b \oplus x_i\rangle = | i\rangle | b \rangle $
+As the second oracle maps $ |i \rangle |b \oplus x_i \rangle \rightarrow |i \rangle | x_i \oplus b \oplus x_i\rangle = | i\rangle | b \rangle $
 
 For more mathematically inclined readers,
   
-Note that we can then represent the map $| i\rangle | b\rangle \rightarrow | i\rangle | b \oplus x_i\rangle$ by a matrix $U_x$, which will be a *permutation matrix*, and therefore is unitary.
+Note that we can then represent the map $ | i\rangle | b\rangle \rightarrow | i\rangle | b \oplus x_i \rangle $ by a matrix $U_x$, which will be a *permutation matrix*, and therefore is unitary.
 
-A **permutation matrix** is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dag = \mathbb{1}).
+A **permutation matrix** is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dag = \mathbb{1}$).
 
 For an oracle that does this 
 
 $| i\rangle | b\rangle \rightarrow | i\rangle | b \oplus x_i\rangle$
 
-The matrix element of the oracle $O_x$, $\langle j, c | O_x | i, b \rangle = $
+The matrix element of the oracle $O_x$, $ \langle j, c | O_x | i, b \rangle = $
 
-$$
-= \langle j, c | b \oplus x_i \rangle (By the action of the oracle, which follows from its definition)
+$= \langle j, c | b \oplus x_i \rangle$ (By the action of the oracle, which follows from its definition)
 
-= \delta_{I,j} \langle j, c | b \oplus x_i \rangle 
+$= \delta_{I,j} \langle j, c | b \oplus x_i \rangle$ 
 
-= \delta_{ij} \delta_{c, b \oplus x_i }
-$$
+$= \delta_{ij} \delta_{c, b \oplus x_i }$
+
 
 Thus, it is a permutation matrix.
 
 Note that $\delta_{c, b \oplus x_i } = 1$ when $c = b \oplus x_i$ 
 
-$$ \implies b \oplus c = b \oplus b \oplus x_i = 0 \oplus x_i = x_i$$
+$ \implies b \oplus c = b \oplus b \oplus x_i = 0 \oplus x_i = x_i$
 
 Therefore for each block corresponding to a given i, $\delta{ c, b \oplus x_i }$ connects all and only the indices $b,c$ such that $b \oplus c = x_i$
 
