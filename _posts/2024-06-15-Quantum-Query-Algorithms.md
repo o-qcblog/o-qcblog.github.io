@@ -31,6 +31,7 @@ The point of defining a query this way is that it can be reversed. In fact, appl
 
 As the second oracle maps $\lvert i \rangle \lvert b \oplus x_i \rangle \rightarrow \lvert i \rangle \lvert x_i \oplus b \oplus x_i\rangle = \lvert  i\rangle \lvert b \rangle$
 
+
 For more mathematically inclined readers,
 
   
@@ -57,13 +58,18 @@ $= \delta_{I,j} \langle j, c \lvert b \oplus x_i \rangle$
 
 $= \delta_{ij} \delta_{c, b \oplus x_i }$
 
+
 Thus, it is a permutation matrix.
+
 
 Note that $\delta_{c, b \oplus x_i } = 1$ when $c = b \oplus x_i$ 
 
+
 $\implies b \oplus c = b \oplus b \oplus x_i = 0 \oplus x_i = x_i$
 
+
 Therefore for each block corresponding to a given i, $\delta{ c, b \oplus x_i }$ connects all and only the indices $b,c$ such that $b \oplus c = x_i$
+
 
 After each query, we would like to allow the quantum algorithm to select the following query arbitrarily. To do so, we give the algorithm a workspace of arbitrary size. That is, let $W$ be a set representing the possible basis states of the workspace. Then, the quantum algorithm will act on the [Hilbert space](https://en.wikipedia.org/wiki/Hilbert_space#:~:text=Formally%2C%20a%20Hilbert%20space%20is,point%20in%20a%20Hilbert%20space). with basis states corresponding to $W \times [n] \times \{ 0, 1\}$. In addition to this, we also have an output register. The algorithm will alternate between applying an arbitrary transformation on this state, which is independent of $x$, and applying the unitary $U_x$ implementing the query specified by the query register (the unitary $U_x$ will be extended to act as identity on the workspace register). That is, the action of the quantum algorithm on $x$ will be
 
@@ -76,7 +82,7 @@ where $\lvert \psi_{init}\rangle$ is some fixed initial state. Note that $T$ is 
 
 [<img src="{{ site.baseurl}}/images/Post6/P6_3.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-We say that a quantum query algorithm $Q$ computes Boolean function $f$ to error $\epsilon$ if $\mathrm{P}\mathrm{r}[Q(x) \not = f(x)] \leq \epsilon$ for all inputs $x$. It turns out that quantum algorithms can be amplified just like classical ones by repeating the algorithm several times and taking the majority vote on the outputs. For this reason, we will again pick $\epsilon = 1/3$ as the standard choice.
+We say that a quantum query algorithm $Q$ computes Boolean function $f$ to error $\epsilon$ if $\mathcal{P}\{Q(x) \not = f(x)\} \leq \epsilon$ for all inputs $x$. It turns out that quantum algorithms can be amplified just like classical ones by repeating the algorithm several times and taking the majority vote on the outputs. For this reason, we will again pick $\epsilon = 1/3$ as the standard choice.
 
 
 **Definition:**
