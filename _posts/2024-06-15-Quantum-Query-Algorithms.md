@@ -43,16 +43,16 @@ A **permutation matrix** is a square binary matrix with exactly one entry of 1 i
 For an oracle that does this 
 
 
-$\lvert i\rangle | b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i\rangle$
+$\lvert i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i\rangle$
 
 
-The matrix element of the oracle $O_x$, $\langle j, c | O_x | i, b \rangle =$
+The matrix element of the oracle $O_x$, $\langle j, c \rvert O_x \lvert i, b \rangle =$
 
 
-$= \langle j, c | b \oplus x_i \rangle$ (By the action of the oracle, which follows from its definition)
+$= \langle j, c \lvert b \oplus x_i \rangle$ (By the action of the oracle, which follows from its definition)
 
 
-$= \delta_{I,j} \langle j, c | b \oplus x_i \rangle$ 
+$= \delta_{I,j} \langle j, c \lvert b \oplus x_i \rangle$ 
 
 
 $= \delta_{ij} \delta_{c, b \oplus x_i }$
