@@ -82,7 +82,7 @@ where $\lvert \psi_{init}\rangle$ is some fixed initial state. Note that $T$ is 
 
 [<img src="{{ site.baseurl}}/images/Post6/P6_3.png" alt="" width="600" />]({{ site.baseurl}}/)
 
-We say that a quantum query algorithm $Q$ computes Boolean function $f$ to error $\epsilon$ if $\mathcal{P}\{Q(x) \not = f(x)\} \leq \epsilon$ for all inputs $x$. It turns out that quantum algorithms can be amplified just like classical ones by repeating the algorithm several times and taking the majority vote on the outputs. For this reason, we will again pick $\epsilon = 1/3$ as the standard choice.
+We say that a quantum query algorithm $Q$ computes Boolean function $f$ to error $\epsilon$ if $\mathcal{P}[Q(x) \not = f(x)] \leq \epsilon$ for all inputs $x$. It turns out that quantum algorithms can be amplified just like classical ones by repeating the algorithm several times and taking the majority vote on the outputs. For this reason, we will again pick $\epsilon = 1/3$ as the standard choice.
 
 
 **Definition:**
