@@ -53,7 +53,7 @@ Thus, it is a permutation matrix.
 
 Note that $\delta_{c, b \oplus x_i } = 1$ when $c = b \oplus x_i$ 
 
-$ \implies b \oplus c = b \oplus b \oplus x_i = 0 \oplus x_i = x_i$
+$\implies b \oplus c = b \oplus b \oplus x_i = 0 \oplus x_i = x_i$
 
 Therefore for each block corresponding to a given i, $\delta{ c, b \oplus x_i }$ connects all and only the indices $b,c$ such that $b \oplus c = x_i$
 
