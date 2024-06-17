@@ -1,6 +1,7 @@
 ---
 Layout: post
 title:  "Quantum Query Algorithms"
+mathjax: true
 categories: [Note, ComplexityTheory, QuantumComputing]
 ---
 
