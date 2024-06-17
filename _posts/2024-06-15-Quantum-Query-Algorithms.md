@@ -32,7 +32,7 @@ For more mathematically inclined readers,
 Note that we can then represent the map $| i\rangle | b\rangle \rightarrow | i\rangle | b \oplus x_i \rangle$ by a matrix $U_x$, which will be a *permutation matrix*, and therefore is unitary.
 
 
-A **permutation matrix** is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dag = \mathbb{1}$).
+A **permutation matrix** is a square binary matrix with exactly one entry of 1 in each row and each column with all other entries 0. One can easily see that they are unitary matrices (i.e., $UU^\dagger = \mathbb{1}$).
 
 
 For an oracle that does this 
