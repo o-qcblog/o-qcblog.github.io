@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: "Pebbling a Checkerboard"
+title: "Projective Planes and Hypergraphs"
 categories: [Puzzle, GraphTheory]
 ---
 
