@@ -98,7 +98,11 @@ Now, finally, let us come back to our puzzle. What if I say the Fano plane is th
 
 ## References and sources
 
+[Wikipedia, Projective planes](https://en.wikipedia.org/wiki/Projective_plane)
 
+[FINITE PROJECTIVE PLANES AND QUADRATIC FORMS WITH APPLICATIONS, XINKAI WU](https://math.uchicago.edu/~may/REU2020/REUPapers/Wu,Xinkai.pdf)
+
+The above two examples of projective planes with 31 and 91 lines and points is taken from [WOLFRAM Demonstrations Project, Projective Planes of Low Order](https://demonstrations.wolfram.com/ProjectivePlanesOfLowOrder/). They have really cool animations. You can check you and play with it by selecting pairs of lines and seeing if they exactly intersect at a line and vice versa. 
 
 
 
