@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
                                                         
-Hi! I am Padmapriya. I am a curious learner exploring the interface of Computer Science, Physics and Mathematics. Teaching or communicating ideas is the best way of learning. As I unravel and learn new things in the domain of quantum computing, quantum algorithms and, complexity theory and also its classical counterparts, I will pen down my learnings and make a repository for myself and other fellow learners. 
+Hi! I am Padmapriya. I am a curious learner exploring the interface of computer science, mathematics and physics. Teaching or communicating ideas is the best way of learning. As I unravel and learn new things in the domain of algorithms, complexity theory, quantum computing and many more exciting topics in theoritical computer science, I will pen down my learnings and make a repository for myself and other fellow learners. 
 
 Happy reading!
 
