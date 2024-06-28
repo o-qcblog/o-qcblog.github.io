@@ -33,6 +33,6 @@ Subscribe for:
 Feel free to reach out if you have any questions or comments!
 
 *This site is hosted by Github Pages and uses [Jekyll Now](https://github.com/barryclark/jekyll-now), a Jekyll theme by Barry Clark. 
-The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home)* 
+The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home).* 
 
 *Blog started on May, 2024*
