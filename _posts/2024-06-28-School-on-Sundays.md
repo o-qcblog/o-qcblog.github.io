@@ -11,7 +11,7 @@ I designed a toy puzzle, which seems very hard to solve, but has a surprisingly 
 
 ### Puzzle
 
-You are the head of a committee in charge of making class timetables for school students. The school offers seven courses. Every day of the week (including Sundays), classes are scheduled. As the school works even on Sundays, every day is kept light with exactly three classes. 
+You are the head of a committee in charge of making timetables for school students. The school offers seven courses. Every day of the week (including Sundays), classes are scheduled. As the school works even on Sundays, every day is kept light with exactly three classes. 
 You are asked to schedule classes so that, every day, three different courses are taught. Also, given two different days of the week, there is precisely one course common on both days, and given two different courses, there is exactly one day when both these courses are taught. Furthermore, there should be a set of 4 courses such that no three are taught on the same day. 
 
 It seems like a monumental task! Does such a timetable exist? If so, how to make one?
