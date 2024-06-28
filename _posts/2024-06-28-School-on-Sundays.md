@@ -56,7 +56,7 @@ There is a geometric way of constructing an extended Euclidean plane. Each point
 
 <div class="video-container">
   <video controls>
-  <source src="{{ site.baseurl }}/images/Post7/Post7_1A.mp4" type="video/mp4">
+  <source src="{{ site.baseurl }}/images/Post7/Post7_1.mp4" type="video/mp4">
   </video>
 </div>
 
