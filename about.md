@@ -19,6 +19,7 @@ Email: [quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
 Subscribe for:
 
 Regular Updates: Get the latest posts delivered straight to your inbox.
+
 Exclusive Content: Access to subscriber-only newsletter.
 
 <div class="form-container">
