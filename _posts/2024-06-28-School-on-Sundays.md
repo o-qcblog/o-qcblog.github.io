@@ -83,11 +83,11 @@ Not any arbitrary number of points and lines can satisfy these properties. The n
 
 Larger projective planes become more challenging to draw. They are complex but pretty looking. You can try to pull the one with 13 lines and 13 points as a challenge. 
 
-[<img src="{{ site.baseurl}}/images/Post7/Post7_3.png" alt="" width="600" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post7/P7_3.png" alt="" width="600" />]({{ site.baseurl}}/)
 
 This is a finite projective plane with 31 lines and points. 
 
-[<img src="{{ site.baseurl}}/images/Post7/Post7_4.png" alt="" width="600" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post7/P7_4.png" alt="" width="600" />]({{ site.baseurl}}/)
 
 This with 91!
 
