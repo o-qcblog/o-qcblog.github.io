@@ -20,7 +20,7 @@ The quest for finding a solution to this puzzle takes us on a tour into the fasc
 
 <div class="hint-box info">
   <div class="hint-box-header">
-   [Combinatorial design theory]( https://en.wikipedia.org/wiki/Combinatorial_design) is the part of combinatorial mathematics that deals with the existence, construction, and properties of systems of finite sets whose arrangements satisfy generalized concepts of balance and/or symmetry.
+   Combinatorial design theory is the part of combinatorial mathematics that deals with the existence, construction, and properties of systems of finite sets whose arrangements satisfy generalized concepts of balance and/or symmetry.
   </div>
 </div>
 
@@ -40,7 +40,7 @@ So, more generally, a projective plane is a non-empty set $X$ (whose elements ar
 
 <div class="hint-box info">
   <div class="hint-box-header">
-    One example of a projective plane is an extended Euclidean plane, which is constructed from the ordinary [Euclidean plane](https://en.wikipedia.org/wiki/Euclidean_plane). As an exercise, try to figure out by adding what set of lines and/or points one can achieve this construction. (After thinking through, click to see how this can be done)  
+    One example of a projective plane is an extended Euclidean plane, which is constructed from the ordinary Euclidean plane. As an exercise, try to figure out by adding what set of lines and/or points one can achieve this construction. (After thinking through, click to see how this can be done)  
   </div>
   <div class="hint-box-content">
 Ordinary Euclidian plane, one can turn into the projective plane (called the extended Euclidian plane) by the following procedure:
