@@ -7,7 +7,7 @@ categories: [Puzzle, Miscellaneous]
 
 *An Intimidating puzzle, which leads to exploring projective geometry…*
 
-I designed a toy puzzle, which seems very hard to solve, but has a surprisingly simple looking geometric solution. 
+I designed a toy puzzle, which seems very hard to solve but has a surprisingly simple looking geometric solution. 
 
 ### Puzzle
 
