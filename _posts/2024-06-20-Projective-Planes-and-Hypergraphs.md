@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: "Projective Planes and Hypergraphs"
-categories: [Note, GraphTheory]
+categories: [Puzzle, GraphTheory]
 ---
 
 Coming soon...
