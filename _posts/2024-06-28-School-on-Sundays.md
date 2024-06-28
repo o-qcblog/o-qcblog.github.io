@@ -47,8 +47,8 @@ So, more generally, a projective plane is a non-empty set $X$ (whose elements ar
   <div class="hint-box-content">
 Ordinary Euclidian plane, one can turn into the projective plane (called the extended Euclidian plane) by the following procedure:
     
-1.	Consider a maximum set of mutually parallel lines. To each of such a set, associate a single new point, which is considered incident with each line in this set. These points are called *points at infinity*.
-2.	Now, we need to have a line passing through the points at infinity. So, introduce a new line, which is considered to be incident with all points at infinity and no other points. This is called the *line at infinity*.
+1.	Consider a maximum set of mutually parallel lines. To each of such a set, associate a single new point, which is considered incident with each line in this set. These points are called points at infinity.
+2.	Now, we need to have a line passing through the points at infinity. So, introduce a new line, which is considered to be incident with all points at infinity and no other points. This is called the line at infinity.
   </div>
 </div>
 
