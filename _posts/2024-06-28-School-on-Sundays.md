@@ -93,7 +93,7 @@ This with 91!
 
 Now, finally, let us come back to our puzzle. What if I say the Fano plane is the solution to our puzzle? Yes! We can consider the line to be the days of the week and points to be the courses (or vice versa), and you will see all the needed conditions are satisfied!  
 
-[<img src="{{ site.baseurl}}/images/Post7/Post7_5.png" alt="" width="600" />]({{ site.baseurl}}/)
+[<img src="{{ site.baseurl}}/images/Post7/Post7_5.jpg" alt="" width="600" />]({{ site.baseurl}}/)
 
 
 ## References and sources
