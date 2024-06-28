@@ -7,6 +7,8 @@ categories: [Puzzle, Miscellaneous]
 
 *An Intimidating puzzle, which leads to exploring projective geometry…*
 
+I designed a toy puzzle, which seems very hard to solve, but has a surprisingly simple looking geometric solution. 
+
 ### Puzzle
 
 You are the head of a committee in charge of making class timetables for school students. The school offers seven courses. Every day of the week (including Sundays), classes are scheduled. As the school works even on Sundays, every day is kept light with exactly three classes. 
@@ -54,7 +56,7 @@ There is a geometric way of constructing an extended Euclidean plane. Each point
 
 <div class="video-container">
   <video controls>
-  <source src="{{ site.baseurl }}/images/Post7/Post7_1.mp4" type="video/mp4">
+  <source src="{{ site.baseurl }}/images/Post7/Post7_1A.mp4" type="video/mp4">
   </video>
 </div>
 
