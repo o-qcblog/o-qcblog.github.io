@@ -8,7 +8,7 @@ As long as a branch of science offers an abundance of problems, so long it is al
 a lack of problems foreshadows extinction or the cessation of independent development.                                                   
                                                         - DavidHilbert, 1900
                                                         
-I am a curious learner exploring the interface of Computer Science, Physics and Mathematics. Teaching or communicating ideas is the best way of learning. As I unravel and learn new things in the domain of quantum computing, quantum algorithms and, complexity theory and also its classical counterparts, I will pen down my learnings and make a repository for myself and other fellow learners. 
+Hi! I am Padmapriya. I am a curious learner exploring the interface of Computer Science, Physics and Mathematics. Teaching or communicating ideas is the best way of learning. As I unravel and learn new things in the domain of quantum computing, quantum algorithms and, complexity theory and also its classical counterparts, I will pen down my learnings and make a repository for myself and other fellow learners. 
 
 Happy reading!
 
@@ -32,6 +32,7 @@ Subscribe for:
 
 Feel free to reach out if you have any questions or comments!
 
-
+This site is hosted by Github Pages and uses [Jekyll Now](https://github.com/barryclark/jekyll-now), a Jekyll theme by Barry Clark. 
+The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home) 
 
 *Blog started on May, 2024*
