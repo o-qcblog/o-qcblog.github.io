@@ -15,8 +15,8 @@ categories: [Note, Algorithms]
       "image": [
         "{{ site.baseurl}}/images/Post2/P2_1.png"
        ],
-      "datePublished": "2024-05-29T08:00:00+05:30",
-      "dateModified": "2024-05-29T08:00:00+05:30",
+      "datePublished": "2024-05-31T08:00:00+05:30",
+      "dateModified": "2024-05-31T08:00:00+05:30",
       "author": [{
           "@type": "Person",
           "name": "Padmapriya S",
