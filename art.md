@@ -2,7 +2,7 @@
 **Our owl**
 
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/mascot.png" alt="" width="200" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/mascot.png" alt="" width="20" class="zoom-image">
 </div>
 <div class="image-container">
   <img src="{{ site.baseurl}}/images/exercise.png" alt="" width="200" class="zoom-image">
