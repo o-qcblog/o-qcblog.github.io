@@ -114,7 +114,20 @@ window.MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
 
+<!-- image zoom -->
+<script>
+  $(document).ready(function() {
+    $('.zoom-image').on('click', function() {
+      var src = $(this).attr('src');
+      $('body').append('<div class="zoom-overlay"><img src="' + src + '"></div>');
+      $('.zoom-overlay').addClass('active');
 
+      $('.zoom-overlay').on('click', function() {
+        $(this).removeClass('active').remove();
+      });
+    });
+  });
+</script>
 
 
 
