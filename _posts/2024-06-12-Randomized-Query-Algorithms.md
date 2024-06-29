@@ -5,28 +5,6 @@ title:  "Randomized Query Algorithms"
 categories: [Note, ComplexityTheory]
 ---
 
-<html>
-  <head>
-    <title>Randomized Query Algorithms</title>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Randomized Query Algorithms",
-      "datePublished": "2024-06-12T08:00:00+05:30",
-      "dateModified": "2024-06-12T08:00:00+05:30",
-      "author": [{
-          "@type": "Person",
-          "name": "Padmapriya S",
-          "url": "https://o-qcblog.github.io/about/"
-        }]
-    }
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
-
 *Like many other models of computation, can we add the power of randomization to decision trees? Can this reduce the number of queries? How can we define randomized query complexity? This blog post answers these questions and discusses randomized query algorithm, introducing it from two different lenses.*
 
 Given that we are familiar with decision trees (if not, check out my post on [Deterministic Query Algorithms](https://o-qcblog.github.io/note/complexitytheory/Deterministic-Query-Algorithms/)), how would one incorporate randomness into this?
@@ -106,4 +84,26 @@ Note that at $\epsilon = 1/2$, this error can be achieved via randomly guessing 
 [Harry Buhrman and Ronald de Wolf. Complexity measures and decision tree complexity: a survey. In: Theoretical Computer Science, 288.1, 2002.](https://dl.acm.org/doi/10.1145/502090.502097)
 
 [Rajat Mittal. Decision tree complexity. Lecture notes](https://www.cse.iitk.ac.in/users/rmittal/prev_course/f21/reports/4_dt.pdf)
+
+<html>
+  <head>
+    <title>Randomized Query Algorithms</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Randomized Query Algorithms",
+      "datePublished": "2024-06-12T08:00:00+05:30",
+      "dateModified": "2024-06-12T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
 
