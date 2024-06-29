@@ -4,6 +4,30 @@ mathjax: true
 title: "Pebbling a Checkerboard"
 categories: [Puzzle, Algorithms]
 ---
+<html>
+  <head>
+    <title>Pebbling a Checkerboard</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Pebbling a Checkerboard",
+      "image": [
+        "{{ site.baseurl}}/images/Post1/P1_1.png"
+       ],
+      "datePublished": "2024-05-29T08:00:00+05:30",
+      "dateModified": "2024-05-29T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
 
 *A problem from the textbook [Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.](https://dl.acm.org/doi/10.5555/1177299#cited-by-sec); Chapter 6, problem 6.5. I have rephrased the problem and provided an elaborate solution.*
 
