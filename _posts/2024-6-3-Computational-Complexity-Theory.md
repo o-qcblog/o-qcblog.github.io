@@ -11,7 +11,9 @@ Computational complexity theory studies the inherent hardness or easiness of com
 
 The computational complexity theory field can be broadly classified into two parts. 
 
-[<img src="{{ site.baseurl}}/images/Post3/P3_1.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  [<img src="{{ site.baseurl}}/images/Post3/P3_1.png" alt="" width="600" />]({{ site.baseurl}}/)
+</div>
 
 **Structural complexity** deals with high-level complexity questions. To name a few, it deals with questions like: Is space a more powerful resource than time? Does randomness enhance the power of efficient computation? Is it easier to verify a proof than to construct one? Etc. 
 So far, we do not know the answers to many of these questions; thus, most results in structural complexity are conditional results that rely on various unproven assumptions like $P \neq NP$
