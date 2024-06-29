@@ -102,3 +102,28 @@ In future blog posts, we will look at various quantum query algorithms and see t
 ## Reference
 
 [Shalev Ben-David. Query complexity basis. Lecture notes.](https://cs.uwaterloo.ca/~s4bendav/CS860S20.html)
+
+<html>
+  <head>
+    <title>Quantum Query Algorithms</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Quantum Query Algorithms",
+      "image": [
+       "{{ site.baseurl}}/images/Post6/P6_3.png"
+       ],
+      "datePublished": "2024-06-15T08:00:00+05:30",
+      "dateModified": "2024-06-15T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
