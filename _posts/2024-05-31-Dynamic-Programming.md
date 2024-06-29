@@ -4,30 +4,6 @@ mathjax: true
 title:  "Dynamic Programming"
 categories: [Note, Algorithms]
 ---
-<html>
-  <head>
-    <title>Dynamic Programming</title>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Dynamic Programming",
-      "image": [
-        "{{ site.baseurl}}/images/Post2/P2_1.png"
-       ],
-      "datePublished": "2024-05-31T08:00:00+05:30",
-      "dateModified": "2024-05-31T08:00:00+05:30",
-      "author": [{
-          "@type": "Person",
-          "name": "Padmapriya S",
-          "url": "https://o-qcblog.github.io/about/"
-        }]
-    }
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
 
 *This is a note on a powerful algorithmic technique called Dynamic Programming*
 
@@ -155,4 +131,28 @@ In the above pause and ponder, I highlighted that the arrows always go from left
 ## References
 [Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.](https://dl.acm.org/doi/10.5555/1177299#cited-by-sec)
 
+<html>
+  <head>
+    <title>Dynamic Programming</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Dynamic Programming",
+      "image": [
+        "{{ site.baseurl}}/images/Post2/P2_1.png"
+       ],
+      "datePublished": "2024-05-31T08:00:00+05:30",
+      "dateModified": "2024-05-31T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
 
