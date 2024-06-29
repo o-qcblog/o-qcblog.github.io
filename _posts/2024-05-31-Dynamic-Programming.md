@@ -4,6 +4,30 @@ mathjax: true
 title:  "Dynamic Programming"
 categories: [Note, Algorithms]
 ---
+<html>
+  <head>
+    <title>Dynamic Programming</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Dynamic Programming",
+      "image": [
+        "{{ site.baseurl}}/images/Post2/P2_1.png"
+       ],
+      "datePublished": "2024-05-29T08:00:00+05:30",
+      "dateModified": "2024-05-29T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
 
 *This is a note on a powerful algorithmic technique called Dynamic Programming*
 
