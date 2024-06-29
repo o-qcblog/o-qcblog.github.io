@@ -10,7 +10,9 @@ categories: [Puzzle, Algorithms]
 ### Puzzle
 After a long day of work, you and your friend go to a cafe. There is a checkerboard on the cafe table. Some pebbles lie around to enhance the ambience. Seeing this, your friend challenges you with a task. She is willing to bear a huge chunk of the bill depending on how well you complete the task. You, who love taking up challenges, readily agree. 
 
-[<img src="{{ site.baseurl}}/images/Post1/P1_1.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_1.png" alt="Description" class="zoom-image">
+</div>
 
 The checkerboard is of dimension $4 \times n$, and there are $2n$ pebbles at your disposal. Your friend writes an arbitrary integer on each square of the checkerboard. She challenges you to place these pebbles, one on each square, but on the condition that no two pebbles can be on horizontally or vertically adjacent squares (diagonal adjacency is fine). She is willing to pay a bill equivalent to the sum of integers written on the squares you tailed using these pebbles. 
 
@@ -33,22 +35,41 @@ the pebbles in adjacent columns).
 
 1 is leaving the blocks empty:
 
-[<img src="{{ site.baseurl}}/images/Post1/P1_2.png" alt="1" width="60" />]({{ site.baseurl}}/)
-
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_2.png" alt="Description" width="60" class="zoom-image">
+</div>
 
 3 patters with 2 pebbles:
 
-[<img src="{{ site.baseurl}}/images/Post1/P1_3.png" alt="2" width="60" />]({{ site.baseurl}}/)
-[<img src="{{ site.baseurl}}/images/Post1/P1_4.png" alt="3" width="60" />]({{ site.baseurl}}/)
-[<img src="{{ site.baseurl}}/images/Post1/P1_5.png" alt="4" width="60" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_3.png" alt="Description" width="60" class="zoom-image">
+</div>
+
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_4.png" alt="Description" width="60" class="zoom-image">
+</div>
+
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_5.png" alt="Description" width="60" class="zoom-image">
+</div>
 
 4 patterns with 1 pebble:
 
-[<img src="{{ site.baseurl}}/images/Post1/P1_6.png" alt="5" width="60" />]({{ site.baseurl}}/)
-[<img src="{{ site.baseurl}}/images/Post1/P1_7.png" alt="6" width="60" />]({{ site.baseurl}}/)
-[<img src="{{ site.baseurl}}/images/Post1/P1_8.png" alt="7" width="60" />]({{ site.baseurl}}/)
-[<img src="{{ site.baseurl}}/images/Post1/P1_9.png" alt="8" width="60" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_6.png" alt="Description" width="60" class="zoom-image">
+</div>
 
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_7.png" alt="Description" width="60" class="zoom-image">
+</div>
+
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_8.png" alt="Description" width="60" class="zoom-image">
+</div>
+
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post1/P1_9.png" alt="Description" width="60" class="zoom-image">
+</div>
 
 Now let us call two patterns compatible if they can be placed on adjacent columns to form a legal placement.
 
