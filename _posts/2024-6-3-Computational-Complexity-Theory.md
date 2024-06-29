@@ -19,3 +19,28 @@ So far, we do not know the answers to many of these questions; thus, most result
 **Concrete complexity** or circuit complexity, as opposed to structural complexity, is a low-level study of computation. It deals with established lower bounds on the computational complexity of specific problems, like the multiplication of matrices, detecting large cliques in a graph or sorting a list. It typically centres around particular models of computation such as decision trees, branching programs, boolean formulas, various classes of boolean circuits, and the like. This line of research aims to establish unconditional lower bounds, which rely on no unproven assumptions. 
 
 In the future, you can hope to find individual blog posts on each of the above-stated examples and models of both structural and concrete complexity:)
+
+<html>
+  <head>
+    <title>Computational Complexity Theory</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Computational Complexity Theory",
+      "image": [
+        "{{ site.baseurl}}/images/Post3/P3_1.png"
+       ],
+      "datePublished": "2024-06-03T08:00:00+05:30",
+      "dateModified": "2024-06-03T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
