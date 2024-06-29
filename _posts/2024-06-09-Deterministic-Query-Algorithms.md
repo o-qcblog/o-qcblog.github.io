@@ -4,30 +4,6 @@ mathjax: true
 title:  "Deterministic Query Algorithms"
 categories: [Note, ComplexityTheory]
 ---
-<html>
-  <head>
-    <title>Deterministic Query Algorithms</title>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Deterministic Query Algorithms",
-      "image": [
-       "{{ site.baseurl}}/images/Post4/P4_1.png"
-       ],
-      "datePublished": "2024-06-09T08:00:00+05:30",
-      "dateModified": "2024-06-09T08:00:00+05:30",
-      "author": [{
-          "@type": "Person",
-          "name": "Padmapriya S",
-          "url": "https://o-qcblog.github.io/about/"
-        }]
-    }
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
 
 *This is a introduction to Query Complexity Model (also known as Black Box Model). This blog will specifically focus on deterministic algorithms in query model.*
 
@@ -99,3 +75,27 @@ Note that there can be multiple decision trees computing the function $f$. In th
 
 [Rajat Mittal. Decision tree complexity. Lecture notes](https://www.cse.iitk.ac.in/users/rmittal/prev_course/f21/reports/4_dt.pdf)
 
+<html>
+  <head>
+    <title>Deterministic Query Algorithms</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Deterministic Query Algorithms",
+      "image": [
+       "{{ site.baseurl}}/images/Post4/P4_1.png"
+       ],
+      "datePublished": "2024-06-09T08:00:00+05:30",
+      "dateModified": "2024-06-09T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
