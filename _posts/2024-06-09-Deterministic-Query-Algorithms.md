@@ -10,7 +10,9 @@ categories: [Note, ComplexityTheory]
 In complexity theory, we are interested in quantifying how easy or hard a problem is.
 Consider your favorite problem. Is the problem easy to solve on your mobile phone or your computer? What if I give you a supercomputer now?
 
-[<img src="{{ site.baseurl}}/images/Post4/P4_1.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post4/P4_1.png" alt="" width="600" class="zoom-image">
+</div>
 
 Depending on the device, if your answer changes, given zillion models of electronic devices, we can never objectively classify a problem as easy or hard. 
 
@@ -28,7 +30,9 @@ The query complexity model is also called the black box model. One can describe 
 
 Typically, we will be dealing with Boolean functions, so here $x \in$ {0,1}$^n$
 
-[<img src="{{ site.baseurl}}/images/Post4/P4_2.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post4/P4_2.png" alt="" width="600" class="zoom-image">
+</div>
 
 On an input $i$ the black box outputs $x_i$ (this counts as one query), the $i^{th}$ bit of the input string $x$
 
@@ -43,8 +47,9 @@ A deterministic algorithm for a given input $x$, irrespective of when and where 
 **Definition:**
     A *(Deterministic) decision tree* on the input of size n is either a leaf in {0,1} or a tuple $(i, D_0, D_1)$ (represented as a node $x_i$, when its value is 0, it is attached to subtree $D_0$ and when 1, subtree $D_1$) where $i \in [n]$ and $D_0$ and $D_1$ are decision trees which do not use $i$ in any intermediate tuple. 
 
-
-[<img src="{{ site.baseurl}}/images/Post4/P4_3.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post4/P4_3.png" alt="" width="600" class="zoom-image">
+</div>
 
 The way this works is as follows: on input $x$, the algorithm starts at the top of the tree, and if the node looks like $(i, D_0, D_1)$, the algorithm queries bit $i$ of $x$ to get the answer $x_i \in ${ 0, 1}. The algorithm then goes to $D_0$ if $x_i = 0$ and to $D_1$ if $x_i = 1$, and repeats the same process there.
 
