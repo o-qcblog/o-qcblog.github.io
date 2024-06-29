@@ -64,7 +64,9 @@ Now we have some flavor of projective planes. When the number of points and line
 
 A very famous example of a finite projective plane is a Fano plane.
 
-[<img src="{{ site.baseurl}}/images/Post7/Post7_2.jpg" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post7/Post7_2.jpg" alt="" width="600" class="zoom-image">
+</div>
 
 We can see that this satisfies all the conditions listed for the projective plane. This has a finite number of lines and points, and both are equal to 7.  
 
@@ -85,17 +87,23 @@ Not any arbitrary number of points and lines can satisfy these properties. The n
 
 Larger projective planes become more challenging to draw. They are complex but pretty looking. You can try to pull the one with 13 lines and 13 points as a challenge. 
 
-[<img src="{{ site.baseurl}}/images/Post7/P7_4.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post7/P7_4.png" alt="" width="600" class="zoom-image">
+</div>
 
 This is a finite projective plane with 31 lines and points. 
 
-[<img src="{{ site.baseurl}}/images/Post7/P7_3.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post7/P7_3.png" alt="" width="600" class="zoom-image">
+</div>
 
 This with 91!
 
 Now, finally, let us come back to our puzzle. What if I say the Fano plane is the solution to our puzzle? Yes! We can consider the line to be the days of the week and points to be the courses (or vice versa), and you will see all the needed conditions are satisfied!  
 
-[<img src="{{ site.baseurl}}/images/Post7/Post7_5.jpg" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post7/Post7_5.jpg" alt="" width="600" class="zoom-image">
+</div>
 
 
 ## References and sources
