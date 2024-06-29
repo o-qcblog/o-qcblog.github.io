@@ -22,7 +22,7 @@ Subscribe for regular updates via email and get early access to newsletters.
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTJ_nCEkPI9-DMx0voILUG8t2czAgns4gOWU3Fy2d-Ptqj8A/viewform?embedded=true" width="640" height="672" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
 
-No one is perfect. If you notice any mistakes in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!
+If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!
 
 *This site is hosted by Github Pages and uses [Jekyll Now](https://github.com/barryclark/jekyll-now), a Jekyll theme by Barry Clark. 
 The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home).* 
