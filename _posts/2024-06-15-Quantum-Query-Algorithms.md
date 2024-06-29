@@ -20,14 +20,18 @@ In a classical oracle (black box) model, for input $i$, we get $x_i$ as an outpu
 
 Consider the following oracle:
 
-[<img src="{{ site.baseurl}}/images/Post6/P6_1.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post6/P6_1.png" alt="" width="600" class="zoom-image">
+</div>
 
 This query maps the pair $(i, b)$ to the pair $(i, b \oplus x_i)$. Here $b \in \{ 0, 1\}$ is an arbitrary bit, which will often be 0, and $b \oplus x_i$ denotes xor of $b$ and $x_i$ (flipping $b$ if $x_i = 1$). 
 
 
 The point of defining a query this way is that it can be reversed. In fact, applying the same oracle again reverses this.
 
-[<img src="{{ site.baseurl}}/images/Post6/P6_2.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post6/P6_2.png" alt="" width="600" class="zoom-image">
+</div>
 
 As the second oracle maps $\lvert i \rangle \lvert b \oplus x_i \rangle \rightarrow \lvert i \rangle \lvert x_i \oplus b \oplus x_i\rangle = \lvert  i\rangle \lvert b \rangle$
 
@@ -83,8 +87,9 @@ $U_T U_x U_{T-1} U_x U_{T-2} U_x \dots U_x U_1 U_x U_0 \lvert \psi_{init}\rangle
 
 where $\lvert \psi_{init}\rangle$ is some fixed initial state. Note that $T$ is the number of queries the quantum algorithm makes.
 
-
-[<img src="{{ site.baseurl}}/images/Post6/P6_3.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post6/P6_3.png" alt="" width="600" class="zoom-image">
+</div>
 
 We say that a quantum query algorithm $Q$ computes Boolean function $f$ to error $\epsilon$ if $\mathcal{P}[Q(x) \not = f(x)] \leq \epsilon$ for all inputs $x$. It turns out that quantum algorithms can be amplified just like classical ones by repeating the algorithm several times and taking the majority vote on the outputs. For this reason, we will again pick $\epsilon = 1/3$ as the standard choice.
 
