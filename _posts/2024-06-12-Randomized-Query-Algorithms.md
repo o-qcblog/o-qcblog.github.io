@@ -5,6 +5,28 @@ title:  "Randomized Query Algorithms"
 categories: [Note, ComplexityTheory]
 ---
 
+<html>
+  <head>
+    <title>Randomized Query Algorithms</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Randomized Query Algorithms",
+      "datePublished": "2024-06-12T08:00:00+05:30",
+      "dateModified": "2024-06-12T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
 *Like many other models of computation, can we add the power of randomization to decision trees? Can this reduce the number of queries? How can we define randomized query complexity? This blog post answers these questions and discusses randomized query algorithm, introducing it from two different lenses.*
 
 Given that we are familiar with decision trees (if not, check out my post on [Deterministic Query Algorithms](https://o-qcblog.github.io/note/complexitytheory/Deterministic-Query-Algorithms/)), how would one incorporate randomness into this?
