@@ -30,38 +30,47 @@ layout: default
   </div>
 </article>
 
-<!-- Post 1 -->
+<!-- Google SEO -->
 
 <script type="application/ld+json">
-{ "@context": "https://schema.org", 
- "@type": "BlogPosting",
- "headline": "Pebbling a Checkerboard",
- "alternativeHeadline": "Pebbling a Checkerboard",
- "image": "https://o-qcblog.github.io/images/Post1/P1_1.png",
- "editor": "Padmapriya S", 
- "genre": "Algorithms",
- "keywords": "Dynamic programming puzzle algorithms Pebbling a Checkerboard Dasgupta solution", 
- "url": "https://o-qcblog.github.io/puzzle/algorithms/Pebbling-Checkerboard/",
- "datePublished": "2024-05-29",
- "dateCreated": "2024-05-29",
- "dateModified": "2024-05-29",
- "description": "A problem from the textbook Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.; Chapter 6, problem 6.5. I have rephrased the problem and provided an elaborate solution.",
- "articleBody": "After a long day of work, you and your friend go to a cafe. There is a checkerboard on the cafe table. Some pebbles lie around to enhance the ambience. Seeing this, your friend challenges you with a task. She is willing to bear a huge chunk of the bill depending on how well you complete the task. You, who love taking up challenges, readily agree.
- 
- The checkerboard is of dimension $4 \\times n$, and there are $2n$ pebbles at your disposal. Your friend writes an arbitrary integer on each square of the checkerboard. She challenges you to place these pebbles, one on each square, but on the condition that no two pebbles can be on horizontally or vertically adjacent squares (diagonal adjacency is fine). She is willing to pay a bill equivalent to the sum of integers written on the squares you tailed using these pebbles.</P>\n\n<P>You realise that the $n$ is too big. You are very hungry and can not afford to solve the puzzle slower than running a linear time algorithm to solve it. How can you write a clever algorithm and make a hearty meal?
-  
-  Solution</H3>\n\n<P>Let’s first look into what legal patterns that can occur in any column (in isolation, ignoring\nthe pebbles in adjacent columns).\n8 patters are possible:</P>\n\n<P>1 is leaving the blocks empty
-  
-  3 patters with 2 pebbles:
-  
-  4 patterns with 1 pebble:
-  
-  Now let us call two patterns compatible if they can be placed on adjacent columns to form a legal placement.</P>\n\n<P>A natural way of solving any big problem is to look at smaller subproblems. These smaller problem may or may not be exactly the same as the actual problem. Such an algorithmic technique which considers subproblems whose solution is used in solving the bigger problem is called <A href=\"https://o-qcblog.github.io/note/algorithms/Dynamic-Programming/\">Dynamic Programming</A>.</P>\n\n<P>Here the most intutive way of making the problem smaller is by reducing the size of the checkerboard. So, let us consider the subproblems consisting of pebbling the first $k$ columns ($1 \\leq k \\leq n$) of the checkerboard. Each subproblem can be assigned a type, which is the pattern occurring in the last column.</P>\n\n<P>Let $C_j[k] =$ optimal value achieved by pebbling columns 1 to $k$ such that the final column is type $j$ ($j \\in ${$1,2 \\dots 8$} i.e one among the above 8 patterns).</P>\n\n<P>One important step in dynamic programming or recursion is to give the base case. Here $C_j[0] = 0$ for all $j$.</P>\n\n<P>We want to maximise the sum. So we need to find maximum over all possible $j\\prime$ on the i th column, that are compatable with the $j$ in $i+1$ th column
-  
-  $C_j[i+1] =$ max {$ value ( C_{j, i+1}) + C_{j\\prime}[i] $}</P>\n\n<P>Where $value( C_{j, i+1})$ is the value of square(s) covered by $j$ in column $i+1$.</P>\n\n<P>Note that the maximum is over all $j\\prime =$ all columns compatible with $j$ and for each pattern there are only constant number of patterns compatible with it. So this running over all compatible $j\\prime =$ costs $O (1)$.</P>\n\n<P>We need to return $max_j$ $C_j[n]$. Which involves computing $C_j[i]$ for all $i$ from 1 to $n$. Therefore computing $C_j[n]$ is $O (n)$. Again max over $j$ just takes constant number of steps.</P>\n\n<P>This completes our linear time algorithm:) Now you can have a hearthy meal",
-   "author": {
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "url": "{{ site.url }}{{ page.url }}",
+  "name": {{ page.title | jsonify }},
+  "headline": {{ page.title | jsonify }},
+  "keywords": {{ page.tags | join: ',' | jsonify }},
+  "description": {{ page.excerpt | strip_newlines | strip | jsonify }},
+  "articleBody": {{ page.content | strip_html | jsonify }},
+  "datePublished": {{ page.date | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
+  "author": {
     "@type": "Person",
-    "name": "Padmapriya S"
+    "name": {{ site.author_name | jsonify }},
+    "givenName": {{ site.author_first_name | jsonify }},
+    "familyName": {{ site.author_last_name | jsonify }},
+    "email": {{ site.email | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "url": "{{ site.url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "width": 32,
+      "height": 32,
+      "url": "{{ site.url }}/icon/favicon.ico"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "width": {{ page.img_width | default: site.img_width }},
+    "height": {{ page.img_height | default: site.img_height }},
+    "url": "{{ site.url }}{{ page.img_url | default: site.img_url }}"
   }
- }
+}
 </script>
