@@ -20,15 +20,21 @@ Given a sequence of positive integers $x_1, x_2, \dots x_n$, find the longest in
 
 Consider the following example:
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_1.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post2/P2_1.png" alt="" width="600" class="zoom-image">
+</div>
 
 Here, as the size of the input is small, just by trial and error, we can see that the longest increasing subsequence is 
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_2.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post2/P2_2.png" alt="" width="600" class="zoom-image">
+</div>
 
 Here are all possible increasing subsequences:
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_3.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post2/P2_3.png" alt="" width="600" class="zoom-image">
+</div>
 
 
 <div class="hint-box info">
@@ -50,16 +56,22 @@ In our example problem, let us terminate our sequence at some point and find the
 For the first of such case (base case), i.e. when 𝑛=1
 The longest increasing subsequence ending at index 1 is the number itself. So the length is 1.
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_4.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post2/P2_4.png" alt="" width="600" class="zoom-image">
+</div>
 
 Now, we can increase the value of $n$ one by one and see the length of the longest increasing sequence. 
 For instance, when $n=i$, say 6 (at this point, we assume we have computed the length of the longest increasing subsequence ending at $x_i$ for all $i\leq 5$). 
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_5.jpg" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post2/P2_5.jpg" alt="" width="600" class="zoom-image">
+</div>
 
 How would one naturally go about finding the longest increasing subsequence ending at index 6? We have the number 6 at position 6. If our sequence should necessarily end at 6, then (as it is an increasing sequence) all numbers to the left of 6 in the sequence shoule be $x_i < 6$. So, either 3, 2 or 5 can come before 6. We want to get the longest sequence possible.
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_6.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post2/P2_6.png" alt="" width="600" class="zoom-image">
+</div>
 
 So, it makes sense to pick 3 as it has the longest subsequence ending where it is. (The subsequence being 2-3-). 
 
@@ -126,9 +138,11 @@ Thus the overall time complexity is $O(n^2)$
 
 In the above pause and ponder, I highlighted that the arrows always go from left to right, forming a DAG structure. This is not unique to this problem alone. In fact, for every dynamic programming problem, there will be an underlying DAG structure - either directly seen or hidden in disguise. This is because the core idea of dynamic programming is first solving a sub-problem and using its solution to solve the next sub-problem, thereby finally building to solving our original problem. The ith subproblem can depend only on previously solved i-1 subproblems and not on something which is not yet solved. Thus, the DAG structure arises as a natural consequence of the core idea of dynamic programming. 
 
-[<img src="{{ site.baseurl}}/images/Post2/P2_7.png" alt="" width="600" />]({{ site.baseurl}}/)
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post2/P2_7.png" alt="" width="600" class="zoom-image">
+</div>
 
-## References
+# References
 [Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani. 2006. Algorithms (1st. ed.). McGraw-Hill, Inc., USA.](https://dl.acm.org/doi/10.5555/1177299#cited-by-sec)
 
 <html>
