@@ -35,9 +35,7 @@ the pebbles in adjacent columns).
 
 1 is leaving the blocks empty:
 
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post1/P1_2.png" alt="Description" width="20" class="zoom-image">
-</div>
+<img src="{{ site.baseurl}}/images/Post1/P1_2.png" alt="Description" width="60">
 
 3 patters with 2 pebbles:
 
