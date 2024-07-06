@@ -40,19 +40,14 @@ the pebbles in adjacent columns).
 3 patters with 2 pebbles:
 
 <img src="{{ site.baseurl}}/images/Post1/P1_3.png" alt="Description" width="60">
-
 <img src="{{ site.baseurl}}/images/Post1/P1_4.png" alt="Description" width="60">
-
 <img src="{{ site.baseurl}}/images/Post1/P1_5.png" alt="Description" width="60">
 
 4 patterns with 1 pebble:
 
 <img src="{{ site.baseurl}}/images/Post1/P1_6.png" alt="Description" width="60">
-
 <img src="{{ site.baseurl}}/images/Post1/P1_7.png" alt="Description" width="60">
-
 <img src="{{ site.baseurl}}/images/Post1/P1_8.png" alt="Description" width="60">
-
 <img src="{{ site.baseurl}}/images/Post1/P1_9.png" alt="Description" width="60">
 
 Now let us call two patterns compatible if they can be placed on adjacent columns to form a legal placement.
