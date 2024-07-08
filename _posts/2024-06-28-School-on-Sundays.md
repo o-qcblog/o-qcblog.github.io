@@ -80,7 +80,7 @@ Not any arbitrary number of points and lines can satisfy these properties. The n
   </div>
   <div class="hint-box-content">
     
-  It is known that the number of lines and points is always equal for a finite projective plane (let this number be $N$). Furthermore, all lines contain the same number of points, and all points have the same number of lines incident on them. And these two numbers are equal as well! Say this number, the number of points on a line (as well as the number of lines coming from a point), is $k$. We can write $N = k^2 - k + 1$, and it is conjectured that $k-1$ has to be prime. $k-1$ is called the order of the projective plane.
+  It is known that the number of lines and points is always equal for a finite projective plane (let this number be $N$). Furthermore, all lines contain the same number of points, and all points have the same number of lines incident on them. And these two numbers are equal as well! Say this number, the number of points on a line (as well as the number of lines coming from a point), is $k$. We can write $N = k^2 - k + 1$, and it is conjectured that $k-1$ has to be prime. $k$ is called the order of the projective plane.
     
   </div>
 </div>
