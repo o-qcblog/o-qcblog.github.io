@@ -36,10 +36,10 @@
 }
 
 [data-theme="dark"] {
-    --background-color: var(--background-color-dark);
-    --text-color: var(--text-color-dark);
-    --link-color: var(--link-color-dark);
-    --heading-color: var(--heading-color-dark);
+    --background-color: #181818;
+    --text-color: #e0e0e0;
+    --link-color: #1a73e8; /* Blue color for links */
+    --heading-color: #ffffff;
 }
 
 html {
