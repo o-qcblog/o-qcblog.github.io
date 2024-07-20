@@ -5,6 +5,7 @@
 // IMPORTS
 //
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
@@ -13,14 +14,42 @@
 /* BASE RULES */
 /**************/
 
+:root {
+    --background-color-light: #f5f5f5;
+    --text-color-light: #333333;
+    --link-color-light: #1a73e8;
+    --heading-color-light: #1a1a1a;
+
+    --background-color-dark: #181818;
+    --text-color-dark: #e0e0e0;
+    --link-color-dark: #8ab4f8;
+    --heading-color-dark: #ffffff;
+
+    --font-family: 'Open Sans', sans-serif;
+}
+
+[data-theme="light"] {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --link-color: var(--link-color-light);
+    --heading-color: var(--heading-color-light);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --link-color: var(--link-color-dark);
+    --heading-color: var(--heading-color-dark);
+}
+
 html {
   font-size: 100%;
 }
 
 body {
-	background: $black;
-  font: 18px/1.4 $helvetica;
-  color: $lightGray;
+  background: var(--background-color);
+  font: 18px/1.4 var(--font-family);
+  color: var(--text-color);
 }
 
 .container {
@@ -31,10 +60,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $white;
+  font-family: var(--font-family);
+  color: var(--heading-color);
   font-weight: bold;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -61,7 +89,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $white;
+  color: var(--heading-color);
 }
 
 p {
@@ -69,11 +97,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: var(--link-color);
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: var(--link-color);
   }
 }
 
@@ -117,17 +145,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: var(--text-color-light);
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: var(--background-color);
+  background: var(--text-color);
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: var(--background-color);
+  background: var(--text-color);
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -156,7 +184,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid var(--text-color);
 
   @include mobile {
     text-align: center;
@@ -192,9 +220,9 @@ img {
 
 .site-name {
   margin: 0;
-  color: $white;
+  color: var(--heading-color);
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -202,7 +230,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $lightGray;
+  color: var(--text-color);
   font-size: 16px;
 
   @include mobile {
@@ -213,7 +241,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: var(--font-family);
   font-size: 18px;
 
   @include mobile {
@@ -225,14 +253,14 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $lightGray;
+    color: var(--text-color);
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: var(--link-color);
     }
   }
 }
@@ -243,7 +271,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .posts > .post:last-child {
@@ -254,9 +282,9 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid var(--text-color-light);
     padding: 0.1em 1em;
-    color: $gray;
+    color: var(--text-color-light);
     font-size: 22px;
     font-style: italic;
   }
@@ -275,7 +303,7 @@ nav {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: $bg_grey;
+  background-color: var(--background-color-light);
 }
 
 footer {
