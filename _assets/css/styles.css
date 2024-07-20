@@ -145,17 +145,17 @@ img {
 
 .date {
   font-style: italic;
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 // Specify the color of the selection
 ::-moz-selection {
   color: var(--background-color);
-  background: var(--text-color);
+  background: var(--link-color);
 }
 ::selection {
   color: var(--background-color);
-  background: var(--text-color);
+  background: var(--link-color);
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -282,9 +282,9 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid var(--text-color-light);
+    border-left: 2px solid var(--text-color);
     padding: 0.1em 1em;
-    color: var(--text-color-light);
+    color: var(--text-color);
     font-size: 22px;
     font-style: italic;
   }
@@ -303,7 +303,7 @@ nav {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: var(--background-color-light);
+  background-color: var(--background-color);
 }
 
 footer {
