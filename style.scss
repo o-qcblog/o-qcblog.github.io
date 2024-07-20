@@ -10,36 +10,19 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
-/**************/
-/* BASE RULES */
-/**************/
-
 :root {
-    --background-color-light: #f5f5f5;
-    --text-color-light: #333333;
-    --link-color-light: #1a73e8;
-    --heading-color-light: #1a1a1a;
-
-    --background-color-dark: #181818;
-    --text-color-dark: #e0e0e0;
-    --link-color-dark: #8ab4f8;
-    --heading-color-dark: #ffffff;
-
+    --background-color: #f5f5f5;
+    --text-color: #333333;
+    --link-color: #1a73e8;
+    --heading-color: #1a1a1a;
     --font-family: 'Open Sans', sans-serif;
 }
 
-[data-theme="light"] {
-    --background-color: var(--background-color-light);
-    --text-color: var(--text-color-light);
-    --link-color: var(--link-color-light);
-    --heading-color: var(--heading-color-light);
-}
-
 [data-theme="dark"] {
-    --background-color: var(--background-color-dark);
-    --text-color: var(--text-color-dark);
-    --link-color: var(--link-color-dark);
-    --heading-color: var(--heading-color-dark);
+    --background-color: #181818;
+    --text-color: #e0e0e0;
+    --link-color: #8ab4f8;
+    --heading-color: #ffffff;
 }
 
 html {
@@ -154,8 +137,8 @@ img {
   background: var(--text-color);
 }
 ::selection {
-  color: var(--background-color);
-  background: var(--text-color);
+  color: var (--background-color);
+  background: var (--text-color);
 }
 
 // Nicolas Gallagher's micro clearfix hack
