@@ -1,7 +1,7 @@
 ---
 Layout: post
 mathjax: true
-title:  "Randomized Query Algorithms"
+title:  "Randomized Query Complexity"
 categories: [Note, ComplexityTheory]
 ---
 
