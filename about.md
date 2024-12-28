@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
                                                         
-Hi! I am Padmapriya, an undergraduate physics student with a keen interest in theoretical computer science. As a curious learner, I love exploring the intersection of computer science, mathematics, and physics. I believe teaching and communicating ideas are the best ways to learn. As I delve into algorithms, complexity theory, quantum computing, and other exciting topics in theoretical computer science, I'll document my learnings here. This blog will serve as a repository for myself and fellow learners.
+Hi! I am Padmapriya, a master’s student embarking on an exciting journey into the world of theoretical computer science. My path began as an undergraduate in physics, where a curiosity about quantum computing opened the door to the vast field of theoretical computer science. As a passionate learner, I’m fascinated by the intersections of computer science, mathematics, and physics. I believe that the best way to truly understand a concept is to teach it and share it with others. As I delve into algorithms, complexity theory, quantum computing, and other exciting topics in theoretical computer science, I'll document my learnings here. This blog will serve as a repository for myself and fellow learners. I hope you’ll find something here that sparks your interest.
 
 Happy reading!
 
