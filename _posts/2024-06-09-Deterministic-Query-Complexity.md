@@ -1,7 +1,7 @@
 ---
 Layout: post
 mathjax: true
-title:  "Deterministic Query Algorithms"
+title:  "Deterministic Query Complexity"
 categories: [Note, ComplexityTheory]
 ---
 
