@@ -1,6 +1,6 @@
 ---
 Layout: post
-title:  "Quantum Query Algorithms"
+title:  "Quantum Query Complexity"
 categories: [Note, ComplexityTheory, QuantumComputing]
 ---
 
