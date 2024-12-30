@@ -13,5 +13,9 @@ COMING SOON...
 
 [Click here to play the game](https://5b75-122-164-82-169.ngrok-free.app/){:target="_blank"}
 
+[Click here to play the game](https://24ef-122-164-82-169.ngrok-free.app/){:target="_blank"}
+
+
+
 
 
