@@ -12,7 +12,7 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 COMING SOON...
 
 <iframe
-    src="https://o-qcblog.github.io/assets/codes/Post8_InteractiveCode1.html"
+    src="https://github.com/o-qcblog/o-qcblog.github.io/blob/master/assets/Post8_InteractiveCode1.html"
     width="100%"
     height="600"
     frameborder="0"
