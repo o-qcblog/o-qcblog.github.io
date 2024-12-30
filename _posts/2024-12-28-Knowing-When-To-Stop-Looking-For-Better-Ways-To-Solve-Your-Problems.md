@@ -12,7 +12,7 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 COMING SOON...
 
 <iframe
-    src="https://mybinder.org/v2/gh/o-qcblog/voila/main?urlpath=voila/render/Post8_InteractiveCode1.ipynb"
+    src="https://o-qcblog.github.io/assets/codes/Post8_InteractiveCode1.html"
     width="100%"
     height="600"
     frameborder="0"
