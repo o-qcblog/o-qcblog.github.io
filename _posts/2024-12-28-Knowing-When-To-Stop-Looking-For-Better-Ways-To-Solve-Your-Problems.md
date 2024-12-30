@@ -12,10 +12,11 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 COMING SOON...
 
 <iframe
-    src="https://hub.ovh2.mybinder.org/user/o-qcblog-voila-wsmr081l/voila/render/Post8_InteractiveCode1.ipynb?token=YT7HvYNFTZaTjhe8PZk18g"
+    src="https://mybinder.org/v2/gh/o-qcblog/voila/HEAD?urlpath=voila/render/Post8_InteractiveCode1.ipynb"
     width="100%"
     height="600"
     frameborder="0"
     allowfullscreen>
 </iframe>
+
 
