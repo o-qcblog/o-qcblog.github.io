@@ -11,4 +11,4 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 
 COMING SOON...
 
-[View the notebook](https://o-qcblog.github.io/assets/codes/Post8_InteractiveCode1.html)
+[View the notebook](https://o-qcblog.github.io/_assets/codes/Post8_InteractiveCode1.html)
