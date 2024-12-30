@@ -11,10 +11,9 @@ This blog offers an intuitive and engaging introduction to various lower-boundin
 
 <div class="hint-box info">
   <div class="hint-box-header">
-    <strong>For those who are not familiar with time complexity… </strong> 
-    Click to expand
+    For those who are not familiar with time complexity… (Click to expand)
   </div>
-  <div class="hint-box-content">First of all, what is fast or slow? How to quantify time when it comes to computing? There are many ways to do this, but for us, time is the number of basic operations or steps needed to get to the solution. If your problem instance grows in size intuitively, for most cases, the number of steps needed to get to the solution also increases, right? To capture this dependence, we give the number of steps to solve a problem in terms of its input size (generally denoted as n). This quantity is called the time complexity.
+  <div class="hint-box-content"> First of all, what is fast or slow? How to quantify time when it comes to computing? There are many ways to do this, but for us, time is the number of basic operations or steps needed to get to the solution. If your problem instance grows in size intuitively, for most cases, the number of steps needed to get to the solution also increases, right? To capture this dependence, we give the number of steps to solve a problem in terms of its input size (generally denoted as n). This quantity is called the time complexity.
     For the same problem, we could have a very dumb way of solving it that takes a zillion steps to get to the solution. At the same time, we might have a very clever way of solving this problem in just 10 steps. Thus, for a given problem, we can have many different algorithms with varied time complexities. 
   </div>
 </div>
