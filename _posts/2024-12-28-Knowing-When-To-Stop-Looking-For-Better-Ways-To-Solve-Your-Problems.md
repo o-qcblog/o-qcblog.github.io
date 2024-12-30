@@ -10,14 +10,3 @@ categories: [Note, ComplexityTheory]
 This blog post explores elegant lower-bounding techniques that demonstrate, for a given problem, that no matter how clever one may be, it is impossible to surpass these fundamental limits. The art of giving lower bounds...
 
 COMING SOON...
-
-<iframe
-    src="https://o-qcblog.github.io/assets/codes/Post8_InteractiveCode1.html"
-    width="100%"
-    height="600"
-    frameborder="0"
-    allowfullscreen>
-</iframe>
-
-
-
