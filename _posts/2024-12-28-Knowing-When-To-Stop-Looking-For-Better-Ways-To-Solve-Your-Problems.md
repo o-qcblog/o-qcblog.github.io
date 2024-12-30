@@ -10,12 +10,3 @@ categories: [Note, ComplexityTheory]
 This blog post explores elegant lower-bounding techniques that demonstrate, for a given problem, that no matter how clever one may be, it is impossible to surpass these fundamental limits. The art of giving lower bounds...
 
 COMING SOON...
-
-[Click here to play the game](https://5b75-122-164-82-169.ngrok-free.app/){:target="_blank"}
-
-[Click here to play the game](https://24ef-122-164-82-169.ngrok-free.app/){:target="_blank"}
-
-
-
-
-
