@@ -11,6 +11,13 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 
 COMING SOON...
 
-[Click here to play the game](https://o-qcblog.github.io/assets/codes/Post8_InteractiveCode1.html)
+<iframe
+    src="https://o-qcblog.github.io/assets/codes/Post8_InteractiveCode1.html"
+    width="100%"
+    height="600"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+
 
 
