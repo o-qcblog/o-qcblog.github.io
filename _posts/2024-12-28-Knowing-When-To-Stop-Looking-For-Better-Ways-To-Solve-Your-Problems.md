@@ -11,7 +11,7 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 
 COMING SOON...
 
-[Click here to play the game](https://0798-122-164-82-169.ngrok-free.app/){:target="_blank"}
+[Click here to play the game](https://5b75-122-164-82-169.ngrok-free.app/){:target="_blank"}
 
 
 
