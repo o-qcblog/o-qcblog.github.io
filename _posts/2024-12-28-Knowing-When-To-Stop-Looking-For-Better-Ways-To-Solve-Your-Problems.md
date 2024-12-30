@@ -12,7 +12,8 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 COMING SOON...
 
 <iframe
-    src="https://mybinder.org/v2/gh/o-qcblog/voila/HEAD?urlpath=voila/render/Post8_InteractiveCode1.ipynb"
+    src=["https://mybinder.org/v2/gh/o-qcblog/voila/HEAD?urlpath=voila/render/Post8_InteractiveCode1.ipynb"](https://mybinder.org/v2/gh/o-qcblog/voila/HEAD?urlpath=voila/render/Post8_InteractiveCode1.ipynb
+)
     width="100%"
     height="600"
     frameborder="0"
