@@ -11,12 +11,6 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 
 COMING SOON...
 
-<iframe
-    src=[Click here to view the interactive widget](https://mybinder.org/v2/gh/o-qcblog/voila/HEAD?urlpath=voila/render/Post8_InteractiveCode1.ipynb)
-    width="100%"
-    height="600"
-    frameborder="0"
-    allowfullscreen>
-</iframe>
+[Click here to play the game](https://o-qcblog.github.io/assets/codes/Post8_InteractiveCode1.html)
 
 
