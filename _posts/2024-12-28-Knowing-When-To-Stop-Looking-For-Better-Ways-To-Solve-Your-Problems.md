@@ -11,11 +11,14 @@ This blog post explores elegant lower-bounding techniques that demonstrate, for 
 
 COMING SOON...
 
+<div id="loading">Loading...</div>
 <iframe
-    src="https://github.com/o-qcblog/o-qcblog.github.io/blob/master/assets/Post8_InteractiveCode1.html"
+    src="https://mybinder.org/v2/gh/o-qcblog/voila/HEAD?urlpath=voila/render/Post8_InteractiveCode1.ipynb"
     width="100%"
     height="600"
     frameborder="0"
-    allowfullscreen>
+    allowfullscreen
+    onload="document.getElementById('loading').style.display='none';">
 </iframe>
+
 
