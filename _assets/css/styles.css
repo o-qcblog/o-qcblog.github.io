@@ -96,13 +96,21 @@ p {
   margin: 15px 0;
 }
 
+/* Added for links to come in blue */
+a[target="_blank"] {
+  color: #0000ff; /* Blue for external links */
+  text-decoration: underline; /* Optional: Make external links look distinct */
+}
+
 a {
-  color: var(--link-color);
-  text-decoration: none;
+  color: #0000ff; /* Blue color */
+  text-decoration: none; /* Optional: Remove underline */
   cursor: pointer;
   &:hover, &:active {
-    color: var(--link-color);
+    color: #1a0dab; /* Slightly darker blue on hover or active */
   }
+}
+
 }
 
 ul, ol {
@@ -253,14 +261,14 @@ nav {
 
   a {
     margin-left: 20px;
-    color: var(--text-color);
+    color: #0000ff; /* Blue color */
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: var(--link-color);
+      color: #0000ff; /* Blue color */
     }
   }
 }
