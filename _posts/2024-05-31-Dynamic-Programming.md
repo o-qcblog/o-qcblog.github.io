@@ -38,13 +38,12 @@ Here are all possible increasing subsequences:
 
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-    <strong> Pause and ponder: Do you notice any stark features of these arrows?</strong> 
-    Click to expand
-  </div>
-  <div class="hint-box-content">
-    They always go from left to right. In graph theory, such a structure is called a Directed Acyclic Graph (DAG). Notice that as the arrows always go from left to right, there are no cycles in such a graph. (No arrows go from right to left to complete a cycle.)  
-  </div>
+<div class="hint-box-header">
+<strong> Pause and ponder: Do you notice any stark features of these arrows? </strong> 
+Click to expand
+</div>
+<div class="hint-box-content"> They always go from left to right. In graph theory, such a structure is called a Directed Acyclic Graph (DAG). Notice that as the arrows always go from left to right, there are no cycles in such a graph. (No arrows go from right to left to complete a cycle.)  
+</div>
 </div>
 
 Is there a better way to solve this without trial and error? Most big problems become easy if we make the problem size small. 
@@ -80,32 +79,23 @@ Like this we can keep going and find the longest increasing subsequence ending a
 So, what should we output now?
 
 <div class="hint-box info">
-   <div class="hint-box-header">
-    <strong> Pause and ponder: Do we need to output the last computed value, i.e., the longest increasing subsequence ending at 𝑥8?</strong> (Click on the answer)
-  </div>
-
-  <div class="hint-box-content">
-    
-    <div class="hint-box.correct">
-      <div class="hint-box-header">
-        Yes!
-      </div>
-      <div class="hint-box-content">
-        Oops:( Go back and refer to the problem statement once.
-      </div>
-    </div>
-  
-    <div class="hint-box.wrong">
-      <div class="hint-box-header">
-        No
-      </div>
-      <div class="hint-box-content">
-        You are right! The question is to find the longest increasing subsequence of the given sequence and not the one ending at the last index.
-      </div>
-    </div>
-    
-  </div>
-  
+<div class="hint-box-header">
+<strong> Pause and ponder: Do we need to output the last computed value, i.e., the longest increasing subsequence ending at 𝑥8?</strong> (Click on the answer)
+</div>
+<div class="hint-box-content">
+<div class="hint-box.correct">
+<div class="hint-box-header"> Yes!
+</div>
+<div class="hint-box-content"> Oops:( Go back and refer to the problem statement once.
+</div>
+</div>
+<div class="hint-box.wrong">
+<div class="hint-box-header"> No
+</div>
+<div class="hint-box-content"> You are right! The question is to find the longest increasing subsequence of the given sequence and not the one ending at the last index.
+</div>
+</div>
+</div>
 </div>
 
 We need to output the maximum value of the longest increasing subsequence ending at $x_i$ where $i$ ranges from 1 to 8.
