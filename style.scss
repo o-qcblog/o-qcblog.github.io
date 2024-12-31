@@ -96,12 +96,18 @@ p {
   margin: 15px 0;
 }
 
+/*Added for links to be blue */
+a[target="_blank"] {
+  color: #0000ff; /* Blue for external links */
+  text-decoration: underline; /* Optional: Make external links look distinct */
+}
+
 a {
-  color: var(--link-color);
+  color: #0000ff; /* Blue for external links */
   text-decoration: none;
   cursor: pointer;
   &:hover, &:active {
-    color: var(--link-color);
+    color: #0000ff; /* Blue for external links */
   }
 }
 
@@ -220,9 +226,9 @@ img {
 
 .site-name {
   margin: 0;
-  color: var(--heading-color);
+  color: #0000ff; /* Blue for external links */
   cursor: pointer;
-  font-family: var(--font-family);
+  font-family: #0000ff; /* Blue for external links */
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
