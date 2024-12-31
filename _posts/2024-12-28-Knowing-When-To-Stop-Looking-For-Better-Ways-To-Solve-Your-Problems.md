@@ -7,7 +7,7 @@ categories: [Note, ComplexityTheory]
 
 *Given any problem, is it always possible to develop better or faster methods to solve it? Is there such a thing as the best method for solving a problem? If so, how can one determine which method is the best? And finally, when should one decide to stop searching for an even better or faster way to get to the solution?*
 
-This blog offers an intuitive and engaging introduction to various lower-bounding techniques, presented in a playful and interactive manner that anyone—even without a mathematical background—can grasp. The follow-up post will delve into the mathematics behind elegant lower-bounding techniques that demonstrate, for a given problem, that no matter how clever one may be, it is impossible to surpass these fundamental limits. The art of giving lower bounds...
+This blog offers an intuitive and engaging introduction to various lower-bounding techniques, presented in a playful and interactive manner that anyone—even without a mathematical background—can grasp. The follow-up post will delve into the mathematics behind elegant lower-bounding techniques.
 
 <div class="hint-box info">
 <div class="hint-box-header"> For those who are not familiar with time complexity… (Click to expand) 
@@ -37,7 +37,7 @@ But how much can you throw away at a step? Can you be greedy and try to get rid 
 
 For that, let's plan another game. Here, you can choose any number you want to (between 1 and 10,000). Now I (actually, the computer) will try to guess the number.
 
-[Click here to play the Guess Blocker Game](https://colab.research.google.com/drive/1aWgp8chhEYukRO7a4w37oTMuFiXAvL7F?usp=sharing){:target="_blank"}
+[Click here to play the Guess Blocker Game](https://o-qcblog.github.io/Guess-Blocker-Game/){:target="_blank"}
 
 One cunning strategy to pick a number is, to not pick at all! At every step, you can make sure to reduce the search space as little as possible and be consistent with your answers. Every time someone asks a question like “Is the number <= 70?” and hopes to get rid of all numbers below 70. Here, you can just say no and only reduce the search space by 30. You can go one like this and choose your number at the end, just making sure your answers are consistent.
 
