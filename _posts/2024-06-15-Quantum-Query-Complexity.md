@@ -9,9 +9,8 @@ categories: [Note, ComplexityTheory, QuantumComputing]
 For people familiar with quantum mechanics, you may know that the time evolution operator is unitary. When quantum states evolve, no two input states will evolve to the same output state given a particular Hamiltonian. Thus, in quantum computing, all the gates are unitary transformations. But is classical computing reversible? Are all the classical gates (NOT, AND, OR) reversible in nature? The answer is no.
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-  Note that it is reversible in the sense that, given the output, we can get the input back every single time. 
-  </div>
+<div class="hint-box-header"> Note that it is reversible in the sense that, given the output, we can get the input back every single time. 
+</div>
 </div>
 
 
@@ -36,10 +35,10 @@ The point of defining a query this way is that it can be reversed. In fact, appl
 As the second oracle maps $\lvert i \rangle \lvert b \oplus x_i \rangle \rightarrow \lvert i \rangle \lvert x_i \oplus b \oplus x_i\rangle = \lvert  i\rangle \lvert b \rangle$
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-    <strong> Extras: </strong> For more mathematically inclined readers (click to expand)
-  </div>
-  <div class="hint-box-content">
+<div class="hint-box-header"> <strong> Extras: </strong> 
+For more mathematically inclined readers (click to expand)
+</div>
+<div class="hint-box-content">
 
 <p> Note that we can then represent the map $\lvert  i\rangle \lvert b\rangle \rightarrow \lvert i\rangle \lvert b \oplus x_i \rangle$ by a matrix $U_x$, which will be a <i>permutation matrix</i>, and therefore is unitary. </p>
 
@@ -76,7 +75,7 @@ As the second oracle maps $\lvert i \rangle \lvert b \oplus x_i \rangle \rightar
 
 <p> Therefore for each block corresponding to a given i, $\delta{ c, b \oplus x_i }$ connects all and only the indices $b,c$ such that $b \oplus c = x_i$ </p>
     
-  </div>
+</div>
 </div>
 
 After each query, we would like to allow the quantum algorithm to select the following query arbitrarily. To do so, we give the algorithm a workspace of arbitrary size. That is, let $W$ be a set representing the possible basis states of the workspace. Then, the quantum algorithm will act on the [Hilbert space](https://en.wikipedia.org/wiki/Hilbert_space#:~:text=Formally%2C%20a%20Hilbert%20space%20is,point%20in%20a%20Hilbert%20space). with basis states corresponding to $W \otimes [n] \otimes \{ 0, 1\}$. In addition to this, we also have an output register. The algorithm will alternate between applying an arbitrary transformation on this state, which is independent of $x$, and applying the unitary $U_x$ implementing the query specified by the query register (the unitary $U_x$ will be extended to act as identity on the workspace register). That is, the action of the quantum algorithm on $x$ will be
