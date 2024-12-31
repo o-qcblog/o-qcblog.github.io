@@ -32,13 +32,11 @@ Another way is to define a randomized decision tree as a probability distributio
 Here, in this example, we are considering probability distribution over two deterministic trees $T_1$ and $T_2$ and the algorithm runs on input $x = 10 $
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-    <strong> Pause and ponder: These two interpretations are equivalent. Guess why?</strong> 
-    Click to expand
-  </div>
-  <div class="hint-box-content">
-    Depending on the value of the random bit, either the subtree on the left $T_1$ (say) or right $T_2$ (say) will be evaluated. If $r_1$ can be 0 or 1 with equal probability, then $T_1$ and $T_2$ can be thought of as coming from a uniform probability distribution from {$T_1$, $T_2$}. By induction, we can see this equivalence for random bits of any size.
-  </div>
+<div class="hint-box-header"> <strong> Pause and ponder: These two interpretations are equivalent. Guess why?</strong> 
+Click to expand
+</div>
+<div class="hint-box-content"> Depending on the value of the random bit, either the subtree on the left $T_1$ (say) or right $T_2$ (say) will be evaluated. If $r_1$ can be 0 or 1 with equal probability, then $T_1$ and $T_2$ can be thought of as coming from a uniform probability distribution from {$T_1$, $T_2$}. By induction, we can see this equivalence for random bits of any size.
+</div>
 </div>
 
 We say that a randomized decision tree computes $f$ with bounded-error if its output equals $f(x)$ with probability at least 2/3, for all $x \in ${0,1}$^n$. 
