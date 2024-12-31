@@ -16,13 +16,7 @@ Email: [quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
 
 ## Subscribe to My Blog!
 
-Subscribe for post related updates via email.
-
-<div class="form-container">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTJ_nCEkPI9-DMx0voILUG8t2czAgns4gOWU3Fy2d-Ptqj8A/viewform?embedded=true" width="640" height="672" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
-
----
+[Subscribe](https://docs.google.com/forms/d/e/1FAIpQLSdTJ_nCEkPI9-DMx0voILUG8t2czAgns4gOWU3Fy2d-Ptqj8A/viewform?embedded=true) for post related updates via email.
 
 If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!
 
