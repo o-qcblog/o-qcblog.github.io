@@ -23,7 +23,7 @@ Let’s start with a game. I have a number in mind (it is between 1 and 10,000),
 -	Is the number equal to x? =x
 Your task is to guess the number with the least number of questions. In particular, you win if you can find the number with just 14 questions or less. (14? By the end of this post, you will find where this number came from)
 
-[Click here to play the Number Guessing Game](https://colab.research.google.com/drive/1Fb1I63PiL3OfgLemvOG5eEtXrYf9PybF#scrollTo=V0XzR_rS-OoT){:target="_blank"}
+[Click here to play the Number Guessing Game](https://o-qcblog.github.io/Number-Guessing-Game/){:target="_blank"}
 
 If you took a moment to play the game and returned, how did it go? Were you able to win? If so, what clever strategy did you use to guess the number *efficiently*?
 
