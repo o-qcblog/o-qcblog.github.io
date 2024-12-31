@@ -375,10 +375,10 @@ footer {
 .form-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
+    height: 0; /* This ensures the height is based on padding-bottom */
     overflow: hidden;
     max-width: 100%;
-    height: auto;
+    clear: both; /* Ensure the container doesn't overlap elements below */
 }
 
 .form-container iframe {
