@@ -325,6 +325,7 @@ footer {
   border-radius: 4px;
   padding: 0;
   background-color: white; /* Ensure white background */
+  overflow: hidden;
 }
 
 .hint-box-header {
@@ -334,6 +335,7 @@ footer {
   background-color: white; /* Ensure consistent background */
   border-bottom: 1px solid #00529B; /* Seamless with content */
   color: #00529B; /* Blue text for the header */
+  overflow: hidden;
 }
 
 .hint-box-content {
@@ -344,6 +346,7 @@ footer {
   border-radius: 0 0 4px 4px; /* Rounded bottom corners */
   background-color: white; /* Ensure consistent background */
   color: #333; /* Dark text for readability */
+  overflow: hidden;
 }
 
 
