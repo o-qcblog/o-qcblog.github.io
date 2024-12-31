@@ -21,9 +21,8 @@ It seems like a monumental task! Does such a timetable exist? If so, how to make
 The quest for finding a solution to this puzzle takes us on a tour into the fascinating world of combinatorial design.
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-   Combinatorial design theory is the part of combinatorial mathematics that deals with the existence, construction, and properties of systems of finite sets whose arrangements satisfy generalized concepts of balance and/or symmetry.
-  </div>
+<div class="hint-box-header"> Combinatorial design theory is the part of combinatorial mathematics that deals with the existence, construction, and properties of systems of finite sets whose arrangements satisfy generalized concepts of balance and/or symmetry.
+</div>
 </div>
 
 Specifically, into finite projective planes…
@@ -41,15 +40,14 @@ I have put points and lines under quotation because these need not necessarily b
 So, more generally, a projective plane is a non-empty set $X$ (whose elements are called “points”), along with a non-empty collection $L$ of subsets of $X$ (whose elements are called “lines”).
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-    One example of a projective plane is an extended Euclidean plane, which is constructed from the ordinary Euclidean plane. As an exercise, try to figure out by adding what set of lines and/or points one can achieve this construction. (After thinking through, click to see how this can be done)  
-  </div>
-  <div class="hint-box-content">
+<div class="hint-box-header"> One example of a projective plane is an extended Euclidean plane, which is constructed from the ordinary Euclidean plane. As an exercise, try to figure out by adding what set of lines and/or points one can achieve this construction. (After thinking through, click to see how this can be done)  
+</div>
+<div class="hint-box-content">
 Ordinary Euclidian plane, one can turn into the projective plane (called the extended Euclidian plane) by the following procedure:
     
 1.	Consider a maximum set of mutually parallel lines. To each of such a set, associate a single new point, which is considered incident with each line in this set. These points are called points at infinity.
 2.	Now, we need to have a line passing through the points at infinity. So, introduce a new line, which is considered to be incident with all points at infinity and no other points. This is called the line at infinity.
-  </div>
+</div>
 </div>
 
 There is a geometric way of constructing an extended Euclidean plane. Each point in the Euclidean plane $\mathbb{R}^2$ can be mapped to a geometric line in $\mathbb{R}^3$ which passes through the origin, and each line in $\mathbb{R}^2$ can be mapped to geometric plane through the origin in $\mathbb{R}^3$.
@@ -75,14 +73,14 @@ Try to make a finite projective plane with 8 or 6 lines and points. Can you make
 Not any arbitrary number of points and lines can satisfy these properties. The next possible finite projective plane is known to have 13 points and 13 lines. (Yes! always the number of points and lines turn out to be same for a finite projective plane).
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-    <b> Extras! For mathematically inclined readers</b> Click to expand
-  </div>
-  <div class="hint-box-content">
+<div class="hint-box-header"> <b> Extras! For mathematically inclined readers</b> 
+Click to expand
+</div>
+<div class="hint-box-content">
     
   It is known that the number of lines and points is always equal for a finite projective plane (let this number be $N$). Furthermore, all lines contain the same number of points, and all points have the same number of lines incident on them. And these two numbers are equal as well! Say this number, the number of points on a line (as well as the number of lines coming from a point), is $k$. We can write $N = k^2 - k + 1$, and it is conjectured that $k-1$ has to be prime. $k$ is called the order of the projective plane.
     
-  </div>
+</div>
 </div>
 
 Larger projective planes become more challenging to draw. They are complex but pretty looking. You can try to pull the one with 13 lines and 13 points as a challenge. 
