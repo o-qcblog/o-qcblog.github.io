@@ -10,12 +10,10 @@ categories: [Note, ComplexityTheory]
 This blog offers an intuitive and engaging introduction to various lower-bounding techniques, presented in a playful and interactive manner that anyone—even without a mathematical background—can grasp. The follow-up post will delve into the mathematics behind elegant lower-bounding techniques that demonstrate, for a given problem, that no matter how clever one may be, it is impossible to surpass these fundamental limits. The art of giving lower bounds...
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-    For those who are not familiar with time complexity… (Click to expand)
-  </div>
-  <div class="hint-box-content"> First of all, what is fast or slow? How to quantify time when it comes to computing? There are many ways to do this, but for us, time is the number of basic operations or steps needed to get to the solution. If your problem instance grows in size intuitively, for most cases, the number of steps needed to get to the solution also increases, right? To capture this dependence, we give the number of steps to solve a problem in terms of its input size (generally denoted as n). This quantity is called the time complexity.
+<div class="hint-box-header"> For those who are not familiar with time complexity… (Click to expand) </div>
+<div class="hint-box-content"> First of all, what is fast or slow? How to quantify time when it comes to computing? There are many ways to do this, but for us, time is the number of basic operations or steps needed to get to the solution. If your problem instance grows in size intuitively, for most cases, the number of steps needed to get to the solution also increases, right? To capture this dependence, we give the number of steps to solve a problem in terms of its input size (generally denoted as n). This quantity is called the time complexity.
     For the same problem, we could have a very dumb way of solving it that takes a zillion steps to get to the solution. At the same time, we might have a very clever way of solving this problem in just 10 steps. Thus, for a given problem, we can have many different algorithms with varied time complexities. 
-  </div>
+</div>
 </div>
 
 Let’s start with a game. I have a number in mind (it is between 1 and 10,000), and you can ask me questions of the following and try to guess the number:
