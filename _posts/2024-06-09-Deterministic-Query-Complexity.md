@@ -65,14 +65,12 @@ Note that there can be multiple decision trees computing the function $f$. In th
     Here, we are taking $\min$ over only those trees $T$ that compute $f$. And $path(T,x)$ is the number of nodes from root to leaf in the path $x$ traces. 
 
 <div class="hint-box info">
-  <div class="hint-box-header">
-    <strong> Pause and ponder: Come with a decision tree computing OR function on n = 3 bits</strong> 
-    Click to expand
-  </div>
-  <div class="hint-box-content">
-      If we find 1 at any index then we can halt and output 1 (true).
-     <img src="{{ site.baseurl}}/images/Post4/P4_4.png" alt="" width="600" />({{ site.baseurl}}/)
-  </div>
+<div class="hint-box-header"> <strong> Pause and ponder: Come with a decision tree computing OR function on n = 3 bits </strong> 
+Click to expand
+</div>
+<div class="hint-box-content"> If we find 1 at any index then we can halt and output 1 (true).
+<img src="{{ site.baseurl}}/images/Post4/P4_4.png" alt="" width="600" />({{ site.baseurl}}/)
+</div>
 </div>
 
 ## References
