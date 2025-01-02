@@ -56,7 +56,7 @@ When will this tree end? Will we keep drawing the nodes forever?
 We stop when we exhaust all possible questions and find the value we are searching for. Eventually, we will converge to nodes of the form $x = b_1$, $x = b_2$ $\dots$, and $x = b_n$ if the numbers considered are between 1 and $n$. 
 
 <div class="hint-box info">
-<div class="hint-box-header"> Tree? (Click to expand)
+<div class="hint-box-header"> <b>Tree?</b> (Click to expand)
 </div>
 <div class="hint-box-content"> The structure we drew (given in the above picture) is a graph theoretical object called a <i>tree<\i>. We call these nodes as <i>vertices<\i> and these lines as <i>edges<\i>. The last nodes, those that do not have descendants, are called <i>leaves<\i>.
 
@@ -85,13 +85,12 @@ The first method we saw, where we drew out the tree and used it to compute our $
 
 <div class="hint-box info">
 <div class="hint-box-header">
-Sorting Problem (Click to see the problem statement)
+<b>Sorting Problem</b> (Click to see the problem statement)
 </div>
 <div class="hint-box-content"> Given a list of n distinct elements how many steps do you need to sort the list of elements? At every step you get to compare two elements and sort. What is the least number of steps needed to do this? And give the best strategy to do this. 
 <div class="hint-box-header"> <strong> Hint </strong> (Click to expand)
 </div>
 <div class="hint-box-content"> Think about the number of leaves here. It will be $n!$($n$ factorial). Why?
-</div>
 </div>
 </div>
 </div>
