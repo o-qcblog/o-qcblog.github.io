@@ -58,9 +58,9 @@ We stop when we exhaust all possible questions and find the value we are searchi
 <div class="hint-box info">
 <div class="hint-box-header"> <b>Tree?</b> (Click to expand)
 </div>
-<div class="hint-box-content"> The structure we drew (given in the above picture) is a graph theoretical object called a <i>tree<\i>. We call these nodes as <i>vertices<\i> and these lines as <i>edges<\i>. The last nodes, those that do not have descendants, are called <i>leaves<\i>.
+<div class="hint-box-content"> The structure we drew (given in the above picture) is a graph theoretical object called a <i>tree</i>. We call these nodes as <i>vertices</i> and these lines as <i>edges</i>. The last nodes, those that do not have descendants, are called <i>leaves</i>.
 
-The single node from which the tree starts is called the <i>root node<\i>. In this example, at every step, we divide the space into two (based on whether $x$ is less than or greater than the number). Such trees that have a root node and have at most two branches from every node are called <i>rooted binary trees<\i>.
+The single node from which the tree starts is called the <i>root node</i>. In this example, at every step, we divide the space into two (based on whether $x$ is less than or greater than the number). Such trees that have a root node and have at most two branches from every node are called <i>rooted binary trees</i>.
 </div>
 </div>
 
