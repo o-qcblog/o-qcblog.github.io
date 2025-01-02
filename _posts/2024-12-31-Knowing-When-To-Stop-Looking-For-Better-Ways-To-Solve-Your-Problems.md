@@ -72,7 +72,7 @@ Notice that, in this context, the height of the tree captures the number of ques
 
 The following Python code lets you see this pictorially. It shows that a balanced-rooted binary tree has the least height compared to any other unbalanced-rooted binary tree. The code lets you choose the number of leaves (in this context, the number $n$, i.e. search space size), and it shows both a balanced and unbalanced binary tree with their corresponding heights. It generates randomly the unbalanced tree every time.
 
-[Click to Compare the Heights of Trees](https://colab.research.google.com/drive/1bvR6vaTJt386VZffGZRxz5G92mOk73-O).
+[Click to Compare the Heights of Trees](https://colab.research.google.com/drive/1bvR6vaTJt386VZffGZRxz5G92mOk73-O?usp=sharing).
 
 If you had meddled with the above interactive code, you would notice that the height of a balanced rooted binary tree is nothing but equal to $\log_2 n$ and is always less than the height of any unbalanced rooted binary tree.  Eureka! It matches the number of steps taken by our *divide half* strategy. 
 
