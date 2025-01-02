@@ -30,11 +30,11 @@ How many steps does this take?
 
 #steps = ?
 
-$\frac{n}{2^{(# steps)}} = 1$
+$\frac{n}{2^{(\text{# steps)}}} = 1$
 
-$ \implies 2^{(# steps)} = n$
+$\implies 2^{(\text{# steps})} = n$
 
-$ \implies$ # steps $= \log_2 n$
+$\implies$ # steps $= \log_2 n$
 
 
 Thus, our divide half takes $\log_2 n$ many steps.
