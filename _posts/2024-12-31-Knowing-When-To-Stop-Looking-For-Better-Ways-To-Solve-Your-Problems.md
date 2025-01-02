@@ -24,7 +24,7 @@ All the possible strategies to play the above game come under what is called *co
 
 The *divide half* strategy is: to ask questions that rule out half the possible numbers at every step. Now, let us compute how many steps this strategy takes to get to the number. 
 
-At every step, you are ruling out half the numbers from the previous step. So, if we start with $n$ numbers (in our case, $n =10000$), at the end of step 1, we have $\frac{n}{2}$. After step 2 we have $\frac{(\frac{n}{2})}{2}, that is $\frac{n}{2^2}$. At the end of the 3rd step, $\frac{n}{2^3}$, and so on. When do we stop? Say we stop after $s$ many steps. We stop when from 100 numbers, we get to exactly 1 number. So, we want our $\frac{n}{2^s} = 1$.
+At every step, you are ruling out half the numbers from the previous step. So, if we start with $n$ numbers (in our case, $n =10000$), at the end of step 1, we have $\frac{n}{2}$. After step 2 we have $\frac{(\frac{n}{2})}{2}$, that is $\frac{n}{2^2}$. At the end of the 3rd step, $\frac{n}{2^3}$, and so on. When do we stop? Say we stop after $s$ many steps. We stop when from 100 numbers, we get to exactly 1 number. So, we want our $\frac{n}{2^s} = 1$.
 
 How many steps does this take?
 
