@@ -98,4 +98,8 @@ Sorting Problem (Click to see the problem statement)
 
 There is yet another powerful method used to give lower bounds to problems – called the *method of reductions*. Hopefully, in one of the later blog posts, I will present this powerful method as well.
 
+### Reference:
+
+[Lecture on Lower Bounds by Prof. Venkatesh Raman, IMSc](https://youtu.be/_x61AND3TUQ?si=eSF5GeD5FbFDrczH)
+
 
