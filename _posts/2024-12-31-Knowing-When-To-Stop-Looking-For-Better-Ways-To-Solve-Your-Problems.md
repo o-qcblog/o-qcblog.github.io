@@ -101,7 +101,7 @@ There is yet another powerful method used to give lower bounds to problems – c
 
 [Lecture on Lower Bounds by Prof. Venkatesh Raman, IMSc](https://youtu.be/_x61AND3TUQ?si=eSF5GeD5FbFDrczH){:target="_blank"}
 
-### Note
+### Extras:
 
 This winter, I had the honor of returning to my high school as a guest speaker for a workshop. The talk was an outcome of this blog post where I also tried to provided a overall glimpse into the world of theoretical computer science. As a small way to extend the learning, I’m happy to share the slides and worksheet I prepared for the workshop, hoping they will be helpful for anyone interested in these ideas. 
 
