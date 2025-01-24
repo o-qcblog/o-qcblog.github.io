@@ -103,7 +103,7 @@ There is yet another powerful method used to give lower bounds to problems – c
 
 ### Note
 
-This winter, I had the honor of returning to my high school as a guest speaker for a workshop.The talk was an outcome of this blog post and I also tried to provided a glimpse into the fascinating world of theoretical computer science. As a small way to extend the learning, I’m happy to share the slides and worksheet I prepared for the workshop, hoping they will be helpful for anyone interested in these ideas. 
+This winter, I had the honor of returning to my high school as a guest speaker for a workshop. The talk was an outcome of this blog post and I also tried to provided a glimpse into the fascinating world of theoretical computer science. As a small way to extend the learning, I’m happy to share the slides and worksheet I prepared for the workshop, hoping they will be helpful for anyone interested in these ideas. 
 
 Link to the [slides](https://drive.google.com/file/d/112zVbf_rURQZbrhFvlzIm7uAR9UPMAwT/view?usp=sharing) and [worksheet](https://drive.google.com/file/d/1GvxUsuwDDm5ZvnZAd8p48W8fP-COCTD8/view?usp=sharing).
 
