@@ -100,12 +100,14 @@ Now, let's revisit the key generation aided with a number-theoretic lens. Recall
 
 The decryption works as $D$ is chosen such that $ED \mod R =1 \implies ED= 1 + xR$ where $x \in \mathbb{Z}$. Hence, we have,
 
+
 $$C^D \ {\rm mod} \  N = (M^E)^D \ {\rm mod} \  N$$
 
 $$= M^{ED} \ {\rm mod} \  N = (M \ {\rm mod} \  N)(M^{xR} \ {\rm mod} \  N)$$
 
 $$= M \ {\rm mod} \  N$$
        
+
 The last line follows from the fact that $M^R \mod N = 1$ as $R$ is totient of $N$.
 
 A malicious Eve can eavesdrop on Alice and Bob's conversation and get $C$. But what guarantees that she cannot get $M$ from $C$ given the protocol $N$ and $E$?
