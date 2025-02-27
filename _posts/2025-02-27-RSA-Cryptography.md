@@ -25,9 +25,9 @@ Suppose you and your friend want to communicate. This time, both of you have two
   <img src="{{ site.baseurl}}/images/Post10/P10_1.png" alt="" width="600" class="zoom-image">
 </div>
 
-Your friend encrypts their message through the function $f$, invoking the public key $E$, and sends the encrypted message $C$ to you. You then use the function $g$ to decrypt the message with the help of your private key $D$. The functions $f$ and $g$ are released publicly as a part of the protocol. Public key cryptography works on the basis that the function $f$ is extremely difficult to invert; that is, getting the message $M$ from the chipper text $C$ is extremely hard. But this becomes easy with $D$, the private key. Thus, such protocols heavily rely on the computational hardness of a problem.
+Your friend encrypts their message through the function $f$, invoking the public key $E$, and sends the encrypted message $C$ to you. You then use the function $g$ to decrypt the message with the help of your private key $D$. The functions $f$ and $g$ are released publicly as a part of the protocol. Public key cryptography works on the basis that the function $f$ is extremely difficult to invert; that is, getting the message $M$ from the cipher text $C$ is extremely hard. But this becomes easy with $D$, the private key. Thus, such protocols heavily rely on the computational hardness of a problem.
 
-Basically, you need to pick the functions such that though the entire communication happens via a public channel, no eavesdropper should be able to invert the function to get the message from the chipper. Inverting the function should be a really hard task. At the same time, the genuine receiver should be able to invert it with ease; this should be aided by the receiver's private key.
+Basically, you need to pick the functions such that though the entire communication happens via a public channel, no eavesdropper should be able to invert the function to get the message from the cipher. Inverting the function should be a really hard task. At the same time, the genuine receiver should be able to invert it with ease; this should be aided by the receiver's private key.
 
 Now, let us understand this better by looking into the workings of RSA. RSA’s security relies on the hardness of the *discrete logarithm problem*, which we will see shortly.
 
@@ -51,7 +51,7 @@ The keys for the RSA algorithm are generated in the following way:
 
 • Determine $D$ such that $ED \mod R = 1$, that is $D = E−1 \mod R$, the modular multiplicative inverse of $E \mod R$. $D$ is the private key.
 
-You may wonder why we have such a complicated strategy to choose the public and private keys. The reason lies in the underlying number theoretic results, without which RSA wouldn’t be possible.
+You may wonder why we have such a complicated strategy to choose the public and private keys. The reason lies in the underlying number theoretical results, without which RSA wouldn’t be possible.
 
 Let us take a small detour into the interesting world of number theory to understand the RSA key generation protocol.
 
@@ -81,11 +81,11 @@ By Lagrange's theorem, we emphasize that the order of the cyclic group generated
 
 **Theorem(Fermat-Euler):** For any $a \in (\mathbb{Z} / n \mathbb{Z})^\times$, $$a^{\varphi(N)} \equiv 1 \mod{N}.$$
 
-Euler's theorem is a generalization of Fermat's little theorem (For any prime $\varphi(p)=p-1$ since there exist $p-1$ numbers co-prime to $p$ smaller than $p$, hence $a^{\varphi(p)}\mod p\equiv a^{p+1}\mod p\equiv 1\mod p$, thereby $a^p\equiv a\mod p$), which can be understood from group theoretic principles. Since the order of any element in $(\mathbb{Z} / n \mathbb{Z})^\times$ divides the order of $(\mathbb{Z} / n \mathbb{Z})^\times$, we have $a^r\equiv 1\mod N$ where $r$ divides $\varphi(N)$. Thereby we have $\varphi(N)=rk$ for some $k$, then $a^{\varphi(N)}\mod N\equiv (a^r)^k\mod N=1\mod N$.
+Euler's theorem is a generalization of Fermat's little theorem (For any prime $\varphi(p)=p-1$ since there exist $p-1$ numbers co-prime to $p$ smaller than $p$, hence $a^{\varphi(p)}\mod p\equiv a^{p+1}\mod p\equiv 1\mod p$, thereby $a^p\equiv a\mod p$), which can be understood from group theoretical principles. Since the order of any element in $(\mathbb{Z} / n \mathbb{Z})^\times$ divides the order of $(\mathbb{Z} / n \mathbb{Z})^\times$, we have $a^r\equiv 1\mod N$ where $r$ divides $\varphi(N)$. Thereby we have $\varphi(N)=rk$ for some $k$, then $a^{\varphi(N)}\mod N\equiv (a^r)^k\mod N=1\mod N$.
 
 ### Coming back to RSA
 
-Now, let's revisit the key generation aided with a number-theoretic lens. Recall that $R$ was defined as $R=(P-1)(Q-1)$ the *totient function*. Note that as $\varphi(N) = \varphi(P) \times \varphi(Q)=(P-1)(Q-1)$ since $\varphi(P)$ and $\varphi(Q)$ are $P-1$ and $Q-1$ respectively. As $P$ and $Q$ are primes, their all $P-1$ and $Q-1$ natural numbers before $P$ and $Q$ are co-prime to $P$ and $Q$, respectively. And we choose an integer $E$ as a public key, such that $1< E < R$ and $E$ is coprime with $R$. This means $E \in \varphi(R)$.
+Now, let's revisit the key generation aided with a number-theoretical lens. Recall that $R$ was defined as $R=(P-1)(Q-1)$ the *totient function*. Note that as $\varphi(N) = \varphi(P) \times \varphi(Q)=(P-1)(Q-1)$ since $\varphi(P)$ and $\varphi(Q)$ are $P-1$ and $Q-1$ respectively. As $P$ and $Q$ are primes, their all $P-1$ and $Q-1$ natural numbers before $P$ and $Q$ are co-prime to $P$ and $Q$, respectively. And we choose an integer $E$ as a public key, such that $1< E < R$ and $E$ is coprime with $R$. This means $E \in \varphi(R)$.
 
 The decryption works as $D$ is chosen such that 
 
