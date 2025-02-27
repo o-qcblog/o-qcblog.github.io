@@ -100,18 +100,17 @@ Now, let's revisit the key generation aided with a number-theoretic lens. Recall
 
 The decryption works as $D$ is chosen such that $ED \mod R =1 \implies ED= 1 + xR$ where $x \in \mathbb{Z}$. Hence, we have,
 
-$$C^D \mod N = (M^E)^D \mod N$$
+$$C^D \ {\rm mod} \  N = (M^E)^D \ {\rm mod} \  N$$
 
-$$= M^{ED} \mod N = (M \mod N)(M^{xR} \mod N)$$
+$$= M^{ED} \ {\rm mod} \  N = (M \ {\rm mod} \  N)(M^{xR} \ {\rm mod} \  N)$$
 
-$$= M \mod N$$
-    
-
+$$= M \ {\rm mod} \  N$$
+       
 The last line follows from the fact that $M^R \mod N = 1$ as $R$ is totient of $N$.
 
 A malicious Eve can eavesdrop on Alice and Bob's conversation and get $C$. But what guarantees that she cannot get $M$ from $C$ given the protocol $N$ and $E$?
 
-Classical computers can efficiently compute $D$ such that $ED \mod R = 1$, provided $R$ is known. So, the real difficulty lies in computing $R$ from $E, N$, and $C$, that is, finding the prime factors of $N$. So, the security of RSA lies in the fact that factoring is a computationally very hard problem. This is no longer true in the case of a quantum computer. In the upcoming blog post, we will delve into the quantum computing algorithm- Shor’s algorithm- that can break RSA.
+Classical computers can efficiently compute $D$ such that $ED \mod R = 1$, provided $R$ is known. So, the real difficulty lies in computing $R$ from $E, N$, and $C$, that is, finding the prime factors of $N$. So, the security of RSA lies in the fact that factoring is a computationally very hard problem. This is no longer true in the case of a quantum computer. In the upcoming blog post, we will delve into the quantum computing algorithm- [Shor’s algorithm](https://o-qcblog.github.io/note/quantumcomputing/Shors-Algorithm/)- that can break RSA.
 
 <html>
   <head>
