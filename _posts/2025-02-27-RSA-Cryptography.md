@@ -98,14 +98,16 @@ We will show that the problem of finding a non-trivial factor to $n$ can be redu
 
 Now, let's revisit the key generation aided with a number-theoretic lens. Recall that $R$ was defined as $R=(P-1)(Q-1)$ the *totient function*. Note that as $\varphi(N) = \varphi(P) \times \varphi(Q)=(P-1)(Q-1)$ since $\varphi(P)$ and $\varphi(Q)$ are $P-1$ and $Q-1$ respectively. As $P$ and $Q$ are primes, their all $P-1$ and $Q-1$ natural numbers before $P$ and $Q$ are co-prime to $P$ and $Q$, respectively. And we choose an integer $E$ as a public key, such that $1< E < R$ and $E$ is coprime with $R$. This means $E \in \varphi(R)$.
 
-The decryption works as $D$ is chosen such that $ED \mod R =1 \implies ED= 1 + xR$ where $x \in \mathbb{Z}$. Hence, we have,
+The decryption works as $D$ is chosen such that 
+
+$ED \mod R =1 \implies ED= 1 + xR$ where $x \in \mathbb{Z}$. 
+
+Hence, we have,
 
 
 $$C^D \ {\rm mod} \  N = (M^E)^D \ {\rm mod} \  N$$
 
-$$= M^{ED} \ {\rm mod} \  N = (M \ {\rm mod} \  N)(M^{xR} \ {\rm mod} \  N)$$
-
-$$= M \ {\rm mod} \  N$$
+$$= M^{ED} \ {\rm mod} \  N = (M \ {\rm mod} \  N)(M^{xR} \ {\rm mod} \  N) = M \ {\rm mod} \  N$$
        
 
 The last line follows from the fact that $M^R \mod N = 1$ as $R$ is totient of $N$.
