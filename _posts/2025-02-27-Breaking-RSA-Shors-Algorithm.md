@@ -4,6 +4,7 @@ mathjax: true
 title:  "Breaking RSA: Shor's Algorithm"
 categories: [Note, QuantumComputing]
 ---
+
 *As ingenious as RSA is, Shor’s Algorithm is equally remarkable—with the potential to break it and disrupt modern secure systems. This blog post offers a detailed and engaging introduction to Shor’s Algorithm, exploring its implications for cryptography.*
 
 **Prerequisites:** This blog post assumes the reader is familiar with basic group theory, RSA cryptography and quantum Fourier transform. For the ones who are not familiar with RSA can check out my previous blog post - [RSA Cryptography](https://o-qcblog.github.io/note/miscellaneouscomputerscience/RSA-Cryptography/). To understand quantum Fourier transform you can refer to my blog post - [Quantum Fourier Transform]().
@@ -29,9 +30,7 @@ This is enough number theory background to straight away jump into Shor's algori
 
 Shor’s algorithm consists of a classical and a quantum part.
 
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_1.png" alt="" width="600" class="zoom-image">
-</div>
+%%Photo%%
 
 #### Classical Part of Shor's Algorithm
 
@@ -61,24 +60,14 @@ Consider factoring 15:
 - Let us pick $a= 13$, as 13 is coprime with 15.
 - We need to find the order of $13^x$$\mod{15}$.
 
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_2.png" alt="" width="600" class="zoom-image">
-</div>
+%%Photo%%
 
 - Since $R$ is the smallest number such that $a^r \equiv 1 \mod{N}$, here $r=4$ since the values are periodic about $x=0,4,8,\dots$.
 - $R=4$ is even, define $x = a^{R/2}\mod{N}$ $= 13^{4/2}$$\mod{15}$ $= 13^2$$\mod{15}$ $= 4$$\mod{15}$. Therefore, $x \equiv 4$$\mod{15}$, hence $x + 1 \equiv 4 + 1$$\mod{15}$ $\equiv 5$$\mod{15}$ $\not \equiv 0$$\mod{15}$. This implies $P$ or $Q$ is in $\left\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\right\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
 
 *Why can not we implement the above algorithm completely classically?* The reason is that it becomes progressively harder to find the order (it takes exponential running time). We can see this by looking at the plot between $a^{z} \mod{N}$ and $z$. As the number $N$ grows, the period grows very quickly, and this function appears more and more aperiodic. For $N = 314191$, classical computer runs for about 2 hours in real-time computing. This order-finding part is expedited by using quantum computers.
 
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_1.png" alt="" width="200" class="zoom-image">
-</div>
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_2.png" alt="" width="200" class="zoom-image">
-</div>
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_3.png" alt="" width="200" class="zoom-image">
-</div>
+%%Photo%%
 
 Click here to get the Python code to generate the above plots for your favorite number and check for yourself how fast the run time grows as the numbers become larger.
 
@@ -99,32 +88,30 @@ We have the state $\frac{1}{N} \sum_{x=0}^{N-1} |x\rangle \otimes |f(x)\rangle$.
 $$QFT^{-1} \frac{1}{\sqrt{N}} \sum_{x=0}^{N-1} |x\rangle \otimes |f(x)\rangle = \frac{1}{\sqrt{N}} \sum_{x=0}^{N-1} (QFT^{-1} |x\rangle) \otimes |f(x)\rangle = \frac{1}{N} \sum_{x,y=0}^{N-1} e^{-\frac{2\pi i xy}{N}} |y\rangle \otimes |f(x)\rangle $$
 Measure the second register, then after applying inverse QFT, measure the first register. Depending on the value do classical processing, as mentioned in the above pseudo code for Shor's algorithm.
 
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P3_4.png" alt="" width="600" class="zoom-image">
-</div>
+%%Photo Circuit for Shor's algo%%
 
-Again let us work out an example to concretely understand the working of Shor's algorithm. Like before consider the number 15 $(\ket{1111}$ in 4 qubits representation$)$. This time we will use the circuit to factor the number. 
+Again let us work out an example to concretely understand the working of Shor's algorithm. Like before consider the number 15 $(|1111 \rangle$ in 4 qubits representation$)$. This time we will use the circuit to factor the number. 
 
-- Start with set of 2 registers at the state $\ket{0}^{\otimes4} \ket{0}^{\otimes4}$.
+- Start with set of 2 registers at the state $|0\rangle^{\otimes4} |0\rangle^{\otimes4}$.
 - Now apply Hadamard on the first set of register,
-$$ \left[ H^{\otimes4} \ket{0}^{\otimes4} \right] \ket{0}^{\otimes4} = \frac{1}{4} \left[ \ket{0} + \ket{1} + \dots + \ket{15} \right] \ket{0}^{\otimes4}$$
+$$ \left[ H^{\otimes4} |0\rangle^{\otimes4} \right] |0\rangle^{\otimes4} = \frac{1}{4} \left[ |0\rangle + |1\rangle + \dots + |15\rangle \right] |0\rangle^{\otimes4}$$
 
 - Here the numbers inside ket are in base 10 representation. In base 2, they are all possible 4 bitstrings.
-- Applying $f(x)$ on the second register $$= \frac{1}{4} \left[ \ket{0} \ket{0 \oplus 13^0\mod{15}} + \ket{0} \ket{0 \oplus 13^1\mod{15}} + \cdots \right].$$
-Note that 0 $\oplus$ (i.e. XOR) something is the number itself    $$= \frac{1}{4} [ \ket{0} \ket{1}+ \ket{1} \ket{13} + \ket{2} \ket{4}+ \ket{3} \ket{7}+$$$$\ket{4} \ket{1}+ \ket{5} \ket{13} + \ket{6} \ket{4}+ \ket{7} \ket{7}+$$$$\ket{8} \ket{1}+ \ket{9} \ket{13} + \ket{10} \ket{4}+ \ket{11} \ket{7}+$$
-$$\ket{12} \ket{1}+ \ket{13} \ket{13} + \ket{14} \ket{4}+ \ket{15} \ket{7} ]$$
-- We now measure the second register (This measurement happens before applying inverse QFT). Suppose after measuring second register, we get $\ket{7}$. Implies, we have the superposition $\frac{1}{2} \left[ \ket{3} + \ket{7} + \ket{11} + \ket{15} \right] \otimes \ket{7}$. Note the normalization, $\frac{1}{2}$, i.e., probabilities have changed.
-- Now apply inverse QFT to the first register. If we apply and compute, we will find that phases will interfere and cancel out. The only terms which will remain are $$= \frac{1}{8} \left[ 4 \ket{0} + 4i \ket{4} + 4 \ket{8} + 4i \ket{12} \right].$$
+- Applying $f(x)$ on the second register $$= \frac{1}{4} \left[ |0\rangle |0 \oplus 13^0\mod{15}\rangle + |0\rangle |0 \oplus 13^1\mod{15}\rangle + \cdots \right].$$
+Note that 0 $\oplus$ (i.e. XOR) something is the number itself    $$= \frac{1}{4} [ |0\rangle |1\rangle+ |1\rangle |13\rangle + |2\rangle |4\rangle+ |3\rangle |7\rangle+$$$$|4\rangle |1\rangle+ |5\rangle |13\rangle + |6\rangle |4\rangle+ |7\rangle |7\rangle+$$$$|8\rangle |1\rangle+ |9\rangle |13\rangle + |10\rangle |4\rangle+ |11\rangle |7\rangle+$$
+$$|12\rangle |1\rangle+ |13\rangle |13\rangle + |14\rangle |4\rangle+ |15\rangle |7\rangle ]$$
+- We now measure the second register (This measurement happens before applying inverse QFT). Suppose after measuring second register, we get $|7\rangle$. Implies, we have the superposition $\frac{1}{2} \left[ |3\rangle + |7\rangle + |11\rangle + |15\rangle \right] \otimes |7\rangle$. Note the normalization, $\frac{1}{2}$, i.e., probabilities have changed.
+- Now apply inverse QFT to the first register. If we apply and compute, we will find that phases will interfere and cancel out. The only terms which will remain are $$= \frac{1}{8} \left[ 4 |0\rangle + 4i |4\rangle + 4 |8\rangle + 4i |12\rangle \right].$$
 - The final step is to measure the first register.
-- We will get $\ket{0}, \ket{4}, \ket{8}$ or $\ket{12}$ with equal probability of $\frac{1}{4}$.
+- We will get $|0\rangle, |4\rangle, |8\rangle$ or $|12\rangle$ with equal probability of $\frac{1}{4}$.
 
 We have completed the quantum part of Shor's algorithm. After this, all that is left is doing the classical post-processing. The measurement results peak near $j \times \frac{N}{R}$ for some integer $j \in \mathbb{Z}$.  
 
 Analyzing the measurement results:
 
-- $\ket{0}$ is trivial. If we measure $\ket{0}$, restart.
-- $\ket{4}$  $j^{16/R} = 4$ One possibility (the lowest one) is $j=1$\\ Implies $R=4$ even, which is good. $x = a^{R/2}\mod{N}$ $= 13^{4/2}$$\mod{15}$ $= 13^2$$\mod{15}$ $= 4$$\mod{15}$. Therefore, $x \equiv 4$$\mod{15}$ and $x + 1 \equiv 4 + 1$$\mod{15}$ $\equiv 5$ $\mod{15}$ $\not \equiv 0$$\mod{15}$. Thereby, $P$ or $Q$ is in $\left\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\right\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
-- For $\ket{8}$ and $\ket{12}$, we get one of the factors, and the algebra works just like above.
+- $|0\rangle$ is trivial. If we measure $|0\rangle$, restart.
+- $|4\rangle$  $j^{16/R} = 4$ One possibility (the lowest one) is $j=1$\\ Implies $R=4$ even, which is good. $x = a^{R/2}\mod{N}$ $= 13^{4/2}$$\mod{15}$ $= 13^2$$\mod{15}$ $= 4$$\mod{15}$. Therefore, $x \equiv 4$$\mod{15}$ and $x + 1 \equiv 4 + 1$$\mod{15}$ $\equiv 5$ $\mod{15}$ $\not \equiv 0$$\mod{15}$. Thereby, $P$ or $Q$ is in $\left\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\right\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
+- For $|8\rangle$ and $|12\rangle$, we get one of the factors, and the algebra works just like above.
 
 **Remark:** Note that the above phase cancellations were possible because of interference which is a quantum phenomenon. This enables a drastic reduction of terms, thus giving an exponential speed-up compared to classical computers.
 
