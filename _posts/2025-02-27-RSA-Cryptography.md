@@ -83,17 +83,6 @@ By Lagrange's theorem, we emphasize that the order of the cyclic group generated
 
 Euler's theorem is a generalization of Fermat's little theorem (For any prime $\varphi(p)=p-1$ since there exist $p-1$ numbers co-prime to $p$ smaller than $p$, hence $a^{\varphi(p)}\mod p\equiv a^{p+1}\mod p\equiv 1\mod p$, thereby $a^p\equiv a\mod p$), which can be understood from group theoretic principles. Since the order of any element in $(\mathbb{Z} / n \mathbb{Z})^\times$ divides the order of $(\mathbb{Z} / n \mathbb{Z})^\times$, we have $a^r\equiv 1\mod N$ where $r$ divides $\varphi(N)$. Thereby we have $\varphi(N)=rk$ for some $k$, then $a^{\varphi(N)}\mod N\equiv (a^r)^k\mod N=1\mod N$.
 
-#### Factoring as Order finding
-
-We will show that the problem of finding a non-trivial factor to $n$ can be reduced (efficiently) to finding the order of a non-trivial element in $\mathbb{Z}/n\mathbb{Z}$.
-
-**Lemma:** Given a composite number $n$, and $x$ non-trivial square root of $1$ modulo $n$, i.e. $x^2 \equiv 1$ $\mod{N}$ but $x$ is neither $1$ nor $-1\mod{n}$, then either $\gcd(x-1, \ n)$ or $\gcd(x+1, \ n)$ is a non-trivial factor of $n$.
-\label{thm:Number Theoretic Foundations_lem1}
-
-**Proof:** Since $x^2\equiv1\mod{n}$, we have $x^2 - 1 \equiv 0\mod{n}$. Factoring, we get $(x - 1)(x + 1) \equiv 0\mod{n}$. This implies that $n$ is a factor of ($x$ + 1)($x - 1$). Since $(x \pm 1) \not\equiv 0\mod{n}$, $n$ has a non-trivial factor with $x$ + 1 or $x-1$. To find this common factor efficiently, we apply Euclid’s algorithm to get $\gcd(x-1, \ n)$ or $\gcd(x+1, \ n)$.
-
-**Example:** Let $n = 55 =5\times 11$. We find that $34$ is a square root of $1\mod n$ since $342 = 1156 = 1 + 21 \times 55$. Computing, we get $\gcd(33,\ 55) = 11$ and $\gcd(35, 55) = 5$.
-
 ### Coming back to RSA
 
 Now, let's revisit the key generation aided with a number-theoretic lens. Recall that $R$ was defined as $R=(P-1)(Q-1)$ the *totient function*. Note that as $\varphi(N) = \varphi(P) \times \varphi(Q)=(P-1)(Q-1)$ since $\varphi(P)$ and $\varphi(Q)$ are $P-1$ and $Q-1$ respectively. As $P$ and $Q$ are primes, their all $P-1$ and $Q-1$ natural numbers before $P$ and $Q$ are co-prime to $P$ and $Q$, respectively. And we choose an integer $E$ as a public key, such that $1< E < R$ and $E$ is coprime with $R$. This means $E \in \varphi(R)$.
