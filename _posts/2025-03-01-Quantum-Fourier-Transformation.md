@@ -4,7 +4,7 @@ mathjax: true
 title:  "Quantum Fourier Transformation"
 categories: [Note, QuantumComputing]
 ---
-*Can one implement Fourier transform on a quantum computer? Can this help us decompose our music into fundamental frequencies even faster? What if I say the answer to the former is 'yes' but latter is 'no'. Read this blog post to know how and why.*
+*Can one implement Fourier transform on a quantum computer? Can this help us decompose our music into fundamental frequencies even faster? What if I say the answer to the former is 'yes' but latter is 'no'. Read this blog post to know why and how.*
 
 ### QFT
 
