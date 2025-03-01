@@ -1,8 +1,8 @@
 ---
 Layout: post
 mathjax: true
-title:  "RSA Cryptography"
-categories: [Note, MiscellaneousComputerScience]
+title:  "Breaking RSA: Shor's Algorithm"
+categories: [Note, QuantumComputing]
 ---
 *As ingenious as RSA is, Shor’s Algorithm is equally remarkable—with the potential to break it and disrupt modern secure systems. This blog post offers a detailed and engaging introduction to Shor’s Algorithm, exploring its implications for cryptography.*
 
