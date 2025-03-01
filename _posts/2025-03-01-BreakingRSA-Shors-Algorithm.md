@@ -90,7 +90,7 @@ Measure the second register, then after applying inverse QFT, measure the first 
 
 Again let us work out an example to concretely understand the working of Shor's algorithm. Like before consider the number 15(1111 in 4 qubits representation). This time we will use the circuit to factor the number. 
 
-- Start with set of 2 registers at the state $$\|0\rangle^{\otimes 4} |0\rangle^{\otimes 4}$$.
+- Start with set of 2 registers at the state $$|0\rangle^{\otimes 4}|0\rangle^{\otimes 4}$$.
 - Now apply Hadamard on the first set of register,
 $$\left[ H^{\otimes4} |0\rangle^{\otimes4} \right] |0\rangle^{\otimes4} = \frac{1}{4} \left[ |0\rangle + |1\rangle + \dots + |15\rangle \right] |0\rangle^{\otimes4}$$
 
