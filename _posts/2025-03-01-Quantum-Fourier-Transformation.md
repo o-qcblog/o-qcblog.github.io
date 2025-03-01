@@ -96,7 +96,7 @@ $$R_k \equiv \begin{pmatrix} 1 & 0 \\ 0 & e^{\frac{2\pi i}{2^k}} \end{pmatrix}$$
 
 %%Photo%%
 
-Consider the state $|j_1 \dotsm j_n\rangle$ is input. Applying the Hadamard gate to the first bit produces the state 
+Consider the state $\|j_1 \dotsm j_n\rangle$ is input. Applying the Hadamard gate to the first bit produces the state 
 
 $$\frac{1}{\sqrt{2}} \left(|0\rangle + e^{2\pi i0.j_1} |1\rangle \right) |j_2 \dotsm j_n\rangle,$$
 
@@ -104,7 +104,7 @@ since $e^{2\pi i 0.j_1} = -1$ when $j_1 = 1$, and is $+1$ otherwise. Applying th
 
 $$\frac{1}{\sqrt{2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2} |1\rangle \right) |j_2 \dotsm j_n\rangle.$$
 
-We continue applying the controlled $R_3$, $R_4$ through $R_n$ gates, each of which adds an extra bit to the phase of the coefficient of the first $|1\rangle$. At the end of this procedure, we have the state, 
+We continue applying the controlled $R_3$, $R_4$ through $R_n$ gates, each of which adds an extra bit to the phase of the coefficient of the first $\|1\rangle$. At the end of this procedure, we have the state, 
 
 $$\frac{1}{\sqrt{2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) |j_2 \dotsm j_n\rangle.$$
 
