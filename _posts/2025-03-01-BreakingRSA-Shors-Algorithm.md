@@ -100,11 +100,11 @@ $$\left[ H^{\otimes4} |0\rangle^{\otimes4} \right] |0\rangle^{\otimes4} = \frac{
   
 Note that 0 $\oplus$ (i.e. XOR) something is the number itself
 
-$$= \frac{1}{4} [ |0\rangle |1\rangle+ |1\rangle |13\rangle + |2\rangle |4\rangle+ |3\rangle |7\rangle+$$
+$$= \frac{1}{4} [ |0\rangle |1\rangle+ |1\rangle |13\rangle + |2\rangle |4\rangle+ |3\rangle |7\rangle$$
 
-$$|4\rangle |1\rangle+ |5\rangle |13\rangle + |6\rangle |4\rangle+ |7\rangle |7\rangle+$$$$|8\rangle |1\rangle+ |9\rangle |13\rangle + |10\rangle |4\rangle+ |11\rangle |7\rangle+$$
+$$+|4\rangle |1\rangle+ |5\rangle |13\rangle + |6\rangle |4\rangle+ |7\rangle |7\rangle+$$$$|8\rangle |1\rangle+ |9\rangle |13\rangle + |10\rangle |4\rangle+ |11\rangle |7\rangle$$
 
-$$|12\rangle |1\rangle+ |13\rangle |13\rangle + |14\rangle |4\rangle+ |15\rangle |7\rangle ]$$
+$$+|12\rangle |1\rangle+ |13\rangle |13\rangle + |14\rangle |4\rangle+ |15\rangle |7\rangle ]$$
 
 - We now measure the second register (This measurement happens before applying inverse QFT). Suppose after measuring second register, we get 7. Implies, we have the superposition $\frac{1}{2} \left[ |3\rangle + |7\rangle + |11\rangle + |15\rangle \right] \otimes |7\rangle$. Note the normalization, $\frac{1}{2}$, i.e., probabilities have changed.
 - Now apply inverse QFT to the first register. If we apply and compute, we will find that phases will interfere and cancel out. The only terms which will remain are $$= \frac{1}{8} \left[ 4 |0\rangle + 4i |4\rangle + 4 |8\rangle + 4i |12\rangle \right].$$
@@ -115,7 +115,7 @@ We have completed the quantum part of Shor's algorithm. After this, all that is 
 
 Analyzing the measurement results:
 
-- $|0\rangle$ is trivial. If we measure $|0\rangle$, restart.
+- $\\|0\rangle$ is trivial. If we measure $\\|0\rangle$, restart.
 - $|4\rangle$  $j^{16/R} = 4$. One possibility (the lowest one) is $j=1$ implies $R=4$ even, which is good. $x = a^{R/2} \mod{N} = 13^{4/2} \mod{15} = 13^2 \mod{15} = 4\mod{15}$. Therefore, $x \equiv 4\mod{15}$ and $x + 1 \equiv 4 + 1\mod{15} \equiv 5 \mod{15} \not \equiv 0\mod{15}$. Thereby, $P$ or $Q$ is in $\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
 - For $|8\rangle$ and $|12\rangle$, we get one of the factors, and the algebra works just like above.
 
