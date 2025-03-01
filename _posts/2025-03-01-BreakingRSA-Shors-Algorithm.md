@@ -128,9 +128,17 @@ We have completed the quantum part of Shor's algorithm. After this, all that is 
 
 Analyzing the measurement results:
 
-- $\|0\rangle$ is trivial. If we measure $\\|0\rangle$, restart.
-- $|4\rangle$  $j^{16/R} = 4$. One possibility (the lowest one) is $j=1$ implies $R=4$ even, which is good. $x = a^{R/2} \mod{N} = 13^{4/2} \mod{15} = 13^2 \mod{15} = 4\mod{15}$. Therefore, $x \equiv 4\mod{15}$ and $x + 1 \equiv 4 + 1\mod{15} \equiv 5 \mod{15} \not \equiv 0\mod{15}$. Thereby, $P$ or $Q$ is in $\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
-- For $|8\rangle$ and $|12\rangle$, we get one of the factors, and the algebra works just like above.
+- $\|0\rangle$ is trivial. If we measure $\|0\rangle$, restart.
+- $\|4\rangle$  $j^{16/R} = 4$. One possibility (the lowest one) is $j=1$ implies $R=4$ even, which is good.
+
+$$x = a^{R/2} \mod{N} = 13^{4/2} \mod{15} = 13^2 \mod{15} = 4\mod{15}$$
+
+Therefore, $x \equiv 4\mod{15}$ and 
+
+$$x + 1 \equiv 4 + 1\mod{15} \equiv 5 \mod{15} \not \equiv 0\mod{15}$$
+
+Thereby, $P$ or $Q$ is in $\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
+- For $\|8\rangle$ and $\|12\rangle$, we get one of the factors, and the algebra works just like above.
 
 **Remark:** Note that the above phase cancellations were possible because of interference which is a quantum phenomenon. This enables a drastic reduction of terms, thus giving an exponential speed-up compared to classical computers.
 
