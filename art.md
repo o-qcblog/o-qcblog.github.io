@@ -8,6 +8,7 @@
 <img src="{{ site.baseurl}}/images/404.png" alt="" width="200">
 
 **Owl's friend**
+
 <img src="{{ site.baseurl}}/images/friend.jpg" alt="" width="200">
 
 **Elements**
