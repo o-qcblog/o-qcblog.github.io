@@ -73,7 +73,11 @@ $$=\frac{1}{2^{n/2}}\left[|0\rangle + e^{2\pi i0.j_n}|1\rangle) (|0\rangle + e^{
 <strong> Pause and ponder: Is there any relation between QFT and Hadamard transformation?</strong> 
 Click to expand
 </div>
-<div class="hint-box-content">Consider $$U|00\ldots 0\rangle$$, where $$U$$ is QFT 
+<div class="hint-box-content">Consider 
+  
+$$U|00\ldots 0\rangle$$
+
+where $$U$$ is QFT 
 
 $$=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j k / N}|k\rangle$$
 
