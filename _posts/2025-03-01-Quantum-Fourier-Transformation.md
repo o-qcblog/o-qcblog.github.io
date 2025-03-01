@@ -38,7 +38,7 @@ $$=\frac{1}{N} \sum_{k=0}^{N-1} \mathbb{I} \cdot 1=\frac{N}{N} \mathbb{I}=\mathb
 
 Though it is not obvious from the definition of QFT, but this transformation is a unitary transformation and thus can be implemented as the dynamics for a quantum computer. The theorem below will show this fact and also give an expression that can be easily interpreted when designing a quantum circuit for the QFT algorithm.
 
-We consider $N= 2^n, n \in \mathbb{Z}$. As earlier, the basis $\|0\rangle \dots |N-1\rangle$ is $\|0\rangle \dots \|2^n -1\rangle$ thus can be represented using $n$ bit-string. Thus, $\|j\rangle = |j_1 \dots j_n\rangle$ where $j = j_1 2^{n-1} + j_2 2^{n-2} + \dots + j_n 2^0$. Also $0.j_lj_{l+1} \dots j_m$ is binary fraction $\frac{j_l}{2} + \frac{j_l}{2^2} + \dots + \frac{j_m}{2^{m-l+1}}$.
+We consider $N= 2^n, n \in \mathbb{Z}$. As earlier, the basis $\|0\rangle \dots \|N-1\rangle$ is $\|0\rangle \dots \|2^n -1\rangle$ thus can be represented using $n$ bit-string. Thus, $\|j\rangle = \|j_1 \dots j_n\rangle$ where $j = j_1 2^{n-1} + j_2 2^{n-2} + \dots + j_n 2^0$. Also $0.j_lj_{l+1} \dots j_m$ is binary fraction $\frac{j_l}{2} + \frac{j_l}{2^2} + \dots + \frac{j_m}{2^{m-l+1}}$.
 
 One can show that 
 
