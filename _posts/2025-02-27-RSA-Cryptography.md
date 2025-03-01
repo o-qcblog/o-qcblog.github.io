@@ -105,6 +105,10 @@ A malicious Eve can eavesdrop on Alice and Bob's conversation and get $C$. But w
 
 Classical computers can efficiently compute $D$ such that $ED \mod R = 1$, provided $R$ is known. So, the real difficulty lies in computing $R$ from $E, N$, and $C$, that is, finding the prime factors of $N$. So, the security of RSA lies in the fact that factoring is a computationally very hard problem. This is no longer true in the case of a quantum computer. In the upcoming blog post, we will delve into the quantum computing algorithm- [Shor’s algorithm](https://o-qcblog.github.io/note/quantumcomputing/BreakingRSA-Shors-Algorithm/)- that can break RSA.
 
+### Reference
+
+Quantum Information and Quantum Computing. Lectures. Sreejith G. J.
+
 <html>
   <head>
     <title>RSA Cryptography</title>
