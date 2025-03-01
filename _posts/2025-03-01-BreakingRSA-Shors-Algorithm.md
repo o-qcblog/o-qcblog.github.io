@@ -90,21 +90,26 @@ Measure the second register, then after applying inverse QFT, measure the first 
 
 Again let us work out an example to concretely understand the working of Shor's algorithm. Like before consider the number 15(1111 in 4 qubits representation). This time we will use the circuit to factor the number. 
 
-- Start with set of 2 registers at the state $$|0\rangle^{\otimes4}|0\rangle^{\otimes4}$$.
+- Start with set of 2 registers (4 qubit each) all at the state 0.
 - Now apply Hadamard on the first set of register,
 $$\left[ H^{\otimes4} |0\rangle^{\otimes4} \right] |0\rangle^{\otimes4} = \frac{1}{4} \left[ |0\rangle + |1\rangle + \dots + |15\rangle \right] |0\rangle^{\otimes4}$$
 
 - Here the numbers inside ket are in base 10 representation. In base 2, they are all possible 4 bitstrings.
 - Applying $f(x)$ on the second register
   $$= \frac{1}{4} \left[ |0\rangle |0 \oplus 13^0\mod{15}\rangle + |0\rangle |0 \oplus 13^1\mod{15}\rangle + \cdots \right].$$
+  
 Note that 0 $\oplus$ (i.e. XOR) something is the number itself
+
 $$= \frac{1}{4} [ |0\rangle |1\rangle+ |1\rangle |13\rangle + |2\rangle |4\rangle+ |3\rangle |7\rangle+$$
+
 $$|4\rangle |1\rangle+ |5\rangle |13\rangle + |6\rangle |4\rangle+ |7\rangle |7\rangle+$$$$|8\rangle |1\rangle+ |9\rangle |13\rangle + |10\rangle |4\rangle+ |11\rangle |7\rangle+$$
+
 $$|12\rangle |1\rangle+ |13\rangle |13\rangle + |14\rangle |4\rangle+ |15\rangle |7\rangle ]$$
-- We now measure the second register (This measurement happens before applying inverse QFT). Suppose after measuring second register, we get $|7\rangle$. Implies, we have the superposition $\frac{1}{2} \left[ |3\rangle + |7\rangle + |11\rangle + |15\rangle \right] \otimes |7\rangle$. Note the normalization, $\frac{1}{2}$, i.e., probabilities have changed.
+
+- We now measure the second register (This measurement happens before applying inverse QFT). Suppose after measuring second register, we get 7. Implies, we have the superposition $\frac{1}{2} \left[ |3\rangle + |7\rangle + |11\rangle + |15\rangle \right] \otimes |7\rangle$. Note the normalization, $\frac{1}{2}$, i.e., probabilities have changed.
 - Now apply inverse QFT to the first register. If we apply and compute, we will find that phases will interfere and cancel out. The only terms which will remain are $$= \frac{1}{8} \left[ 4 |0\rangle + 4i |4\rangle + 4 |8\rangle + 4i |12\rangle \right].$$
 - The final step is to measure the first register.
-- We will get $|0\rangle, |4\rangle, |8\rangle$ or $|12\rangle$ with equal probability of $\frac{1}{4}$.
+- We will get $\{|0\rangle, |4\rangle, |8\rangle, |12\rangle\}$ with equal probability of $\frac{1}{4}$.
 
 We have completed the quantum part of Shor's algorithm. After this, all that is left is doing the classical post-processing. The measurement results peak near $j \times \frac{N}{R}$ for some integer $j \in \mathbb{Z}$.  
 
