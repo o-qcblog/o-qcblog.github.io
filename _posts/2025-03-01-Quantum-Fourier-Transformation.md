@@ -138,7 +138,7 @@ DFT takes $\Theta(2^{2n})$ operations on an input with $2n$ components. This is 
 
 If we multiply $W$ with a vector and count the operations, we get the result.
 
-The modified QFT expression allows you to take advantage of the fact that the Fourier transformed $|j_1,j_2,\dotsc,j_n\rangle$ is made out of $n$ tensored $2 \times 1$ vectors. So, we process each $2 \times 1$ vector independently by performing the following $n$ mappings: 
+The modified QFT expression allows you to take advantage of the fact that the Fourier transformed $\|j_1,j_2,\dotsc,j_n\rangle$ is made out of $n$ tensored $2 \times 1$ vectors. So, we process each $2 \times 1$ vector independently by performing the following $n$ mappings: 
 
 $$\frac{1}{\sqrt{2}} \begin{pmatrix} |0\rangle + |1\rangle \\ \vdots \\ |0\rangle + |1\rangle \end{pmatrix} \rightarrow \frac{1}{\sqrt{2}} \begin{pmatrix} |0\rangle + e^{2\pi i 0.j_n}|1\rangle \\ \vdots \\ |0\rangle + e^{2\pi i 0.j_1\dotsc j_n}|1\rangle \end{pmatrix}$$ 
 
@@ -146,12 +146,13 @@ Each mapping takes a constant number of operations in $n$ as it is simply multip
 
 $$R_k = \begin{pmatrix} 1 & 0 \\ 0 & e^{\frac{2\pi i}{2^k}} \end{pmatrix}$$
 
-Hence, we perform $n$ matrix-vector multiplication to process a single $|j_1\dotsc j_n\rangle$.
+Hence, we perform $n$ matrix-vector multiplication to process a single $\|j_1\dotsc j_n\rangle$.
 
-We know that an arbitrary vector $|\psi\rangle$ on $n$ qubits can be written as a linear combination of $2^n$ binary kets $|j_1,j_2,\dotsc,j_n\rangle$. For example, for $n=2$, an arbitrary state can be written as a linear combination of $2^2$ binary kets as follows: 
+We know that an arbitrary vector $\|\psi\rangle$ on $n$ qubits can be written as a linear combination of $2^n$ binary kets $\|j_1,j_2,\dotsc,j_n\rangle$. For example, for $n=2$, an arbitrary state can be written as a linear combination of $2^2$ binary kets as follows: 
 
-$$\|\psi\rangle = a|00\rangle + b|01\rangle + c|10\rangle + d|11\rangle$$ 
-Therefore, to transform $|\psi\rangle$ on $n$ qubits, we need to process $2^n$ binary vectors $|j_1,\dotsc,j_n\rangle$ by performing $n$ mappings described above. Since each such binary vector requires $n$ matrix-vector multiplications, and there are $2^n$ of them, it takes $\Theta(n2^n)$ operations.
+$$|\psi\rangle = a|00\rangle + b|01\rangle + c|10\rangle + d|11\rangle$$ 
+
+Therefore, to transform $\|\psi\rangle$ on $n$ qubits, we need to process $2^n$ binary vectors $\|j_1,\dotsc,j_n\rangle$ by performing $n$ mappings described above. Since each such binary vector requires $n$ matrix-vector multiplications, and there are $2^n$ of them, it takes $\Theta(n2^n)$ operations.
 
 
 <html>
