@@ -20,7 +20,7 @@ Email: [quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
 
 If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!
 
-*This blog would be incomplete without expressing my heartfelt gratitude to my parents and teachers. A special thanks to Nishkal Rao for consistently providing valuable feedback and helping me enhance the quality of my posts.*
+*This blog would be incomplete without expressing my heartfelt gratitude to my parents and teachers. A special thanks to [Nishkal Rao](https://github.com/nishkalrao20) for consistently providing valuable feedback and helping me enhance the quality of my posts.*
 
 *This site is hosted by Github Pages and uses [Jekyll Now](https://github.com/barryclark/jekyll-now), a Jekyll theme by Barry Clark. 
 The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home) and PowerPoint. For maths related images I use tikz in LaTeX.* 
