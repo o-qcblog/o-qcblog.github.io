@@ -8,7 +8,7 @@ categories: [Note, QuantumComputing]
 
 ### QFT
 
-Similar to DFT definition, QFT on an orthonormal basis $\|0\rangle \dots |N-1\rangle$ is defined to be a linear operator with the following action on the basis states,
+Similar to DFT definition, QFT on an orthonormal basis $\|0\rangle \dots \|N-1\rangle$ is defined to be a linear operator with the following action on the basis states,
 
 $$QFT |j\rangle = \frac{1}{\sqrt{2^n}}\sum_{k=0}^{2^n-1}e^{2\pi ijk/2^n}|k\rangle$$
 The action on an arbitrary state may be written as
