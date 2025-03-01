@@ -19,7 +19,7 @@ where $y_k$ are DFT of the amplitudes $x_j$. This expression strengthens our und
 
 <div class="hint-box info">
 <div class="hint-box-header">
-<strong> Pause and ponder: Is the above defined transformation unitary? How will you prove that?</strong> 
+<strong> Pause and ponder:</strong> Is the above defined transformation unitary? How will you prove that? 
 Click to expand
 </div>
 <div class="hint-box-content">
@@ -46,7 +46,7 @@ $$|j_1, \dotsc, j_n\rangle \xrightarrow{QFT} \frac{1}{2^{n/2}} \left[ \left( |0\
 
 <div class="hint-box info">
 <div class="hint-box-header">
-<strong> Pause and ponder: How to prove the above?</strong> 
+<strong> Pause and ponder:</strong>  How to prove the above?
 Click to expand
 </div>
 <div class="hint-box-content">
@@ -70,7 +70,7 @@ $$=\frac{1}{2^{n/2}}\left[|0\rangle + e^{2\pi i0.j_n}|1\rangle) (|0\rangle + e^{
 
 <div class="hint-box info">
 <div class="hint-box-header">
-<strong> Pause and ponder: Is there any relation between QFT and Hadamard transformation?</strong> 
+<strong> Pause and ponder:</strong>Is there any relation between QFT and Hadamard transformation? 
 Click to expand
 </div>
 <div class="hint-box-content">Consider 
@@ -154,6 +154,11 @@ $$|\psi\rangle = a|00\rangle + b|01\rangle + c|10\rangle + d|11\rangle$$
 
 Therefore, to transform $\|\psi\rangle$ on $n$ qubits, we need to process $2^n$ binary vectors $\|j_1,\dotsc,j_n\rangle$ by performing $n$ mappings described above. Since each such binary vector requires $n$ matrix-vector multiplications, and there are $2^n$ of them, it takes $\Theta(n2^n)$ operations.
 
+### References
+
+[1] [M.A. Nielsen and I.L. Chuang. Quantum computation and quantum information. Cambridge University Press, 10th Anniversary Edition, 2011.]( https://www.cse.iitk.ac.in/users/rmittal/prev_course/s23/reports/4concentration.pdf){:target="_blank"}
+
+[2] [Rajat Mittal. Quantum fourier transform. Lecture notes.](https://www.cse.iitk.ac.in/users/rmittal/prev_course/f22/course_f22.php){:target="_blank"}
 
 <html>
   <head>
