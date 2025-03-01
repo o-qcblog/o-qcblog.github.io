@@ -94,7 +94,9 @@ So, $$U|00\ldots 0\rangle =\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1}|k\rangle$$ which 
 Let the gate $R_k$ denote the unitary transformation,
 $$R_k \equiv \begin{pmatrix} 1 & 0 \\ 0 & e^{\frac{2\pi i}{2^k}} \end{pmatrix}$$
 
-%%Photo%%
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post13/P13_1.png" alt="" width="600" class="zoom-image">
+</div>
 
 Consider the state $\|j_1 \dotsm j_n\rangle$ is input. Applying the Hadamard gate to the first bit produces the state 
 
@@ -134,7 +136,9 @@ In contrast, the best classical algorithms for computing the discrete Fourier tr
 
 DFT takes $\Theta(2^{2n})$ operations on an input with $2n$ components. This is quite easy to see if we look at the $2^n \times 2^n = 2^{2n}$ matrix of DFT: 
 
-%%Photo%%
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post13/P13_2.png" alt="" width="600" class="zoom-image">
+</div>
 
 If we multiply $W$ with a vector and count the operations, we get the result.
 
