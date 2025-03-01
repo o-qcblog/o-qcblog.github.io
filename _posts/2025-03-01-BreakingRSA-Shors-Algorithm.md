@@ -70,9 +70,7 @@ Consider factoring 15:
 *Why can not we implement the above algorithm completely classically?* The reason is that it becomes progressively harder to find the order (it takes exponential running time). We can see this by looking at the plot between $a^{z} \mod{N}$ and $z$. As the number $N$ grows, the period grows very quickly, and this function appears more and more aperiodic. For $N = 314191$, classical computer runs for about 2 hours in real-time computing. This order-finding part is expedited by using quantum computers.
 
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_1.png" alt="" width="20" class="zoom-image">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_2.png" alt="" width="20" class="zoom-image">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_3.png" alt="" width="20" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/Post11/P11_3.png" alt="" width="600" class="zoom-image">
 </div>
 
 [Click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.ipynb) to get the Python code to generate the above plots for your favorite number and check for yourself how fast the run time grows as the numbers become larger. Also you can run the whole Shor's algorithm in classical computer but it will run very slow for large numbers ([click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.py) to explore). 
