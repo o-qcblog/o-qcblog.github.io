@@ -23,11 +23,11 @@ where $y_k$ are DFT of the amplitudes $x_j$. This expression strengthens our und
 Click to expand
 </div>
 <div class="hint-box-content"> 
-$$U|j\rangle=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j \cdot k / N}|k\rangle \quad$$ QFT
-
+$$U|j\rangle=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j \cdot k / N}|k\rangle \quad$$
+  
 Claim: $$U$$ is Unitary
 
-$$U^{+} U & =\frac{1}{N}\left(\sum_{k=0}^{N-1} e^{-2 \pi i j \cdot k / N}\langle k|\right)\left(\sum_{k^{\prime}$$
+$$U^{+} U=\frac{1}{N}\left(\sum_{k=0}^{N-1} e^{-2 \pi i j \cdot k / N}\langle k|\right)\left(\sum_{k^{\prime}$$
 
 $$=0}^{N^{-1}} e^{+2 \pi i j \cdot k' / N}|k'\rangle\right)$$
 
