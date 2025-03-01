@@ -22,7 +22,8 @@ where $y_k$ are DFT of the amplitudes $x_j$. This expression strengthens our und
 <strong> Pause and ponder: Is the above defined transformation unitary? How will you prove that?</strong> 
 Click to expand
 </div>
-<div class="hint-box-content"> 
+<div class="hint-box-content">
+
 $$U|j\rangle=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j \cdot k / N}|k\rangle \quad$$
   
 Claim: $$U$$ is Unitary
@@ -48,7 +49,8 @@ $$\|j_1, \dotsc, j_n\rangle \xrightarrow{QFT} \frac{1}{2^{n/2}} \left[ \left( |0
 <strong> Pause and ponder: How to prove the above?</strong> 
 Click to expand
 </div>
-<div class="hint-box-content"> 
+<div class="hint-box-content">
+
 $$QFT|j\rangle = \frac{1}{2^{n/2}} \sum_{k=0}^{2^n-1} e^{\frac{2\pi ijk}{2^n}} |k\rangle= \frac{1}{2^{n/2}}  \sum_{k_1=0}^{1} \dotsm \sum_{k_n=0}^{1} e^{\frac{2\pi ij(k_1 2^{n-1} + k_2 2^{n-2} + \dots + k_n 2^0 )}{2^n}} |k\rangle$$
 
 $$= \frac{1}{2^{n/2}}  \sum_{k_1=0}^{1} \dotsm \sum_{k_n=0}^{1} e^{2\pi ij(k_1 2^{-1} + k_2 2^{-2} + \dots + k_n 2^{-n})} |k\rangle$$
