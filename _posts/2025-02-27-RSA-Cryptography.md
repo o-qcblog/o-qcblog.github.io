@@ -103,7 +103,7 @@ The last line follows from the fact that $M^R \mod N = 1$ as $R$ is totient of $
 
 A malicious Eve can eavesdrop on Alice and Bob's conversation and get $C$. But what guarantees that she cannot get $M$ from $C$ given the protocol $N$ and $E$?
 
-Classical computers can efficiently compute $D$ such that $ED \mod R = 1$, provided $R$ is known. So, the real difficulty lies in computing $R$ from $E, N$, and $C$, that is, finding the prime factors of $N$. So, the security of RSA lies in the fact that factoring is a computationally very hard problem. This is no longer true in the case of a quantum computer. In the upcoming blog post, we will delve into the quantum computing algorithm- [Shor’s algorithm](https://o-qcblog.github.io/note/quantumcomputing/Shors-Algorithm/)- that can break RSA.
+Classical computers can efficiently compute $D$ such that $ED \mod R = 1$, provided $R$ is known. So, the real difficulty lies in computing $R$ from $E, N$, and $C$, that is, finding the prime factors of $N$. So, the security of RSA lies in the fact that factoring is a computationally very hard problem. This is no longer true in the case of a quantum computer. In the upcoming blog post, we will delve into the quantum computing algorithm- [Shor’s algorithm](https://o-qcblog.github.io/note/quantumcomputing/BreakingRSA-Shors-Algorithm/)- that can break RSA.
 
 <html>
   <head>
