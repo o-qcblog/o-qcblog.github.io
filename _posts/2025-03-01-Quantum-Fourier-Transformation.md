@@ -22,9 +22,10 @@ where $y_k$ are DFT of the amplitudes $x_j$. This expression strengthens our und
 <strong> Pause and ponder: Is the above defined transformation unitary? How will you prove that?</strong> 
 Click to expand
 </div>
-<div class="hint-box-content"> $$U|j\rangle=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j \cdot k / N}|k\rangle \quad$$ QFT
+<div class="hint-box-content"> 
+$$U|j\rangle=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j \cdot k / N}|k\rangle \quad$$ QFT
 
-Claim: $U$ is Unitary
+Claim: $$U$$ is Unitary
 
 $$U^{+} U & =\frac{1}{N}\left(\sum_{k=0}^{N-1} e^{-2 \pi i j \cdot k / N}\langle k|\right)\left(\sum_{k^{\prime}$$
 
@@ -49,7 +50,8 @@ $$\|j_1, \dotsc, j_n\rangle \xrightarrow{QFT} \frac{1}{2^{n/2}} \left[ \left( |0
 <strong> Pause and ponder: How to prove the above?</strong> 
 Click to expand
 </div>
-<div class="hint-box-content"> $$QFT|j\rangle = \frac{1}{2^{n/2}} \sum_{k=0}^{2^n-1} e^{\frac{2\pi ijk}{2^n}} |k\rangle= \frac{1}{2^{n/2}}  \sum_{k_1=0}^{1} \dotsm \sum_{k_n=0}^{1} e^{\frac{2\pi ij(k_1 2^{n-1} + k_2 2^{n-2} + \dots + k_n 2^0 )}{2^n}} |k\rangle$$
+<div class="hint-box-content"> 
+$$QFT|j\rangle = \frac{1}{2^{n/2}} \sum_{k=0}^{2^n-1} e^{\frac{2\pi ijk}{2^n}} |k\rangle= \frac{1}{2^{n/2}}  \sum_{k_1=0}^{1} \dotsm \sum_{k_n=0}^{1} e^{\frac{2\pi ij(k_1 2^{n-1} + k_2 2^{n-2} + \dots + k_n 2^0 )}{2^n}} |k\rangle$$
 
 $$= \frac{1}{2^{n/2}}  \sum_{k_1=0}^{1} \dotsm \sum_{k_n=0}^{1} e^{2\pi ij(k_1 2^{-1} + k_2 2^{-2} + \dots + k_n 2^{-n})} |k\rangle$$
 
@@ -71,15 +73,15 @@ $$=\frac{1}{2^{n/2}}\left[|0\rangle + e^{2\pi i0.j_n}|1\rangle) (|0\rangle + e^{
 <strong> Pause and ponder: Is there any relation between QFT and Hadamard transformation?</strong> 
 Click to expand
 </div>
-<div class="hint-box-content">Consider $U|00\ldots 0\rangle$, where $U$ is QFT 
+<div class="hint-box-content">Consider $$U|00\ldots 0\rangle$$, where $$U$$ is QFT 
 
 $$=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j k / N}|k\rangle$$
 
 $$=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} 1 \cdot | k\rangle$$
 
-The coefficients have become 1 as $j \cdot k=j_1 \cdot k_1+j_2 \cdot k_2 \cdots j_N \cdot k_N = 0$
+The coefficients have become 1 as $$j \cdot k=j_1 \cdot k_1+j_2 \cdot k_2 \cdots j_N \cdot k_N = 0$$
 
-So, $U|00\ldots 0\rangle =\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1}|k\rangle$ which is the equal superposition of all basis, which is nothing but Hadamard on $|00\ldots 0\rangle$.
+So, $$U|00\ldots 0\rangle =\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1}|k\rangle$$ which is the equal superposition of all basis, which is nothing but Hadamard on $$\|00\ldots 0\rangle$$.
 </div>
 </div>
 
@@ -90,13 +92,22 @@ $$R_k \equiv \begin{pmatrix} 1 & 0 \\ 0 & e^{\frac{2\pi i}{2^k}} \end{pmatrix}$$
 
 %%Photo%%
 
-Consider the state $|j_1 \dotsm j_n\rangle$ is input. Applying the Hadamard gate to the first bit produces the state $$\frac{1}{\sqrt{2}} \left(|0\rangle + e^{2\pi i0.j_1} |1\rangle \right) |j_2 \dotsm j_n\rangle,$$ since $e^{2\pi i 0.j_1} = -1$ when $j_1 = 1$, and is $+1$ otherwise. Applying the controlled $R_2$ gate produces the state, $$\frac{1}{\sqrt{2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2} |1\rangle \right) |j_2 \dotsm j_n\rangle.$$
+Consider the state $|j_1 \dotsm j_n\rangle$ is input. Applying the Hadamard gate to the first bit produces the state 
 
-We continue applying the controlled $R_3$, $R_4$ through $R_n$ gates, each of which adds an extra bit to the phase of the coefficient of the first $|1\rangle$. At the end of this procedure, we have the state, $$\frac{1}{\sqrt{2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) |j_2 \dotsm j_n\rangle.$$
+$$\frac{1}{\sqrt{2}} \left(|0\rangle + e^{2\pi i0.j_1} |1\rangle \right) |j_2 \dotsm j_n\rangle,$$
+
+since $e^{2\pi i 0.j_1} = -1$ when $j_1 = 1$, and is $+1$ otherwise. Applying the controlled $R_2$ gate produces the state, 
+
+$$\frac{1}{\sqrt{2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2} |1\rangle \right) |j_2 \dotsm j_n\rangle.$$
+
+We continue applying the controlled $R_3$, $R_4$ through $R_n$ gates, each of which adds an extra bit to the phase of the coefficient of the first $|1\rangle$. At the end of this procedure, we have the state, 
+
+$$\frac{1}{\sqrt{2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) |j_2 \dotsm j_n\rangle.$$
 
 Next, we perform a similar procedure on the second qubit. The Hadamard gate puts us in the state, 
 
-$$\frac{1}{\sqrt{2^2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) \left( |0\rangle + e^{2\pi i 0.j_2} |1\rangle \right) |j_3 \dotsm j_n\rangle,$$ 
+$$\frac{1}{\sqrt{2^2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) \left( |0\rangle + e^{2\pi i 0.j_2} |1\rangle \right) |j_3 \dotsm j_n\rangle,$$
+
 and the controlled-$R_2$ through $R_{n-1}$ gates yield the state, 
 
 $$\frac{1}{\sqrt{2^2}} \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) \left( |0\rangle + e^{2\pi i 0.j_2 \dotsm j_n} |1\rangle \right) |j_3 \dotsm j_n\rangle.$$
@@ -126,6 +137,7 @@ If we multiply $W$ with a vector and count the operations, we get the result.
 The modified QFT expression allows you to take advantage of the fact that the Fourier transformed $|j_1,j_2,\dotsc,j_n\rangle$ is made out of $n$ tensored $2 \times 1$ vectors. So, we process each $2 \times 1$ vector independently by performing the following $n$ mappings: 
 
 $$\frac{1}{\sqrt{2}} \begin{pmatrix} |0\rangle + |1\rangle \\ \vdots \\ |0\rangle + |1\rangle \end{pmatrix} \rightarrow \frac{1}{\sqrt{2}} \begin{pmatrix} |0\rangle + e^{2\pi i 0.j_n}|1\rangle \\ \vdots \\ |0\rangle + e^{2\pi i 0.j_1\dotsc j_n}|1\rangle \end{pmatrix}$$ 
+
 Each mapping takes a constant number of operations in $n$ as it is simply multiplying a $2 \times 1$ vector by a $2 \times 2$ phase matrix. 
 
 $$R_k = \begin{pmatrix} 1 & 0 \\ 0 & e^{\frac{2\pi i}{2^k}} \end{pmatrix}$$
@@ -134,7 +146,7 @@ Hence, we perform $n$ matrix-vector multiplication to process a single $|j_1\dot
 
 We know that an arbitrary vector $|\psi\rangle$ on $n$ qubits can be written as a linear combination of $2^n$ binary kets $|j_1,j_2,\dotsc,j_n\rangle$. For example, for $n=2$, an arbitrary state can be written as a linear combination of $2^2$ binary kets as follows: 
 
-$$|\psi\rangle = a|00\rangle + b|01\rangle + c|10\rangle + d|11\rangle$$ 
+$$\|\psi\rangle = a|00\rangle + b|01\rangle + c|10\rangle + d|11\rangle$$ 
 Therefore, to transform $|\psi\rangle$ on $n$ qubits, we need to process $2^n$ binary vectors $|j_1,\dotsc,j_n\rangle$ by performing $n$ mappings described above. Since each such binary vector requires $n$ matrix-vector multiplications, and there are $2^n$ of them, it takes $\Theta(n2^n)$ operations.
 
 
