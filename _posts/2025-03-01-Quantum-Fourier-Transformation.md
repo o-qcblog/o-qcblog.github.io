@@ -6,6 +6,8 @@ categories: [Note, QuantumComputing]
 ---
 *Can one implement Fourier transform on a quantum computer? Can this help us decompose our music into fundamental frequencies even faster? What if I say the answer to the former is 'yes' but latter is 'no'. Read this blog post to know why and how.*
 
+**Prerequisites:** This blog post assumes the reader is familiar with discrete Fourier transformation(DFT) and basics of quantum computing. To get an introduction into DFT check out my blog post - [Discrete Fourier Transforms](https://o-qcblog.github.io/puzzle/miscellaneousmathematics/Discrete-Fourier-Transform/). 
+
 ### QFT
 
 Similar to DFT definition, QFT on an orthonormal basis $\|0\rangle \dots \|N-1\rangle$ is defined to be a linear operator with the following action on the basis states,
