@@ -12,7 +12,7 @@ In the classical setting, when we have a periodic function—say, one that repea
 
 In practice, especially when working with digital data, we use the Discrete Fourier Transform (DFT). The DFT algorithm takes a sequence of data points (samples of our function) and computes how much of each frequency is present in the signal. When you run a DFT on a periodic function, you see peaks in the output at the frequencies where the function has a strong periodic component.
 
-Here is an illustration for $y=\sin(2\pi\mathbb{N}u x)$, whose Fourier transform DFT $\tilde{y}$ has the peak at $\mathbb{N}u$. Note that the broadening of the unique peak occurs due to the finiteness of the data size. There is a single peak since $\sin(2\pi\mathbb{N}u x)$ has the fundamental mode and no additional harmonics.
+Here is an illustration for $y=\sin(2\pi\nu x)$, whose Fourier transform DFT $\tilde{y}$ has the peak at $\nu$. Note that the broadening of the unique peak occurs due to the finiteness of the data size. There is a single peak since $\sin(2\pi\nu x)$ has the fundamental mode and no additional harmonics.
 
 <div class="image-container">
   <img src="{{ site.baseurl}}/images/Post12/P12_1.png" alt="" width="600" class="zoom-image">
