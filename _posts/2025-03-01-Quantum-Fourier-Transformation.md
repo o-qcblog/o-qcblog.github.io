@@ -27,9 +27,7 @@ $$U|j\rangle=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi i j \cdot k / N}|k\ran
   
 Claim: $$U$$ is Unitary
 
-$$U^{+} U=\frac{1}{N}\left(\sum_{k=0}^{N-1} e^{-2 \pi i j \cdot k / N}\langle k|\right)\left(\sum_{k^{\prime}$$
-
-$$=0}^{N^{-1}} e^{+2 \pi i j \cdot k' / N}|k'\rangle\right)$$
+$$U^{+} U=\frac{1}{N}\left(\sum_{k=0}^{N-1} e^{-2 \pi i j \cdot k / N}\langle k|\right)\left(\sum_{k^{\prime}=0}^{N^{-1}} e^{+2 \pi i j \cdot k' / N}|k'\rangle\right)$$
 
 $$=\frac{1}{N} \sum_{k=0}^{N-1} \sum_{k^{\prime}=0}^{N-1} e^{\frac{2 \pi i j}{N}\left(k^{\prime}-k\right) j}\left\langle k \mid k^{\prime}\right\rangle$$
 
