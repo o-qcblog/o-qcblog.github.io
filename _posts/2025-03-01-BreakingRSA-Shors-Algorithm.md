@@ -71,15 +71,11 @@ Consider factoring 15:
 
 <div class="image-container">
   <img src="{{ site.baseurl}}/images/Post11/P11_3_1.png" alt="" width="20" class="zoom-image">
-</div>
-<div class="image-container">
   <img src="{{ site.baseurl}}/images/Post11/P11_3_2.png" alt="" width="20" class="zoom-image">
-</div>
-<div class="image-container">
   <img src="{{ site.baseurl}}/images/Post11/P11_3_3.png" alt="" width="20" class="zoom-image">
 </div>
 
-Click here to get the Python code to generate the above plots for your favorite number and check for yourself how fast the run time grows as the numbers become larger.
+[Click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.ipynb) to get the Python code to generate the above plots for your favorite number and check for yourself how fast the run time grows as the numbers become larger. Also you can run the whole Shor's algorithm in classical computer but it will run very slow for large numbers ([click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.py) to explore). 
 
 So now the actual task is to find the order $r$ of some $x \in \mathbb{Z}/n\mathbb{Z}$. This is where quantum computing in the form of *quantum Fourier transform* comes into play.
 
