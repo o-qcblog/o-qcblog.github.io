@@ -82,7 +82,11 @@ Now suppose $f(x) = a^x \mod{N}$. Note that the period of $f$ is the same as the
 
 We need to apply $f$ to the contents of the first register and store the result of $f(x)$ in the second register. To do so, we can construct $f$ as a quantum function. It turns out that this is the bottleneck of the algorithm since implementing $f$ on a quantum computer requires a lot of quantum gates (for further details refer to Shor's original paper- link given in the references). Still, Shor’s algorithm is much faster than factoring on a classical computer.
 
-We have the state $\frac{1}{N} \sum_{x=0}^{N-1} |x\rangle \otimes |f(x)\rangle$. Apply the inverse QFT to the first register, and we get 
+We have the state 
+
+$$\frac{1}{N} \sum_{x=0}^{N-1} |x\rangle \otimes |f(x)\rangle$$
+
+Apply the inverse QFT to the first register, and we get 
 
 $$QFT^{-1} \frac{1}{\sqrt{N}} \sum_{x=0}^{N-1} |x\rangle \otimes |f(x)\rangle$$
 
