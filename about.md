@@ -23,6 +23,6 @@ If you notice any errors in my posts or have questions or suggestions, please fe
 *This blog would be incomplete without expressing my heartfelt gratitude to my parents and teachers. A special thanks to Nishkal Rao for consistently providing valuable feedback and helping me enhance the quality of my posts.*
 
 *This site is hosted by Github Pages and uses [Jekyll Now](https://github.com/barryclark/jekyll-now), a Jekyll theme by Barry Clark. 
-The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home) and PowerPoint.* 
+The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home) and PowerPoint. For maths related images I use tikz in LaTeX.* 
 
 *Blog started on May, 2024*
