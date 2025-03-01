@@ -42,7 +42,7 @@ We consider $N= 2^n, n \in \mathbb{Z}$. As earlier, the basis $\|0\rangle \dots 
 
 One can show that 
 
-$$\|j_1, \dotsc, j_n\rangle \xrightarrow{QFT} \frac{1}{2^{n/2}} \left[ \left( |0\rangle + e^{2\pi i 0.j_n} |1\rangle \right) \left( |0\rangle + e^{2\pi i 0.j_{n-1} j_n} |1\rangle \right) \cdots \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) \right]$$
+$$|j_1, \dotsc, j_n\rangle \xrightarrow{QFT} \frac{1}{2^{n/2}} \left[ \left( |0\rangle + e^{2\pi i 0.j_n} |1\rangle \right) \left( |0\rangle + e^{2\pi i 0.j_{n-1} j_n} |1\rangle \right) \cdots \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dotsm j_n} |1\rangle \right) \right]$$
 
 <div class="hint-box info">
 <div class="hint-box-header">
