@@ -6,13 +6,13 @@ categories: [Note, QuantumComputing]
 ---
 *As ingenious as RSA is, Shor’s Algorithm is equally remarkable—with the potential to break it and disrupt modern secure systems. This blog post offers a detailed and engaging introduction to Shor’s Algorithm, exploring its implications for cryptography.*
 
-**Prerequisites:** This blog post assumes the reader is familiar with basic group theory, RSA cryptography and quantum Fourier transform. For the ones who are not familiar with RSA can check out my previous blog post - [RSA Cryptography](https://o-qcblog.github.io/note/miscellaneouscomputerscience/RSA-Cryptography/). To understand quantum Fourier transform you can refer to my blog post - [Quantum Fourier Transform](https://o-qcblog.github.io/note/quantumcomputing/Quantum-Fourier-Transformation/).
+**Prerequisites:** This blog post assumes the reader is familiar with basic group theory, RSA cryptography and quantum Fourier transform. For the ones who are not familiar with RSA can check out my previous blog post - [RSA Cryptography](https://o-qcblog.github.io/note/miscellaneouscomputerscience/RSA-Cryptography/){:target="_blank"}. To understand quantum Fourier transform you can refer to my blog post - [Quantum Fourier Transform](https://o-qcblog.github.io/note/quantumcomputing/Quantum-Fourier-Transformation/){:target="_blank"}.
 
-In the [previous blog post](https://o-qcblog.github.io/note/miscellaneouscomputerscience/RSA-Cryptography/) we saw the power of *Public Key Cryptography* and looked into the detailed description of RSA. The success of RSA relies on the computational hardness of the *discrete logarithm problem*. More precisely we saw that the real difficulty was in factoring $N$ (a really large number) to its prime factors $P$ and $Q$. In this post we will see how this is no more a barrier when we have access to a quantum computer. The Shor's algorithm gives us the power to do this. 
+In the [previous blog post](https://o-qcblog.github.io/note/miscellaneouscomputerscience/RSA-Cryptography/){:target="_blank"} we saw the power of *Public Key Cryptography* and looked into the detailed description of RSA. The success of RSA relies on the computational hardness of the *discrete logarithm problem*. More precisely we saw that the real difficulty was in factoring $N$ (a really large number) to its prime factors $P$ and $Q$. In this post we will see how this is no more a barrier when we have access to a quantum computer. The Shor's algorithm gives us the power to do this. 
 
 One thing to note is that, Shor's algorithm does not allow us to factor a number directly. Instead, it allows us to find the order of an element $a$ modulo $n$ in polynomial time. We will see that finding a factor of $n$, given the order of some element in $\mathbb{Z}/n\mathbb{Z}$ can be done efficiently even on a classical computer, but no efficient algorithm is known for finding the order of the element.
 
-Like we did in the [previous blog post](https://o-qcblog.github.io/note/miscellaneouscomputerscience/RSA-Cryptography/) here as well we will take a detour into number theory to understand the basis of Shor's algorithm.
+Like we did in the [previous blog post](https://o-qcblog.github.io/note/miscellaneouscomputerscience/RSA-Cryptography/){:target="_blank"} here as well we will take a detour into number theory to understand the basis of Shor's algorithm.
 
 ### More on Number Theory
 
@@ -73,7 +73,7 @@ Consider factoring 15:
   <img src="{{ site.baseurl}}/images/Post11/P11_3.png" alt="" width="600" class="zoom-image">
 </div>
 
-[Click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.ipynb) to get the Python code to generate the above plots for your favorite number and check for yourself how fast the run time grows as the numbers become larger. Also you can run the whole Shor's algorithm in classical computer but it will run very slow for large numbers ([click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.py) to explore). 
+[Click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.ipynb){:target="_blank"} to get the Python code to generate the above plots for your favorite number and check for yourself how fast the run time grows as the numbers become larger. Also you can run the whole Shor's algorithm in classical computer but it will run very slow for large numbers ([click here](https://github.com/o-qcblog/o-qcblog.github.io/blob/master/_codes/Post11/ClassicalShors.py){:target="_blank"} to explore). 
 
 So now the actual task is to find the order $r$ of some $x \in \mathbb{Z}/n\mathbb{Z}$. This is where quantum computing in the form of *quantum Fourier transform* comes into play.
 
@@ -164,7 +164,7 @@ It is known that if we repeat the above algorithm $O(\log \log(n))$ times and al
 
 ### References
 
-[1] [IBM. Qiskit global summar school. Lecture.](https://www.youtube.com/watch?v=dscRoTBPeso&ab_channel=Qiskit)
+[1] [IBM. Qiskit global summar school. Lecture.](https://www.youtube.com/watch?v=dscRoTBPeso&ab_channel=Qiskit){:target="_blank"}
 
 [2] Fang Xi Lin. Shor’s algorithm and the quantum fourier transform. Lecture notes.
 
@@ -172,9 +172,9 @@ It is known that if we repeat the above algorithm $O(\log \log(n))$ times and al
 
 [4] Gary L. Miller. Riemann’s hypothesis and tests for primality. Journal of Computer and System Sciences, (300–317), 1976.
 
-[5] [Rajat Mittal. Quantum fourier transform. Lecture notes.](https://www.cse.iitk.ac.in/users/rmittal/prev_course/f22/course_f22.php)
+[5] [Rajat Mittal. Quantum fourier transform. Lecture notes.](https://www.cse.iitk.ac.in/users/rmittal/prev_course/f22/course_f22.php){:target="_blank"}
 
-[6] [M.A. Nielsen and I.L. Chuang. Quantum computation and quantum information. Cambridge University Press, 10th Anniversary Edition, 2011.]( https://www.cse.iitk.ac.in/users/rmittal/prev_course/s23/reports/4concentration.pdf)
+[6] [M.A. Nielsen and I.L. Chuang. Quantum computation and quantum information. Cambridge University Press, 10th Anniversary Edition, 2011.]( https://www.cse.iitk.ac.in/users/rmittal/prev_course/s23/reports/4concentration.pdf){:target="_blank"}
 
 [7] Schönhage and V. Strassen. Concentration inequalities. Schnelle Multiplikation grosser Zahlen, Computing, 7(281–292), 1971.
 
