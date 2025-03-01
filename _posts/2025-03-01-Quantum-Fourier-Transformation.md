@@ -17,7 +17,7 @@ The action on an arbitrary state may be written as
 
 $$\sum_{j=0}^{N-1} x_j|j\rangle = \sum_{k=0}^{N-1} y_k |k\rangle$$
 
-where $y_k$ are DFT of the amplitudes $x_j$. This expression strengthens our understanding of the basis transformation nature of the algorithm.
+where $y_k$ are DFT of the amplitudes $x_j$. This expression strengthens our understanding of the basis transformation nature of the algorithm. Notice that though the definition of DFT and QFT are similar we can not use QFT to replace DFT in classical computing. As though QFT computes the Fourier transform of $\|j\rangle$, once we measure the summation collapses to one value of k.
 
 <div class="hint-box info">
 <div class="hint-box-header">
