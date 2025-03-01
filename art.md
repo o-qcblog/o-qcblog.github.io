@@ -7,6 +7,9 @@
 <img src="{{ site.baseurl}}/images/note.png" alt="" width="200">
 <img src="{{ site.baseurl}}/images/404.png" alt="" width="200">
 
+**Owl's Friend**
+<img src="{{ site.baseurl}}/images/friend.png" alt="" width="200">
+
 **Elements**
 
 <img src="{{ site.baseurl}}/images/favicon.png" alt="" width="200">
