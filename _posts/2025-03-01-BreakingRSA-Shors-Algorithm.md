@@ -108,10 +108,21 @@ $$+|8\rangle |1\rangle+ |9\rangle |13\rangle + |10\rangle |4\rangle+ |11\rangle 
 
 $$+|12\rangle |1\rangle+ |13\rangle |13\rangle + |14\rangle |4\rangle+ |15\rangle |7\rangle ]$$
 
-- We now measure the second register (This measurement happens before applying inverse QFT). Suppose after measuring second register, we get 7. Implies, we have the superposition $$\frac{1}{2} \left[ |3\rangle + |7\rangle + |11\rangle + |15\rangle \right] \otimes |7\rangle$$. Note the normalization, $\frac{1}{2}$, i.e., probabilities have changed.
-- Now apply inverse QFT to the first register. If we apply and compute, we will find that phases will interfere and cancel out. The only terms which will remain are $$= \frac{1}{8} \left[ 4 |0\rangle + 4i |4\rangle + 4 |8\rangle + 4i |12\rangle \right].$$
+- We now measure the second register (This measurement happens before applying inverse QFT). Suppose after measuring second register, we get 7. Implies, we have the superposition
+
+$$\frac{1}{2} \left[ |3\rangle + |7\rangle + |11\rangle + |15\rangle \right] \otimes |7\rangle$$
+
+Note the normalization, $\frac{1}{2}$, i.e., probabilities have changed.
+- Now apply inverse QFT to the first register. If we apply and compute, we will find that phases will interfere and cancel out. The only terms which will remain are
+
+$$= \frac{1}{8} \left[ 4 |0\rangle + 4i |4\rangle + 4 |8\rangle + 4i |12\rangle \right].$$
+
 - The final step is to measure the first register.
-- We will get $$\{|0\rangle, |4\rangle, |8\rangle, |12\rangle\}$$ with equal probability of $\frac{1}{4}$.
+- We will get
+
+$$\{|0\rangle, |4\rangle, |8\rangle, |12\rangle\}$$ 
+
+with equal probability of $\frac{1}{4}$.
 
 We have completed the quantum part of Shor's algorithm. After this, all that is left is doing the classical post-processing. The measurement results peak near $j \times \frac{N}{R}$ for some integer $j \in \mathbb{Z}$.  
 
