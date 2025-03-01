@@ -72,7 +72,7 @@ $$=\frac{1}{2^{n/2}}\left[|0\rangle + e^{2\pi i0.j_n}|1\rangle) (|0\rangle + e^{
 
 <div class="hint-box info">
 <div class="hint-box-header">
-<strong> Pause and ponder:</strong>Is there any relation between QFT and Hadamard transformation? 
+<strong> Pause and ponder:</strong> Is there any relation between QFT and Hadamard transformation? 
 Click to expand
 </div>
 <div class="hint-box-content">Consider 
