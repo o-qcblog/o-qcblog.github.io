@@ -61,7 +61,7 @@ Consider factoring 15:
 %%Photo%%
 
 - Since $R$ is the smallest number such that $a^r \equiv 1 \mod{N}$, here $r=4$ since the values are periodic about $x=0,4,8,\dots$.
-- $R=4$ is even, define $x = a^{R/2}\mod{N}$ $= 13^{4/2}$$\mod{15}$ $= 13^2$$\mod{15}$ $= 4$$\mod{15}$. Therefore, $x \equiv 4$$\mod{15}$, hence $x + 1 \equiv 4 + 1$$\mod{15}$ $\equiv 5$$\mod{15}$ $\not \equiv 0$$\mod{15}$. This implies $P$ or $Q$ is in $\left\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\right\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
+- $R=4$ is even, define $x = a^{R/2}\mod{N}= 13^{4/2}\mod{15}= 13^2\mod{15}= 4\mod{15}$. Therefore, $x \equiv 4\mod{15}$, hence $x + 1 \equiv 4 + 1\mod{15}\equiv 5\mod{15}\not \equiv 0\mod{15}$. This implies $P$ or $Q$ is in $\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
 
 *Why can not we implement the above algorithm completely classically?* The reason is that it becomes progressively harder to find the order (it takes exponential running time). We can see this by looking at the plot between $a^{z} \mod{N}$ and $z$. As the number $N$ grows, the period grows very quickly, and this function appears more and more aperiodic. For $N = 314191$, classical computer runs for about 2 hours in real-time computing. This order-finding part is expedited by using quantum computers.
 
@@ -88,7 +88,7 @@ Measure the second register, then after applying inverse QFT, measure the first 
 
 %%Photo Circuit for Shor's algo%%
 
-Again let us work out an example to concretely understand the working of Shor's algorithm. Like before consider the number 15 $(|1111 \rangle$ in 4 qubits representation$)$. This time we will use the circuit to factor the number. 
+Again let us work out an example to concretely understand the working of Shor's algorithm. Like before consider the number 15 ($|1111 \rangle$ in 4 qubits representation). This time we will use the circuit to factor the number. 
 
 - Start with set of 2 registers at the state $|0\rangle^{\otimes4} |0\rangle^{\otimes4}$.
 - Now apply Hadamard on the first set of register,
@@ -108,7 +108,7 @@ We have completed the quantum part of Shor's algorithm. After this, all that is 
 Analyzing the measurement results:
 
 - $|0\rangle$ is trivial. If we measure $|0\rangle$, restart.
-- $|4\rangle$  $j^{16/R} = 4$. One possibility (the lowest one) is $j=1$ implies $R=4$ even, which is good. $x = a^{R/2} \mod{N} = 13^{4/2} \mod{15} = 13^2 \mod{15} = 4\mod{15}$. Therefore, $x \equiv 4\mod{15}$ and $x + 1 \equiv 4 + 1\mod{15} \equiv 5 \mod{15} \not \equiv 0\mod{15}$. Thereby, $P$ or $Q$ is in $\left\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\right\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
+- $|4\rangle$  $j^{16/R} = 4$. One possibility (the lowest one) is $j=1$ implies $R=4$ even, which is good. $x = a^{R/2} \mod{N} = 13^{4/2} \mod{15} = 13^2 \mod{15} = 4\mod{15}$. Therefore, $x \equiv 4\mod{15}$ and $x + 1 \equiv 4 + 1\mod{15} \equiv 5 \mod{15} \not \equiv 0\mod{15}$. Thereby, $P$ or $Q$ is in $\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\}$. Here $\gcd(4+1,\ 15),\ \gcd(4-1,\ 15) = 5,\ 3$. So, $P=5$ and $Q=3$.
 - For $|8\rangle$ and $|12\rangle$, we get one of the factors, and the algebra works just like above.
 
 **Remark:** Note that the above phase cancellations were possible because of interference which is a quantum phenomenon. This enables a drastic reduction of terms, thus giving an exponential speed-up compared to classical computers.
