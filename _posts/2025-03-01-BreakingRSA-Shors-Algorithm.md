@@ -180,11 +180,11 @@ It is known that if we repeat the above algorithm $O(\log \log(n))$ times and al
 
 [8] Peter W. Shor. Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. SIAM J.Sci.Statist.Comput, 1997.
 
-[9] [Notes on Shor's Algorithm. Padmapriya S and Nishkal Rao.](https://github.com/padmapriya-s1/Quantum-Computing-Notes/blob/main/Notes_ShorsAlgorithm.pdf)
+[9] [Notes on Shor's Algorithm. Padmapriya S and Nishkal Rao.](https://github.com/padmapriya-s1/Quantum-Computing-Notes/blob/main/Notes_ShorsAlgorithm.pdf){:target="_blank"}
 
 
 ### Acknowledgement 
-A sincere thanks to [Nishkal](https://github.com/nishkalrao20) for valuble discussions, contributions and constructive feedbacks.
+A sincere thanks to [Nishkal](https://github.com/nishkalrao20){:target="_blank"} for valuble discussions, contributions and constructive feedbacks.
 
 <html>
   <head>
