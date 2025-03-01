@@ -30,7 +30,7 @@ This is enough number theory background to straight away jump into Shor's algori
 Shor’s algorithm consists of a classical and a quantum part.
 
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_1.png" alt="" width="600" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/Post11/P11_1.jpg" alt="" width="600" class="zoom-image">
 </div>
 
 #### Classical Part of Shor's Algorithm
@@ -61,7 +61,7 @@ Consider factoring 15:
 - We need to find the order of $13^x$$\mod{15}$.
 
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_2.png" alt="" width="600" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/Post11/P11_2.jpg" alt="" width="600" class="zoom-image">
 </div>
 
 - Since $R$ is the smallest number such that $a^r \equiv 1 \mod{N}$, here $r=4$ since the values are periodic about $x=0,4,8,\dots$.
@@ -70,13 +70,13 @@ Consider factoring 15:
 *Why can not we implement the above algorithm completely classically?* The reason is that it becomes progressively harder to find the order (it takes exponential running time). We can see this by looking at the plot between $a^{z} \mod{N}$ and $z$. As the number $N$ grows, the period grows very quickly, and this function appears more and more aperiodic. For $N = 314191$, classical computer runs for about 2 hours in real-time computing. This order-finding part is expedited by using quantum computers.
 
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_1.png" alt="" width="200" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/Post11/P11_3_1.png" alt="" width="20" class="zoom-image">
 </div>
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_2.png" alt="" width="200" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/Post11/P11_3_2.png" alt="" width="20" class="zoom-image">
 </div>
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_3_3.png" alt="" width="200" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/Post11/P11_3_3.png" alt="" width="20" class="zoom-image">
 </div>
 
 Click here to get the Python code to generate the above plots for your favorite number and check for yourself how fast the run time grows as the numbers become larger.
@@ -109,7 +109,7 @@ $$= \frac{1}{N} \sum_{x,y=0}^{N-1} e^{-\frac{2\pi i xy}{N}} |y\rangle \otimes |f
 Measure the second register, then after applying inverse QFT, measure the first register. Depending on the value do classical processing, as mentioned in the above pseudo code for Shor's algorithm.
 
 <div class="image-container">
-  <img src="{{ site.baseurl}}/images/Post11/P11_4.png" alt="" width="600" class="zoom-image">
+  <img src="{{ site.baseurl}}/images/Post11/P11_4.jpg" alt="" width="600" class="zoom-image">
 </div>
 
 Again let us work out an example to concretely understand the working of Shor's algorithm. Like before consider the number 15(1111 in 4 qubits representation). This time we will use the circuit to factor the number. 
