@@ -85,7 +85,7 @@ $$=\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} 1 \cdot | k\rangle$$
 
 The coefficients have become 1 as $$j \cdot k=j_1 \cdot k_1+j_2 \cdot k_2 \cdots j_N \cdot k_N = 0$$
 
-So, $$U|00\ldots 0\rangle =\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1}|k\rangle$$ which is the equal superposition of all basis, which is nothing but Hadamard on $$\|00\ldots 0\rangle$$.
+So, $$U|00\ldots 0\rangle =\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1}|k\rangle$$ which is the equal superposition of all basis, which is nothing but Hadamard on $$|00\ldots 0\rangle$$.
 </div>
 </div>
 
