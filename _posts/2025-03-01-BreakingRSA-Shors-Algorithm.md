@@ -54,7 +54,7 @@ From the above number theory background we note that, given a composite number $
 
 If both the above fails, then either $x-1$ or $x+1$ is a multiple of $Q$ and $P$, where $N=QP$. Thus finding $\{\gcd(x+1, N), \ \gcd(x-1, N)\}$ gives $P$ and $Q$.
 
-Let is see an example, to kept it really simple say $N=15$ (Note that in reality RSA uses really huge primes. Here we take 25 just for illustration purpose.)
+Let us see an example, to kept it really simple say $N=15$ (Note that in reality RSA uses really huge primes. Here we take 25 just for illustration purpose.)
 
 Consider factoring 15:
 - Let us pick $a= 13$, as 13 is coprime with 15.
@@ -160,7 +160,7 @@ Thereby, $P$ or $Q$ is in $\{\gcd(x + 1, \ N),\ \gcd(x - 1,\ N)\}$. Here $\gcd(4
 
 **Remark:** Note that the above phase cancellations were possible because of interference which is a quantum phenomenon. This enables a drastic reduction of terms, thus giving an exponential speed-up compared to classical computers.
 
-It is known that if we repeat the above algorithm $O(\log \log(n))$ times and almost guarantee that we find $R$ (this non-trivial calculation can be found out in great detail in the textbook by Nielsen Chuang - link given in the reference).
+It is known that if we repeat the above algorithm $O(\log \log(n))$ times it is almost guarantee that we find $R$ (this non-trivial calculation can be found out in great detail in the textbook by Nielsen Chuang - link given in the reference).
 
 ### References
 
