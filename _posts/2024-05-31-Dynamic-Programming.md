@@ -126,7 +126,7 @@ Thus the overall time complexity is $O(n^2)$
 
 <div class="hint-box info">
 <div class="hint-box-header">
-<strong> Pause and ponder:</strong> Can you think of a finer analysis that give linear time in number of vertices and edges? 
+<strong> Pause and ponder:</strong> Can you think of a finer analysis that gives linear time in number of vertices and edges? 
 Click to expand
 </div>
 <div class="hint-box-content"> Note that the at every vertex $j$ max goes over the left neighbours of $j$, which is at max degree of $j$. Thus sum over the degrees of vertices gives 2 X number of edges (by handshaking lemma). Thus the over all time complexity is $O(n+m)$.
