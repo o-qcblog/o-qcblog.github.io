@@ -124,6 +124,17 @@ In the above pseudo-code, $j$ goes over all n, and the $max_i$ goes over all $i$
 
 Thus the overall time complexity is $O(n^2)$ 
 
+<div class="hint-box info">
+<div class="hint-box-header">
+<strong> Pause and ponder:</strong> Can you think of a finer analysis that give linear time in number of vertices and edges? 
+Click to expand
+</div>
+<div class="hint-box-content"> Note that the at every vertex $j$ max goes over the left neighbours of $j$, which is at max degree of $j$. Thus sum over the degrees of vertices gives 2 X number of edges (by handshaking lemma). Thus the over all time complexity is $O(n+m)$.
+
+Also note here the graph is directed, so it is not straight forward to talk about left neighbours of $j$. One can show that in linear time we can construct the adjacency list of the reverse graph. As an exercise think how this can be done?
+</div>
+</div>
+
 ### DAG structure
 
 In the above pause and ponder, I highlighted that the arrows always go from left to right, forming a DAG structure. This is not unique to this problem alone. In fact, for every dynamic programming problem, there will be an underlying DAG structure - either directly seen or hidden in disguise. This is because the core idea of dynamic programming is first solving a sub-problem and using its solution to solve the next sub-problem, thereby finally building to solving our original problem. The ith subproblem can depend only on previously solved i-1 subproblems and not on something which is not yet solved. Thus, the DAG structure arises as a natural consequence of the core idea of dynamic programming. 
