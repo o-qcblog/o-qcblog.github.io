@@ -16,11 +16,8 @@ Padmapriya S
 
 [Website](https://padmapriya-s1.github.io/){:target="_blank"}
 
-## Subscribe to My Blog!
 
-[Subscribe](https://docs.google.com/forms/d/e/1FAIpQLSdTJ_nCEkPI9-DMx0voILUG8t2czAgns4gOWU3Fy2d-Ptqj8A/viewform?embedded=true){:target="_blank"} for post related updates via email.
-
-If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!
+*If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!*
 
 *This blog would be incomplete without expressing my heartfelt gratitude to my parents and teachers. A special thanks to [Nishkal Rao](https://github.com/nishkalrao20){:target="_blank"} for consistently providing valuable feedback and helping me enhance the quality of my posts.*
 
