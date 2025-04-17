@@ -14,7 +14,7 @@ Padmapriya S
 
 [quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
 
-[Website](https://padmapriya-s1.github.io/){:target="_blank"}
+<!--[Website](https://padmapriya-s1.github.io/){:target="_blank"}-->
 
 
 *If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!*
