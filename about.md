@@ -12,7 +12,7 @@ Happy reading!
 
 Padmapriya S
 
-[quantaoncomputing@gmail.com](mailto:quantaoncomputing@gmail.com)
+quantaoncomputing [AT] gmail [DOT] com
 
 <!--[Website](https://padmapriya-s1.github.io/){:target="_blank"}-->
 
