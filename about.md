@@ -12,9 +12,10 @@ Happy reading!
 
 Padmapriya S
 
-quantaoncomputing [AT] gmail [DOT] com
+Email: quantaoncomputing [AT] gmail [DOT] com
 
-<!--[Website](https://padmapriya-s1.github.io/){:target="_blank"}-->
+Website: [https://padmapriya-s1.github.io/](https://padmapriya-s1.github.io/){:target="_blank"}
+
 
 
 *If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!*
