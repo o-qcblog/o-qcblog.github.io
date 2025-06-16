@@ -26,3 +26,28 @@ Website: [https://padmapriya-s1.github.io/](https://padmapriya-s1.github.io/){:t
 The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home){:target="_blank"} and PowerPoint. For maths related images I use tikz in LaTeX.* 
 
 *Blog started on May, 2024*
+
+<html>
+  <head>
+    <title>About: Padmapriya S</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "About: Padmapriya S",
+      "image": [
+        "{{ site.baseurl}}/images/logo.png"
+       ],
+      "datePublished": "2024-05-31T08:00:00+05:30",
+      "dateModified": "2024-05-31T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
