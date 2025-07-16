@@ -6,10 +6,6 @@ permalink: /projects/
 
 Teaching is the best form of learning, and when passion meets perception, surprising results occur. *Quantum Computing and Quantum Information*, a comprehensive note co-authored by Nishkal Rao and me, is one such result of a passion project in the pursuit of knowledge and love for teaching...
 
-<div class="image-container">
-  <img src="{{ site.baseurl}}/images/QIQC_Blog.png" alt="" width="40" class="zoom-image">
-</div>
-
 You can find the latest updated version of the full book in this [site](https://o-qcblog.github.io/QIQC/){:target="_blank"} and also on Arxiv.
 
 Happy reading!
@@ -33,10 +29,10 @@ Email: quantaoncomputing [AT] gmail [DOT] com
       "@type": "BlogPosting",
       "headline": "Quantum Computing and Quantum Information by Padmapriya S and Nishkal Rao",
       "image": [
-        "{{ site.baseurl}}/images/logo.png"
+        "{{ site.baseurl}}/images/QIQC_Blog.png"
        ],
-      "datePublished": "2024-05-31T08:00:00+05:30",
-      "dateModified": "2024-05-31T08:00:00+05:30",
+      "datePublished": "2025-07-30T08:00:00+05:30",
+      "dateModified": "2025-07-30T08:00:00+05:30",
       "author": [{
           "@type": "Person",
           "name": "Padmapriya S and Nishkal Rao",
