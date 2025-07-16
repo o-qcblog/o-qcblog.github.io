@@ -1,3 +1,4 @@
+A fun corner just displaying our mascot owl and other elements...
 
 **Our owl**
 
