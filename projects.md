@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Quantum Computing and Quantum Information - A Comprehensive Note
 permalink: /projects/
 ---
                                                         
