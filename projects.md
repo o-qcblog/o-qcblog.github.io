@@ -6,7 +6,7 @@ permalink: /projects/
 
 Teaching is the best form of learning, and when passion meets perception, surprising results occur. *Quantum Computing and Quantum Information*, a comprehensive note co-authored by Nishkal Rao and me, is one such result of a passion project in the pursuit of knowledge and love for teaching...
 
-You can find the latest updated version of the full book in this [site](https://o-qcblog.github.io/QIQC/){:target="_blank"} and also on Arxiv.
+You can find the latest updated version of the full book in this [site](https://o-qcblog.github.io/QIQC/){:target="_blank"}.
 
 Happy reading!
 
