@@ -20,7 +20,7 @@ Website: [https://padmapriya-s1.github.io/](https://padmapriya-s1.github.io/){:t
 
 *If you notice any errors in my posts or have questions or suggestions, please feel free to reach out. Your feedback is always welcome!*
 
-*This blog would be incomplete without expressing my heartfelt gratitude to my parents and teachers. A special thanks to [Nishkal Rao](https://github.com/nishkalrao20){:target="_blank"} for consistently providing valuable feedback and helping me enhance the quality of my posts.*
+*This blog would be incomplete without expressing my heartfelt gratitude to my parents and teachers. A special thanks to [Nishkal Rao](https://nishkalrao20.github.io/){:target="_blank"} for consistently providing valuable feedback and helping me enhance the quality of my posts.*
 
 *This site is hosted by Github Pages and uses [Jekyll Now](https://github.com/barryclark/jekyll-now){:target="_blank"}, a Jekyll theme by Barry Clark. 
 The logo, images and videos appearing on the site are my own (unless otherwise specified). I make these primarily using [PENUP](https://www.penup.com/main/home){:target="_blank"} and PowerPoint. For maths related images I use tikz in LaTeX.* 
