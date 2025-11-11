@@ -10,7 +10,7 @@ Happy reading!
 
 ## Contact me
 
-Padmapriya S
+S. Padmapriya
 
 Email: quantaoncomputing [AT] gmail [DOT] com
 
