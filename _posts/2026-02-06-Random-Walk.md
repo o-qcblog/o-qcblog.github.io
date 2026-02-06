@@ -32,7 +32,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
 <iframe
   src="/_codes/Post15/3DRandomWalk.html"
   width="100%"
-  height="600"
+  height="1200"
   style="border: none; border-radius: 12px;"
   loading="lazy">
 </iframe>
