@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Quantum Grid Walk</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quantum Grid Walk</title>
 
-<style>
-  body {
-    margin: 0;
-    background: black;
-    overflow: hidden;
-  }
-  canvas {
-    display: block;
-  }
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            overflow: hidden;
+            touch-action: none; /* Prevents default browser gestures */
+        }
+        canvas {
+            display: block;
+            cursor: crosshair;
+        }
 
-  #legend {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: rgba(20,20,30,0.85);
-    color: #eee;
-    padding: 14px;
-    border-radius: 10px;
-    font-family: system-ui, sans-serif;
-    font-size: 13px;
-    width: 220px;
-  }
+        #legend {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: rgba(20, 20, 30, 0.9);
+            color: #eee;
+            padding: 14px;
+            border-radius: 12px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 13px;
+            width: 220px;
+            pointer-events: none; /* Allows clicking through legend to the canvas */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
 
-  .wheel {
-    width: 120px;
-    height: 120px;
-    margin: 8px auto;
-    border-radius: 50%;
-    background: conic-gradient(
-      red, yellow, lime, cyan, blue, magenta, red
-    );
-  }
+        .wheel {
+            width: 80px;
+            height: 80px;
+            margin: 8px auto;
+            border-radius: 50%;
+            background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
+            border: 2px solid #333;
+        }
 
-  .bar {
-    height: 12px;
-    background: linear-gradient(to right, #111, #fff);
-    border-radius: 4px;
-    margin-top: 6px;
-  }
+        .bar {
+            height: 12px;
+            background: linear-gradient(to right, #000, #fff);
+            border-radius: 4px;
+            margin-top: 6px;
+            border: 1px solid #333;
+        }
 
-  .note {
-    opacity: 0.75;
-    font-size: 12px;
-  }
-</style>
+        .note {
+            opacity: 0.75;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 600px) {
+            #legend {
+                width: 160px;
+                right: 10px;
+                bottom: 10px;
+                font-size: 11px;
+            }
+            .wheel { width: 40px; height: 40px; }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,214 +73,244 @@
 <canvas id="c"></canvas>
 
 <div id="legend">
-  <strong>Quantum Grid Walk</strong>
-  <div class="note">Hue → phase arg(ψ)</div>
-  <div class="wheel"></div>
-  <div class="note">Brightness → probability |ψ|²</div>
-  <div class="bar"></div>
-  <div class="note" style="margin-top:8px">
-    Hover: prepare state<br>
-    Click: evolve → measure → reset
-  </div>
+    <strong>Quantum Grid Walk</strong>
+    <div class="note" style="margin-top:4px">Hue → phase arg(ψ)</div>
+    <div class="wheel"></div>
+    <div class="note">Brightness → prob |ψ|²</div>
+    <div class="bar"></div>
+    <div class="note" style="margin-top:8px">
+        <strong>Tap/Hover:</strong> Prepare state<br>
+        <strong>Double Tap/Click:</strong> Cycle Step:<br>
+        Evolve → Measure → Reset
+    </div>
 </div>
 
 <script>
 const canvas = document.getElementById("c");
 const ctx = canvas.getContext("2d");
 
+// Responsive Grid
+let NX = 60;
+let NY = 40;
+const DT = 0.03;
+
 function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // Adjust grid density for mobile performance
+    if (window.innerWidth < 600) {
+        NX = 45;
+        NY = 30;
+    } else {
+        NX = 80;
+        NY = 50;
+    }
+    zeroGrid();
 }
 window.addEventListener("resize", resize);
-resize();
 
-/* ---------- GRID ---------- */
-
-const NX = 80;
-const NY = 50;
-const DT = 0.03;
+/* ---------- STATE ---------- */
 
 let psi = [];
 let psiNext = [];
-
-/* ---------- EXPERIMENT PHASE ---------- */
-
 let phase = "prepare"; // prepare | evolve | measured
 let measuredState = null;
 
-/* ---------- INIT ---------- */
-
 function zeroGrid() {
-  psi = Array.from({ length: NX }, () =>
-    Array.from({ length: NY }, () => ({ re: 0, im: 0 }))
-  );
-  psiNext = JSON.parse(JSON.stringify(psi));
+    psi = Array.from({ length: NX }, () =>
+        Array.from({ length: NY }, () => ({ re: 0, im: 0 }))
+    );
+    psiNext = Array.from({ length: NX }, () =>
+        Array.from({ length: NY }, () => ({ re: 0, im: 0 }))
+    );
 }
-zeroGrid();
 
-/* ---------- PREPARATION ---------- */
+/* ---------- LOGIC FUNCTIONS ---------- */
 
-/* ---------- DESKTOP INPUT ---------- */
+function prepareAt(clientX, clientY) {
+    if (phase !== "prepare") return;
 
+    const x = Math.floor((clientX / canvas.width) * NX);
+    const y = Math.floor((clientY / canvas.height) * NY);
+
+    if (x >= 0 && x < NX && y >= 0 && y < NY) {
+        // Add a bit of complex amplitude
+        psi[x][y].re += 0.6;
+        psi[x][y].im += 0.2;
+    }
+}
+
+function handleInteraction() {
+    if (phase === "prepare") {
+        phase = "evolve";
+    } else if (phase === "evolve") {
+        measure();
+        phase = "measured";
+    } else if (phase === "measured") {
+        zeroGrid();
+        measuredState = null;
+        phase = "prepare";
+    }
+}
+
+/* ---------- INPUT LISTENERS ---------- */
+
+// Desktop Mouse
 canvas.addEventListener("mousemove", e => {
-  if (phase !== "prepare") return;
-
-  const x = Math.floor(e.clientX / canvas.width * NX);
-  const y = Math.floor(e.clientY / canvas.height * NY);
-
-  if (x >= 0 && x < NX && y >= 0 && y < NY) {
-    psi[x][y].re += 0.5;
-  }
+    prepareAt(e.clientX, e.clientY);
 });
 
-/* ---------- MOBILE INPUT ---------- */
+canvas.addEventListener("mousedown", (e) => {
+    handleInteraction();
+});
 
+// Mobile Touch
 canvas.addEventListener("touchstart", e => {
-  e.preventDefault();
-  const t = e.touches[0];
-  prepareAt(t.clientX, t.clientY);
+    e.preventDefault();
+    const t = e.touches[0];
+    prepareAt(t.clientX, t.clientY);
 }, { passive: false });
 
 canvas.addEventListener("touchmove", e => {
-  e.preventDefault();
-  const t = e.touches[0];
-  prepareAt(t.clientX, t.clientY);
+    e.preventDefault();
+    const t = e.touches[0];
+    prepareAt(t.clientX, t.clientY);
 }, { passive: false });
 
-
-/* ---------- CLICK STATE MACHINE ---------- */
-
-canvas.addEventListener("click", () => {
-
-  if (phase === "prepare") {
-    phase = "evolve";
-    return;
-  }
-
-  if (phase === "evolve") {
-    measure();
-    phase = "measured";
-    return;
-  }
-
-  if (phase === "measured") {
-    zeroGrid();
-    measuredState = null;
-    phase = "prepare";
-  }
+// Simple Tap to cycle state on mobile
+let lastTap = 0;
+canvas.addEventListener("touchend", e => {
+    const currentTime = new Date().getTime();
+    const tapLength = currentTime - lastTap;
+    // We treat every clear tap as a step if not moving
+    if (tapLength < 500 && tapLength > 0) {
+        handleInteraction();
+    }
+    lastTap = currentTime;
 });
 
-/* ---------- MEASUREMENT ---------- */
+/* ---------- SIMULATION ---------- */
 
 function measure() {
-  let probs = [];
-  let sum = 0;
+    let probs = [];
+    let sum = 0;
 
-  for (let x = 0; x < NX; x++) {
-    for (let y = 0; y < NY; y++) {
-      let p = psi[x][y].re**2 + psi[x][y].im**2;
-      if (p > 0) {
-        probs.push({ x, y, p });
-        sum += p;
-      }
+    for (let x = 0; x < NX; x++) {
+        for (let y = 0; y < NY; y++) {
+            let p = psi[x][y].re ** 2 + psi[x][y].im ** 2;
+            if (p > 0.0001) {
+                probs.push({ x, y, p });
+                sum += p;
+            }
+        }
     }
-  }
 
-  if (sum === 0) return;
-
-  let r = Math.random() * sum;
-  let acc = 0;
-
-  for (let obj of probs) {
-    acc += obj.p;
-    if (acc >= r) {
-      measuredState = obj;
-      break;
+    if (sum === 0) {
+        phase = "prepare";
+        return;
     }
-  }
 
-  zeroGrid();
-  psi[measuredState.x][measuredState.y].re = 2;
+    let r = Math.random() * sum;
+    let acc = 0;
+    measuredState = probs[probs.length - 1]; // Fallback
+
+    for (let obj of probs) {
+        acc += obj.p;
+        if (acc >= r) {
+            measuredState = obj;
+            break;
+        }
+    }
+
+    zeroGrid();
+    // Collapse to the measured state
+    psi[measuredState.x][measuredState.y].re = 2.0;
 }
 
-/* ---------- SCHRÖDINGER STEP ---------- */
-
 function laplacian(x, y) {
-  let c = psi[x][y];
-  let sumRe = 0, sumIm = 0;
-  const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
+    let c = psi[x][y];
+    let sumRe = 0, sumIm = 0;
+    const dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]];
 
-  for (let [dx,dy] of dirs) {
-    let nx = (x + dx + NX) % NX;
-    let ny = (y + dy + NY) % NY;
-    sumRe += psi[nx][ny].re;
-    sumIm += psi[nx][ny].im;
-  }
+    for (let [dx, dy] of dirs) {
+        let nx = (x + dx + NX) % NX;
+        let ny = (y + dy + NY) % NY;
+        sumRe += psi[nx][ny].re;
+        sumIm += psi[nx][ny].im;
+    }
 
-  sumRe -= 4 * c.re;
-  sumIm -= 4 * c.im;
-
-  return { re: sumRe, im: sumIm };
+    return { 
+        re: sumRe - 4 * c.re, 
+        im: sumIm - 4 * c.im 
+    };
 }
 
 function evolve() {
-  if (phase !== "evolve") return;
+    if (phase !== "evolve") return;
 
-  for (let x = 0; x < NX; x++) {
-    for (let y = 0; y < NY; y++) {
-      let lap = laplacian(x, y);
-      psiNext[x][y].re = psi[x][y].re - DT * lap.im;
-      psiNext[x][y].im = psi[x][y].im + DT * lap.re;
+    for (let x = 0; x < NX; x++) {
+        for (let y = 0; y < NY; y++) {
+            let lap = laplacian(x, y);
+            // Discrete Schrödinger Equation: dpsi/dt = i * laplacian
+            // re' = re - DT * lapIm
+            // im' = im + DT * lapRe
+            psiNext[x][y].re = psi[x][y].re - DT * lap.im;
+            psiNext[x][y].im = psi[x][y].im + DT * lap.re;
+        }
     }
-  }
 
-  [psi, psiNext] = [psiNext, psi];
+    // Swap buffers
+    for (let x = 0; x < NX; x++) {
+        for (let y = 0; y < NY; y++) {
+            psi[x][y].re = psiNext[x][y].re;
+            psi[x][y].im = psiNext[x][y].im;
+        }
+    }
 }
 
-/* ---------- VISUALIZATION ---------- */
+/* ---------- RENDER ---------- */
 
-function colorFromPsi(re, im, highlight=false) {
-  if (highlight) return "rgb(255,255,120)";
+function colorFromPsi(re, im, isMeasured) {
+    if (isMeasured) return "#ffff78";
 
-  let mag = Math.sqrt(re*re + im*im);
-  let phase = Math.atan2(im, re);
-  let hue = (phase / (2*Math.PI) + 1) * 180;
-  let light = Math.min(75, 10 + mag * 300);
+    let magSq = re * re + im * im;
+    if (magSq < 0.0001) return "#000";
 
-  return `hsl(${hue},100%,${light}%)`;
+    let mag = Math.sqrt(magSq);
+    let angle = Math.atan2(im, re);
+    let hue = (angle / (2 * Math.PI) + 0.5) * 360;
+    let lightness = Math.min(80, 5 + mag * 60);
+
+    return `hsl(${hue}, 100%, ${lightness}%)`;
 }
 
 function draw() {
-  const w = canvas.width / NX;
-  const h = canvas.height / NY;
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  for (let x = 0; x < NX; x++) {
-    for (let y = 0; y < NY; y++) {
-      const isMeasured =
-        phase === "measured" &&
-        measuredState &&
-        x === measuredState.x &&
-        y === measuredState.y;
+    const w = Math.ceil(canvas.width / NX);
+    const h = Math.ceil(canvas.height / NY);
 
-      ctx.fillStyle = colorFromPsi(
-        psi[x][y].re,
-        psi[x][y].im,
-        isMeasured
-      );
+    for (let x = 0; x < NX; x++) {
+        for (let y = 0; y < NY; y++) {
+            const val = psi[x][y];
+            if (val.re === 0 && val.im === 0) continue;
 
-      ctx.fillRect(x*w, y*h, w+1, h+1);
+            const isPoint = phase === "measured" && measuredState && x === measuredState.x && y === measuredState.y;
+            ctx.fillStyle = colorFromPsi(val.re, val.im, isPoint);
+            ctx.fillRect(x * (canvas.width / NX), y * (canvas.height / NY), w, h);
+        }
     }
-  }
 }
-
-/* ---------- LOOP ---------- */
 
 function loop() {
-  evolve();
-  draw();
-  requestAnimationFrame(loop);
+    evolve();
+    draw();
+    requestAnimationFrame(loop);
 }
+
+// Start
+resize();
 loop();
 </script>
 
