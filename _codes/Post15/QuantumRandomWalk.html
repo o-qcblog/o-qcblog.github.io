@@ -1,72 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Quantum Grid Walk</title>
-
-<style>
-  body {
-    margin: 0;
-    background: black;
-    overflow: hidden;
-  }
-  canvas {
-    display: block;
-  }
-
-  #legend {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: rgba(20,20,30,0.85);
-    color: #eee;
-    padding: 14px;
-    border-radius: 10px;
-    font-family: system-ui, sans-serif;
-    font-size: 13px;
-    width: 220px;
-  }
-
-  .wheel {
-    width: 120px;
-    height: 120px;
-    margin: 8px auto;
-    border-radius: 50%;
-    background: conic-gradient(
-      red, yellow, lime, cyan, blue, magenta, red
-    );
-  }
-
-  .bar {
-    height: 12px;
-    background: linear-gradient(to right, #111, #fff);
-    border-radius: 4px;
-    margin-top: 6px;
-  }
-
-  .note {
-    opacity: 0.75;
-    font-size: 12px;
-  }
-</style>
-</head>
-
-<body>
-
-<canvas id="c"></canvas>
-
-<div id="legend">
-  <strong>Quantum Grid Walk</strong>
-  <div class="note">Hue → phase arg(ψ)</div>
-  <div class="wheel"></div>
-  <div class="note">Brightness → probability |ψ|²</div>
-  <div class="bar"></div>
-  <div class="note" style="margin-top:8px">
-    Hover: prepare state<br>
-    Click: evolve → measure → reset
-  </div>
-</div>
-
 <script>
 const canvas = document.getElementById("c");
 const ctx = canvas.getContext("2d");
@@ -102,23 +33,48 @@ function zeroGrid() {
 }
 zeroGrid();
 
-/* ---------- PREPARATION ---------- */
+/* ---------- PREPARATION CORE ---------- */
 
-canvas.addEventListener("mousemove", e => {
+function prepareAt(clientX, clientY) {
   if (phase !== "prepare") return;
 
-  const x = Math.floor(e.clientX / canvas.width * NX);
-  const y = Math.floor(e.clientY / canvas.height * NY);
+  const x = Math.floor(clientX / canvas.width * NX);
+  const y = Math.floor(clientY / canvas.height * NY);
 
   if (x >= 0 && x < NX && y >= 0 && y < NY) {
     psi[x][y].re += 0.5;
   }
+}
+
+/* ---------- DESKTOP INPUT ---------- */
+
+canvas.addEventListener("mousemove", e => {
+  prepareAt(e.clientX, e.clientY);
 });
 
-/* ---------- CLICK STATE MACHINE ---------- */
+/* ---------- MOBILE INPUT ---------- */
 
-canvas.addEventListener("click", () => {
+canvas.addEventListener("touchstart", e => {
+  e.preventDefault();
+  const t = e.touches[0];
+  prepareAt(t.clientX, t.clientY);
+}, { passive: false });
 
+canvas.addEventListener("touchmove", e => {
+  e.preventDefault();
+  const t = e.touches[0];
+  prepareAt(t.clientX, t.clientY);
+}, { passive: false });
+
+/* ---------- CLICK / TAP STATE MACHINE ---------- */
+
+canvas.addEventListener("click", advancePhase);
+canvas.addEventListener("touchend", e => {
+  e.preventDefault();
+  advancePhase();
+}, { passive: false });
+
+function advancePhase() {
   if (phase === "prepare") {
     phase = "evolve";
     return;
@@ -135,7 +91,7 @@ canvas.addEventListener("click", () => {
     measuredState = null;
     phase = "prepare";
   }
-});
+}
 
 /* ---------- MEASUREMENT ---------- */
 
@@ -249,6 +205,3 @@ function loop() {
 }
 loop();
 </script>
-
-</body>
-</html>
