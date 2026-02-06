@@ -1,11 +1,11 @@
 ---
 Layout: post
 mathjax: true
-title:  "Quantum Random Walk"
-categories: [Note, Quantum Computing, Mathematics]
+title:  "Random Walk"
+categories: [Note, Quantum Computing, MiscellaneousMathematics, MiscellaneousComputerScience]
 ---
 
-*Amazing interactive visual simulating quantum random walk. A blog post inspired by [Robin Baumgarten's Quantum Jungle](https://www.wobblylabs.com/quantum-jungle).*
+*Amazing interactive visual simulating random walk. A blog post inspired by [Robin Baumgarten's Quantum Jungle](https://www.wobblylabs.com/quantum-jungle).*
 
 ## Interactive quantum walk
 
@@ -17,6 +17,7 @@ categories: [Note, Quantum Computing, Mathematics]
   loading="lazy">
 </iframe>
 
+Coming Soon! Until then play with the above visual and try to figure out what it is doing.
 
 
 
