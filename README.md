@@ -1,4 +1,4 @@
-Quanta on Computing is a theoretical computer science blog by S. Padmapriya
+[Quanta on Computing](https://o-qcblog.github.io/) is a theoretical computer science blog by S. Padmapriya
 
 ## License
 
