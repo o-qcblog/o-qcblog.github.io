@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: "School on Sundays!"
-categories: [Puzzle, MiscellaneousMathematics]
+categories: [Puzzle, Mathematics]
 ---
 
 *An Intimidating puzzle, which leads to exploring projective geometry…*
