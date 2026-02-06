@@ -22,7 +22,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
 <iframe
   src="/_codes/Post15/2DRandomWalk.html"
   width="100%"
-  height="600"
+  height="800"
   style="border: none; border-radius: 12px;"
   loading="lazy">
 </iframe>
