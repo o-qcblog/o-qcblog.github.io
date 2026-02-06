@@ -11,7 +11,7 @@ A fun corner just displaying our mascot owl and other elements...
 **Owl's friend**
 
 <img src="{{ site.baseurl}}/images/friend.jpg" alt="" width="200">
-<img src="{{ site.baseurl}}/images/friend_coat.png" alt="" width="200">
+<img src="{{ site.baseurl}}/images/friend_coat.jpg" alt="" width="200">
 
 **Elements**
 
