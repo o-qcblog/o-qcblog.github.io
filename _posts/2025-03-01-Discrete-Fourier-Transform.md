@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: "Discrete Fourier Transform"
-categories: [Note, MiscellaneousMathematics]
+categories: [Note, Mathematics]
 ---
 *Have you ever wondered how noise cancellation in earphones works or how music editors remove unwanted overtones from a composition? This blog post introduces fast discrete transform.*
 
