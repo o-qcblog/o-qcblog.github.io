@@ -10,7 +10,7 @@ categories: [Note, Quantum Computing, Mathematics]
 ## Interactive quantum walk
 
 <iframe
-  src="_codes/Post15/QuantumRandomWalk.html"
+  src="/_codes/Post15/QuantumRandomWalk.html"
   width="100%"
   height="600"
   style="border: none; border-radius: 12px;"
