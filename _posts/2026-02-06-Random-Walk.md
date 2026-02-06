@@ -17,7 +17,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
   loading="lazy">
 </iframe>
 
-## 2 D Random Walk on Integer Number Line
+## 2 D Random Walk on a Grid
 
 <iframe
   src="/_codes/Post15/2DRandomWalk.html"
