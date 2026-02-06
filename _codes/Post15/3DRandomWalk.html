@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Random Walk Visualization</title>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --grid-color: #cbd5e1;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: transparent;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            width: 100%;
+            gap: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Left Column: Visuals */
+        .viz-column {
+            flex: 2;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .canvas-wrapper {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #f8fafc; /* Darker bg for 3D contrast */
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .canvas-label {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 8px;
+            border-radius: 4px;
+            z-index: 10;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Heatmap Legend */
+        .legend-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: -5px;
+        }
+        
+        .gradient-bar {
+            width: 150px;
+            height: 10px;
+            border-radius: 5px;
+            background: linear-gradient(to right, blue, cyan, lime, yellow, red);
+        }
+
+        /* Right Column: Controls */
+        .controls-column {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            height: fit-content;
+        }
+
+        /* Coins */
+        .coins-row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .coin-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .coin-scene {
+            width: 60px;
+            height: 60px;
+            perspective: 400px;
+            cursor: pointer;
+        }
+
+        .coin {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .coin.flipping {
+            animation: flipInfinite 0.5s infinite linear;
+        }
+
+        @keyframes flipInfinite {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        .coin-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            backface-visibility: hidden;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2);
+            border: 2px solid #fff;
+        }
+
+        .coin-front { background: #f59e0b; transform: rotateY(0deg); } /* Gold */
+        .coin-back { background: #94a3b8; transform: rotateY(180deg); } /* Silver */
+
+        .coin-label {
+            margin-top: 5px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+        }
+
+        /* Sliders */
+        .sliders-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .slider-group {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 5px;
+        }
+
+        input[type=range] {
+            width: 100%;
+            accent-color: var(--primary-color);
+            height: 4px;
+        }
+
+        .bias-val {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 0.85rem;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-action {
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 5px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-toss { background: #3b82f6; color: white; margin-bottom: 10px; }
+        .btn-reset { background: #ef4444; color: white; }
+        .btn-action:hover { opacity: 0.9; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left: Visuals -->
+    <div class="viz-column">
+        <!-- 3D Walk Canvas -->
+        <div class="canvas-wrapper">
+            <div class="canvas-label">3D Random Walk (Bird)</div>
+            <canvas id="walkCanvas"></canvas>
+        </div>
+
+        <!-- 3D Heatmap Canvas -->
+        <div class="canvas-wrapper">
+            <div class="canvas-label">3D Probability Heat Map</div>
+            <canvas id="heatCanvas"></canvas>
+        </div>
+        
+        <!-- Legend -->
+        <div class="legend-container">
+            <span>Low Prob</span>
+            <div class="gradient-bar"></div>
+            <span>High Prob</span>
+        </div>
+    </div>
+
+    <!-- Right: Controls -->
+    <div class="controls-column">
+        <h3>Controls</h3>
+        
+        <!-- Coins -->
+        <div class="coins-row" id="coinsArea">
+            <div class="coin-wrapper">
+                <div class="coin-scene">
+                    <div class="coin" id="coinX">
+                        <div class="coin-face coin-front">H</div>
+                        <div class="coin-face coin-back">T</div>
+                    </div>
+                </div>
+                <span class="coin-label">X Axis</span>
+            </div>
+            <div class="coin-wrapper">
+                <div class="coin-scene">
+                    <div class="coin" id="coinY">
+                        <div class="coin-face coin-front">H</div>
+                        <div class="coin-face coin-back">T</div>
+                    </div>
+                </div>
+                <span class="coin-label">Y Axis</span>
+            </div>
+            <div class="coin-wrapper">
+                <div class="coin-scene">
+                    <div class="coin" id="coinZ">
+                        <div class="coin-face coin-front">H</div>
+                        <div class="coin-face coin-back">T</div>
+                    </div>
+                </div>
+                <span class="coin-label">Z Axis</span>
+            </div>
+        </div>
+
+        <button class="btn-action btn-toss" id="tossBtn">Toss All (Take Step)</button>
+
+        <!-- Sliders -->
+        <div class="sliders-container">
+            <div class="slider-group">
+                <div class="slider-header">
+                    <span>Bias X (Left/Right)</span>
+                    <span id="valX" class="bias-val">0.50</span>
+                </div>
+                <input type="range" id="rangeX" min="0" max="1" step="0.05" value="0.5">
+            </div>
+
+            <div class="slider-group">
+                <div class="slider-header">
+                    <span>Bias Y (Back/Fwd)</span>
+                    <span id="valY" class="bias-val">0.50</span>
+                </div>
+                <input type="range" id="rangeY" min="0" max="1" step="0.05" value="0.5">
+            </div>
+
+            <div class="slider-group">
+                <div class="slider-header">
+                    <span>Bias Z (Down/Up)</span>
+                    <span id="valZ" class="bias-val">0.50</span>
+                </div>
+                <input type="range" id="rangeZ" min="0" max="1" step="0.05" value="0.5">
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-item"><span>Steps:</span> <b id="stepCount">0</b></div>
+            <div class="stat-item"><span>Max Prob:</span> <b id="maxProb">100%</b></div>
+            <div class="stat-item"><span>X:</span> <span id="posX">0</span></div>
+            <div class="stat-item"><span>Y:</span> <span id="posY">0</span></div>
+            <div class="stat-item"><span>Z:</span> <span id="posZ">0</span></div>
+        </div>
+
+        <button class="btn-action btn-reset" id="resetBtn">Reset</button>
+    </div>
+</div>
+
+<script>
+    /* --- State & Config --- */
+    const state = {
+        pos: { x: 0, y: 0, z: 0 },
+        steps: 0,
+        path: [{x:0, y:0, z:0}],
+        probs: { "0,0,0": 1 }, // Key format: "x,y,z"
+        bias: { x: 0.5, y: 0.5, z: 0.5 },
+        isFlipping: false,
+        viewScale: 30, // Pixels per unit
+        gridRange: 6, // Dynamic grid size (minimum)
+        rotation: { x: 0.5, z: 0.6 } // Camera angles (radians approx)
+    };
+
+    /* --- DOM Elements --- */
+    const cvsWalk = document.getElementById('walkCanvas');
+    const cvsHeat = document.getElementById('heatCanvas');
+    const ctxWalk = cvsWalk.getContext('2d');
+    const ctxHeat = cvsHeat.getContext('2d');
+
+    const coins = {
+        x: document.getElementById('coinX'),
+        y: document.getElementById('coinY'),
+        z: document.getElementById('coinZ')
+    };
+
+    const sliders = {
+        x: document.getElementById('rangeX'),
+        y: document.getElementById('rangeY'),
+        z: document.getElementById('rangeZ')
+    };
+
+    const labels = {
+        x: document.getElementById('valX'),
+        y: document.getElementById('valY'),
+        z: document.getElementById('valZ'),
+        steps: document.getElementById('stepCount'),
+        maxProb: document.getElementById('maxProb'),
+        px: document.getElementById('posX'),
+        py: document.getElementById('posY'),
+        pz: document.getElementById('posZ')
+    };
+
+    /* --- Initialization --- */
+    function init() {
+        resize();
+        window.addEventListener('resize', () => { resize(); draw(); });
+        
+        // Sliders
+        ['x', 'y', 'z'].forEach(axis => {
+            sliders[axis].addEventListener('input', (e) => {
+                const val = parseFloat(e.target.value);
+                state.bias[axis] = val;
+                labels[axis].textContent = val.toFixed(2);
+            });
+        });
+
+        document.getElementById('tossBtn').addEventListener('click', takeStep);
+        document.getElementById('coinsArea').addEventListener('click', takeStep);
+        document.getElementById('resetBtn').addEventListener('click', reset);
+        
+        draw();
+    }
+
+    function resize() {
+        const dpr = window.devicePixelRatio || 1;
+        [cvsWalk, cvsHeat].forEach(c => {
+            const rect = c.parentElement.getBoundingClientRect();
+            c.width = rect.width * dpr;
+            c.height = rect.height * dpr;
+            c.getContext('2d').scale(dpr, dpr);
+            c.style.width = rect.width + 'px';
+            c.style.height = rect.height + 'px';
+        });
+    }
+
+    function reset() {
+        state.pos = { x:0, y:0, z:0 };
+        state.steps = 0;
+        state.path = [{x:0, y:0, z:0}];
+        state.probs = { "0,0,0": 1 };
+        state.gridRange = 6;
+        state.viewScale = 30;
+        
+        // Reset Labels
+        labels.steps.textContent = "0";
+        labels.px.textContent = "0";
+        labels.py.textContent = "0";
+        labels.pz.textContent = "0";
+        labels.maxProb.textContent = "100%";
+
+        // Reset Visuals
+        Object.values(coins).forEach(c => c.style.transform = "rotateY(0deg)");
+        draw();
+    }
+
+    /* --- Logic --- */
+
+    function takeStep() {
+        if (state.isFlipping) return;
+        state.isFlipping = true;
+
+        // Visual Flip
+        Object.values(coins).forEach(c => c.classList.add('flipping'));
+
+        // Determine outcome
+        // Bias is P(Head) = P(+1)
+        const dx = Math.random() < state.bias.x ? 1 : -1;
+        const dy = Math.random() < state.bias.y ? 1 : -1;
+        const dz = Math.random() < state.bias.z ? 1 : -1;
+
+        // Update Probabilities (Independent Events)
+        const newProbs = {};
+        // P(H) = p, P(T) = q
+        const probsX = [state.bias.x, 1 - state.bias.x]; // [+1, -1]
+        const probsY = [state.bias.y, 1 - state.bias.y];
+        const probsZ = [state.bias.z, 1 - state.bias.z];
+
+        // For every existing point (x,y,z) with prob P,
+        // it splits into 8 neighbors based on combined probabilities.
+        for (let [key, p] of Object.entries(state.probs)) {
+            if (p < 0.0001) continue; // Optimization: Cull very low probs
+            const [x,y,z] = key.split(',').map(Number);
+            
+            // Distribute
+            // Loop possibilities: i=0 means +1(Head), i=1 means -1(Tail)
+            for(let i=0; i<2; i++) {
+                for(let j=0; j<2; j++) {
+                    for(let k=0; k<2; k++) {
+                        const nx = x + (i===0 ? 1 : -1);
+                        const ny = y + (j===0 ? 1 : -1);
+                        const nz = z + (k===0 ? 1 : -1);
+                        
+                        const combinedP = p * probsX[i] * probsY[j] * probsZ[k];
+                        const nKey = `${nx},${ny},${nz}`;
+                        newProbs[nKey] = (newProbs[nKey] || 0) + combinedP;
+                    }
+                }
+            }
+        }
+        state.probs = newProbs;
+
+        // Delay for animation
+        setTimeout(() => {
+            Object.values(coins).forEach(c => c.classList.remove('flipping'));
+            
+            // Set Coin Rotation
+            setCoinFace(coins.x, dx);
+            setCoinFace(coins.y, dy);
+            setCoinFace(coins.z, dz);
+
+            // Update Pos
+            state.pos.x += dx;
+            state.pos.y += dy;
+            state.pos.z += dz;
+            state.path.push({...state.pos});
+            state.steps++;
+
+            // Update Grid Range & Zoom
+            const maxCoord = Math.max(Math.abs(state.pos.x), Math.abs(state.pos.y), Math.abs(state.pos.z));
+            
+            // Expand base grid range if coordinate exceeds it
+            if (maxCoord + 2 > state.gridRange) {
+                state.gridRange = maxCoord + 2;
+            }
+
+            // Auto Zoom Out if walking off screen
+            if (maxCoord * state.viewScale > 100) {
+               state.viewScale = Math.max(5, state.viewScale * 0.9);
+            }
+
+            // Update UI
+            labels.steps.textContent = state.steps;
+            labels.px.textContent = state.pos.x;
+            labels.py.textContent = state.pos.y;
+            labels.pz.textContent = state.pos.z;
+
+            draw();
+            state.isFlipping = false;
+        }, 500);
+    }
+
+    function setCoinFace(el, val) {
+        // val 1 = Head (0deg), val -1 = Tail (180deg)
+        const curr = el.style.transform ? parseInt(el.style.transform.replace(/[^\d]/g, '')) : 0;
+        const base = Math.ceil(curr/360)*360;
+        const rot = val === 1 ? base + 360 : base + 180;
+        el.style.transform = `rotateY(${rot}deg)`;
+    }
+
+    /* --- 3D Projection Engine (Isometric-ish) --- */
+    function project(x, y, z, w, h) {
+        // Simple Isometric projection
+        // x goes right-down, y goes left-down
+        const isoX = (x - y) * Math.cos(0.5236); // 30 deg
+        const isoY = (x + y) * Math.sin(0.5236) - z;
+        
+        return {
+            x: w/2 + isoX * state.viewScale,
+            y: h/2 + isoY * state.viewScale
+        };
+    }
+
+    /* --- Drawing --- */
+
+    function drawGrid(ctx, w, h) {
+        ctx.clearRect(0,0,w,h);
+        
+        ctx.lineWidth = 1;
+
+        // Calculate a visual range that fills the screen
+        // We use viewScale to determine how many units fit on screen
+        const unitsOnScreen = Math.ceil(Math.max(w, h) / state.viewScale);
+        
+        // Ensure range is at least state.gridRange (to cover walked area)
+        // AND at least half of screen width (to cover empty space)
+        const range = Math.max(state.gridRange, Math.ceil(unitsOnScreen / 1.5));
+        
+        // Grid Floor (XY Plane at Z=0)
+        ctx.strokeStyle = 'rgba(200,200,200,0.3)';
+        ctx.beginPath();
+        for(let i=-range; i<=range; i++) {
+            // Lines parallel to Y
+            let p1 = project(i, -range, 0, w, h);
+            let p2 = project(i, range, 0, w, h);
+            ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y);
+            
+            // Lines parallel to X
+            p1 = project(-range, i, 0, w, h);
+            p2 = project(range, i, 0, w, h);
+            ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y);
+        }
+        ctx.stroke();
+
+        // --- Axes (Compact & Labeled) ---
+        // Calculate axis length: at least 4 units, but ensure it doesn't get too small in pixels (min 60px visual)
+        const axisLen = Math.max(4, 60 / state.viewScale);
+
+        const o = project(0,0,0,w,h);
+        const xEnd = project(axisLen,0,0,w,h);
+        const yEnd = project(0,axisLen,0,w,h);
+        const zEnd = project(0,0,axisLen,w,h);
+
+        ctx.lineWidth = 3; // Thicker for visibility
+        
+        // X Axis (Red)
+        ctx.strokeStyle = '#ef4444'; 
+        ctx.beginPath(); ctx.moveTo(o.x, o.y); ctx.lineTo(xEnd.x, xEnd.y); ctx.stroke();
+        
+        // Y Axis (Green)
+        ctx.strokeStyle = '#22c55e'; 
+        ctx.beginPath(); ctx.moveTo(o.x, o.y); ctx.lineTo(yEnd.x, yEnd.y); ctx.stroke();
+        
+        // Z Axis (Blue)
+        ctx.strokeStyle = '#3b82f6'; 
+        ctx.beginPath(); ctx.moveTo(o.x, o.y); ctx.lineTo(zEnd.x, zEnd.y); ctx.stroke();
+
+        // Label Axes
+        ctx.fillStyle = '#334155';
+        ctx.font = 'bold 14px sans-serif';
+        ctx.fillText('X', xEnd.x + 5, xEnd.y + 5);
+        ctx.fillText('Y', yEnd.x - 15, yEnd.y + 5);
+        ctx.fillText('Z', zEnd.x, zEnd.y - 8);
+    }
+
+    function draw() {
+        // 1. Draw Path
+        const w = cvsWalk.offsetWidth;
+        const h = cvsWalk.offsetHeight;
+        drawGrid(ctxWalk, w, h);
+
+        if (state.path.length > 0) {
+            ctxWalk.strokeStyle = 'rgba(59, 130, 246, 0.5)';
+            ctxWalk.lineWidth = 2;
+            ctxWalk.beginPath();
+            const start = project(0,0,0,w,h);
+            ctxWalk.moveTo(start.x, start.y);
+            
+            for(let p of state.path) {
+                const pt = project(p.x, p.y, p.z, w, h);
+                ctxWalk.lineTo(pt.x, pt.y);
+            }
+            ctxWalk.stroke();
+
+            // Draw Bird
+            const birdPos = state.path[state.path.length-1];
+            const pt = project(birdPos.x, birdPos.y, birdPos.z, w, h);
+            ctxWalk.font = '24px serif';
+            ctxWalk.textAlign = 'center';
+            ctxWalk.textBaseline = 'middle';
+            ctxWalk.fillText('🐦', pt.x, pt.y - 10); // Offset up slightly
+        }
+
+        // 2. Draw Heatmap
+        const w2 = cvsHeat.offsetWidth;
+        const h2 = cvsHeat.offsetHeight;
+        drawGrid(ctxHeat, w2, h2);
+
+        // Calculate Max Prob
+        let maxP = 0;
+        const points = [];
+        for(let [k, p] of Object.entries(state.probs)) {
+            if(p > maxP) maxP = p;
+            if(p < 0.001) continue; // Skip invisible
+            const [x,y,z] = k.split(',').map(Number);
+            points.push({x,y,z,p});
+        }
+        if(maxP === 0) maxP = 1;
+        labels.maxProb.textContent = (maxP*100).toFixed(1) + "%";
+
+        // Sort by depth (Painter's Algo)
+        // Depth in iso: (x+y) roughly
+        points.sort((a,b) => (a.x+a.y) - (b.x+b.y));
+
+        for(let pt of points) {
+            const screen = project(pt.x, pt.y, pt.z, w2, h2);
+            const intensity = pt.p / maxP;
+            
+            // Color Mapping: Blue(0) -> Red(1)
+            // Hue: 240 (Blue) -> 0 (Red)
+            const hue = 240 - (intensity * 240);
+            const alpha = 0.2 + (intensity * 0.8);
+            const radius = (state.viewScale/3) * (0.5 + intensity);
+
+            ctxHeat.fillStyle = `hsla(${hue}, 80%, 50%, ${alpha})`;
+            ctxHeat.beginPath();
+            ctxHeat.arc(screen.x, screen.y, radius, 0, Math.PI*2);
+            ctxHeat.fill();
+        }
+    }
+
+    init();
+
+</script>
+</body>
+</html>
