@@ -104,6 +104,8 @@ zeroGrid();
 
 /* ---------- PREPARATION ---------- */
 
+/* ---------- DESKTOP INPUT ---------- */
+
 canvas.addEventListener("mousemove", e => {
   if (phase !== "prepare") return;
 
@@ -114,6 +116,21 @@ canvas.addEventListener("mousemove", e => {
     psi[x][y].re += 0.5;
   }
 });
+
+/* ---------- MOBILE INPUT ---------- */
+
+canvas.addEventListener("touchstart", e => {
+  e.preventDefault();
+  const t = e.touches[0];
+  prepareAt(t.clientX, t.clientY);
+}, { passive: false });
+
+canvas.addEventListener("touchmove", e => {
+  e.preventDefault();
+  const t = e.touches[0];
+  prepareAt(t.clientX, t.clientY);
+}, { passive: false });
+
 
 /* ---------- CLICK STATE MACHINE ---------- */
 
