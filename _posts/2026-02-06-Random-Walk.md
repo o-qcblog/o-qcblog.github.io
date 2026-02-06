@@ -10,7 +10,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
 ## 1 D Random Walk on Integer Number Line
 
 <iframe
-  src="/_codes/Post15/1DRandomWalk.md"
+  src="/_codes/Post15/1DRandomWalk.html"
   width="100%"
   height="600"
   style="border: none; border-radius: 12px;"
