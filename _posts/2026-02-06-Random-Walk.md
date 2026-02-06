@@ -47,7 +47,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
   loading="lazy">
 </iframe>
 
-The above quantum walk visual interaction was inspired by [Robin Baumgarten's Quantum Jungle](https://www.wobblylabs.com/quantum-jungle).
+The above quantum walk visual interaction is inspired from the idea presented in [Robin Baumgarten's Quantum Jungle](https://www.wobblylabs.com/quantum-jungle).
 
 Coming Soon! Until then play with the above visual and try to figure out what it is doing.
 
