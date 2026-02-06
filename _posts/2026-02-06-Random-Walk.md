@@ -7,7 +7,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
 
 *"A drunk man will find his way home, but a drunk bird may get lost forever"- Shizuo Kakutani. This blog explains why the mathematician, Shizuo Kakutani, said so through amazing interactive visuals simulating random walk.*
 
-## 1 D Random Walk on Integer Number Line
+## Random Walk on Integer Number Line
 
 <iframe
   src="/_codes/Post15/1DRandomWalk.html"
@@ -17,7 +17,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
   loading="lazy">
 </iframe>
 
-## 2 D Random Walk on a 2D lattice
+## Random Walk on a 2D lattice
 
 <iframe
   src="/_codes/Post15/2DRandomWalk.html"
@@ -27,7 +27,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
   loading="lazy">
 </iframe>
 
-## 3 D Random Walk on a 3D lattice
+## Random Walk on a 3D lattice
 
 <iframe
   src="/_codes/Post15/3DRandomWalk.html"
