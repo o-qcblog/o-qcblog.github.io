@@ -1,3 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quantum Grid Walk</title>
+
+<style>
+  body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+  }
+
+  #legend {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(20,20,30,0.85);
+    color: #eee;
+    padding: 14px;
+    border-radius: 10px;
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    width: 220px;
+  }
+
+  .wheel {
+    width: 120px;
+    height: 120px;
+    margin: 8px auto;
+    border-radius: 50%;
+    background: conic-gradient(
+      red, yellow, lime, cyan, blue, magenta, red
+    );
+  }
+
+  .bar {
+    height: 12px;
+    background: linear-gradient(to right, #111, #fff);
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+
+  .note {
+    opacity: 0.75;
+    font-size: 12px;
+  }
+</style>
+</head>
+
+<body>
+
+<canvas id="c"></canvas>
+
+<div id="legend">
+  <strong>Quantum Grid Walk</strong>
+  <div class="note">Hue → phase arg(ψ)</div>
+  <div class="wheel"></div>
+  <div class="note">Brightness → probability |ψ|²</div>
+  <div class="bar"></div>
+  <div class="note" style="margin-top:8px">
+    Hover: prepare state<br>
+    Click: evolve → measure → reset
+  </div>
+</div>
+
 <script>
 const canvas = document.getElementById("c");
 const ctx = canvas.getContext("2d");
@@ -18,11 +87,10 @@ const DT = 0.03;
 let psi = [];
 let psiNext = [];
 
-/* ---------- STATE ---------- */
+/* ---------- EXPERIMENT PHASE ---------- */
 
-let phase = "prepare"; // prepare → evolve → measured
+let phase = "prepare"; // prepare | evolve | measured
 let measuredState = null;
-let isPointerDown = false;
 
 /* ---------- INIT ---------- */
 
@@ -36,46 +104,21 @@ zeroGrid();
 
 /* ---------- PREPARATION ---------- */
 
-function prepareAt(xPix, yPix) {
+canvas.addEventListener("mousemove", e => {
   if (phase !== "prepare") return;
 
-  const x = Math.floor(xPix / canvas.width * NX);
-  const y = Math.floor(yPix / canvas.height * NY);
+  const x = Math.floor(e.clientX / canvas.width * NX);
+  const y = Math.floor(e.clientY / canvas.height * NY);
 
   if (x >= 0 && x < NX && y >= 0 && y < NY) {
-    psi[x][y].re += 0.6;
-  }
-}
-
-/* ---------- POINTER EVENTS (FIX) ---------- */
-
-canvas.addEventListener("pointerdown", e => {
-  e.preventDefault();
-  isPointerDown = true;
-
-  if (phase === "prepare") {
-    prepareAt(e.clientX, e.clientY);
-  } else {
-    advancePhase();
+    psi[x][y].re += 0.5;
   }
 });
 
-canvas.addEventListener("pointermove", e => {
-  if (!isPointerDown) return;
-  prepareAt(e.clientX, e.clientY);
-});
+/* ---------- CLICK STATE MACHINE ---------- */
 
-canvas.addEventListener("pointerup", () => {
-  isPointerDown = false;
-});
+canvas.addEventListener("click", () => {
 
-canvas.addEventListener("pointerleave", () => {
-  isPointerDown = false;
-});
-
-/* ---------- STATE MACHINE ---------- */
-
-function advancePhase() {
   if (phase === "prepare") {
     phase = "evolve";
     return;
@@ -92,20 +135,20 @@ function advancePhase() {
     measuredState = null;
     phase = "prepare";
   }
-}
+});
 
 /* ---------- MEASUREMENT ---------- */
 
 function measure() {
-  let sum = 0;
   let probs = [];
+  let sum = 0;
 
   for (let x = 0; x < NX; x++) {
     for (let y = 0; y < NY; y++) {
-      const p = psi[x][y].re**2 + psi[x][y].im**2;
+      let p = psi[x][y].re**2 + psi[x][y].im**2;
       if (p > 0) {
-        sum += p;
         probs.push({ x, y, p });
+        sum += p;
       }
     }
   }
@@ -127,24 +170,24 @@ function measure() {
   psi[measuredState.x][measuredState.y].re = 2;
 }
 
-/* ---------- SCHRÖDINGER ---------- */
+/* ---------- SCHRÖDINGER STEP ---------- */
 
 function laplacian(x, y) {
-  const c = psi[x][y];
-  let re = 0, im = 0;
-
+  let c = psi[x][y];
+  let sumRe = 0, sumIm = 0;
   const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
+
   for (let [dx,dy] of dirs) {
-    const nx = (x + dx + NX) % NX;
-    const ny = (y + dy + NY) % NY;
-    re += psi[nx][ny].re;
-    im += psi[nx][ny].im;
+    let nx = (x + dx + NX) % NX;
+    let ny = (y + dy + NY) % NY;
+    sumRe += psi[nx][ny].re;
+    sumIm += psi[nx][ny].im;
   }
 
-  return {
-    re: re - 4*c.re,
-    im: im - 4*c.im
-  };
+  sumRe -= 4 * c.re;
+  sumIm -= 4 * c.im;
+
+  return { re: sumRe, im: sumIm };
 }
 
 function evolve() {
@@ -152,7 +195,7 @@ function evolve() {
 
   for (let x = 0; x < NX; x++) {
     for (let y = 0; y < NY; y++) {
-      const lap = laplacian(x, y);
+      let lap = laplacian(x, y);
       psiNext[x][y].re = psi[x][y].re - DT * lap.im;
       psiNext[x][y].im = psi[x][y].im + DT * lap.re;
     }
@@ -161,15 +204,15 @@ function evolve() {
   [psi, psiNext] = [psiNext, psi];
 }
 
-/* ---------- VISUAL ---------- */
+/* ---------- VISUALIZATION ---------- */
 
 function colorFromPsi(re, im, highlight=false) {
-  if (highlight) return "rgb(255,255,140)";
+  if (highlight) return "rgb(255,255,120)";
 
-  const mag = Math.sqrt(re*re + im*im);
-  const phase = Math.atan2(im, re);
-  const hue = (phase / (2*Math.PI) + 1) * 180;
-  const light = Math.min(80, 12 + mag * 320);
+  let mag = Math.sqrt(re*re + im*im);
+  let phase = Math.atan2(im, re);
+  let hue = (phase / (2*Math.PI) + 1) * 180;
+  let light = Math.min(75, 10 + mag * 300);
 
   return `hsl(${hue},100%,${light}%)`;
 }
@@ -191,6 +234,7 @@ function draw() {
         psi[x][y].im,
         isMeasured
       );
+
       ctx.fillRect(x*w, y*h, w+1, h+1);
     }
   }
@@ -205,3 +249,6 @@ function loop() {
 }
 loop();
 </script>
+
+</body>
+</html>
