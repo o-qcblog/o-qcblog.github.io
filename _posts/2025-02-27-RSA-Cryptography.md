@@ -2,7 +2,7 @@
 Layout: post
 mathjax: true
 title:  "RSA Cryptography"
-categories: [Note, MiscellaneousComputerScience]
+categories: [Note, ComputerScience]
 ---
 
 *Have you wondered how security is ensured in communication channels? When we use Instagram or chat with a friend in WhatsApp, it says end-to-end encrypted. How is this achieved? This blog post gives an introduction to one of the most widely used cryptographic systems, the RSA.*
