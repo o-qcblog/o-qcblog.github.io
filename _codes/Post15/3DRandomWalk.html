@@ -409,9 +409,12 @@
         const dpr = window.devicePixelRatio || 1;
         [cvsWalk, cvsHeat].forEach(c => {
             const rect = c.parentElement.getBoundingClientRect();
-            c.width = rect.width * dpr;
-            c.height = rect.height * dpr;
-            c.getContext('2d').scale(dpr, dpr);
+            // We set the actual internal resolution to match screen density
+            // BUT we do NOT use context.scale(). We will scale manually in project().
+            // This avoids coordinate mismatches between offsetWidth and internal width.
+            c.width = Math.floor(rect.width * dpr);
+            c.height = Math.floor(rect.height * dpr);
+            
             c.style.width = rect.width + 'px';
             c.style.height = rect.height + 'px';
         });
@@ -508,7 +511,7 @@
             }
 
             // Auto Zoom Out if walking off screen
-            if (maxCoord * state.viewScale > 100) {
+            if (maxCoord * state.viewScale > 120) {
                state.viewScale = Math.max(5, state.viewScale * 0.9);
             }
 
@@ -534,49 +537,51 @@
     /* --- 3D Projection Engine (Isometric-ish) --- */
     function project(x, y, z, w, h) {
         // Simple Isometric projection
+        // We now scale inside project() using dpr for crisp lines
+        const dpr = window.devicePixelRatio || 1;
+        const scale = state.viewScale * dpr;
+        
         // x goes right-down, y goes left-down
         const isoX = (x - y) * Math.cos(0.5236); // 30 deg
         const isoY = (x + y) * Math.sin(0.5236) - z;
         
         return {
-            x: w/2 + isoX * state.viewScale,
-            y: h/2 + isoY * state.viewScale
+            x: w/2 + isoX * scale,
+            y: h/2 + isoY * scale
         };
     }
 
     /* --- Drawing --- */
 
     function drawGrid(ctx, w, h) {
+        const dpr = window.devicePixelRatio || 1;
         ctx.clearRect(0,0,w,h);
         
-        ctx.lineWidth = 1;
+        ctx.lineWidth = 1 * dpr;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
 
         // Calculate a visual range that fills the screen
-        // We use viewScale to determine how many units fit on screen
-        const unitsOnScreen = Math.ceil(Math.max(w, h) / state.viewScale);
-        
-        // Ensure range is at least state.gridRange (to cover walked area)
-        // AND at least half of screen width (to cover empty space)
+        const unitsOnScreen = Math.ceil(Math.max(w, h) / (state.viewScale * dpr));
         const range = Math.max(state.gridRange, Math.ceil(unitsOnScreen / 1.5));
         
         // Grid Floor (XY Plane at Z=0)
         ctx.strokeStyle = 'rgba(200,200,200,0.3)';
         ctx.beginPath();
         for(let i=-range; i<=range; i++) {
-            // Lines parallel to Y
-            let p1 = project(i, -range, 0, w, h);
-            let p2 = project(i, range, 0, w, h);
-            ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y);
+            // Lines parallel to Y (Constant X, varying Y)
+            const py1 = project(i, -range, 0, w, h);
+            const py2 = project(i, range, 0, w, h);
+            ctx.moveTo(py1.x, py1.y); ctx.lineTo(py2.x, py2.y);
             
-            // Lines parallel to X
-            p1 = project(-range, i, 0, w, h);
-            p2 = project(range, i, 0, w, h);
-            ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y);
+            // Lines parallel to X (Constant Y, varying X)
+            const px1 = project(-range, i, 0, w, h);
+            const px2 = project(range, i, 0, w, h);
+            ctx.moveTo(px1.x, px1.y); ctx.lineTo(px2.x, px2.y);
         }
         ctx.stroke();
 
         // --- Axes (Compact & Labeled) ---
-        // Calculate axis length: at least 4 units, but ensure it doesn't get too small in pixels (min 60px visual)
         const axisLen = Math.max(4, 60 / state.viewScale);
 
         const o = project(0,0,0,w,h);
@@ -584,7 +589,7 @@
         const yEnd = project(0,axisLen,0,w,h);
         const zEnd = project(0,0,axisLen,w,h);
 
-        ctx.lineWidth = 3; // Thicker for visibility
+        ctx.lineWidth = 3 * dpr; 
         
         // X Axis (Red)
         ctx.strokeStyle = '#ef4444'; 
@@ -600,21 +605,29 @@
 
         // Label Axes
         ctx.fillStyle = '#334155';
-        ctx.font = 'bold 14px sans-serif';
-        ctx.fillText('X', xEnd.x + 5, xEnd.y + 5);
-        ctx.fillText('Y', yEnd.x - 15, yEnd.y + 5);
-        ctx.fillText('Z', zEnd.x, zEnd.y - 8);
+        ctx.font = `bold ${14 * dpr}px sans-serif`;
+        ctx.fillText('X', xEnd.x + (5*dpr), xEnd.y + (5*dpr));
+        ctx.fillText('Y', yEnd.x - (15*dpr), yEnd.y + (5*dpr));
+        ctx.fillText('Z', zEnd.x, zEnd.y - (8*dpr));
+        
+        // Origin Dot (To see where 0,0,0 is)
+        ctx.fillStyle = '#334155';
+        ctx.beginPath();
+        ctx.arc(o.x, o.y, 3 * dpr, 0, Math.PI*2);
+        ctx.fill();
     }
 
     function draw() {
-        // 1. Draw Path
-        const w = cvsWalk.offsetWidth;
-        const h = cvsWalk.offsetHeight;
+        const dpr = window.devicePixelRatio || 1;
+        // Use ACTUAL internal pixel width (not CSS width) to prevent scale misalignment
+        const w = cvsWalk.width;
+        const h = cvsWalk.height;
+        
         drawGrid(ctxWalk, w, h);
 
         if (state.path.length > 0) {
             ctxWalk.strokeStyle = 'rgba(59, 130, 246, 0.5)';
-            ctxWalk.lineWidth = 2;
+            ctxWalk.lineWidth = 2 * dpr;
             ctxWalk.beginPath();
             const start = project(0,0,0,w,h);
             ctxWalk.moveTo(start.x, start.y);
@@ -628,15 +641,55 @@
             // Draw Bird
             const birdPos = state.path[state.path.length-1];
             const pt = project(birdPos.x, birdPos.y, birdPos.z, w, h);
-            ctxWalk.font = '24px serif';
+
+            // Draw Depth Cue (Drop line to Z=0 floor)
+            if (birdPos.z !== 0) {
+                const floorPt = project(birdPos.x, birdPos.y, 0, w, h);
+                
+                // Drop Line
+                ctxWalk.beginPath();
+                ctxWalk.strokeStyle = 'rgba(148, 163, 184, 0.8)';
+                ctxWalk.lineWidth = 1.5 * dpr;
+                ctxWalk.setLineDash([4 * dpr, 3 * dpr]);
+                ctxWalk.moveTo(pt.x, pt.y);
+                ctxWalk.lineTo(floorPt.x, floorPt.y);
+                ctxWalk.stroke();
+                ctxWalk.setLineDash([]);
+                
+                // Shadow on grid
+                ctxWalk.beginPath();
+                ctxWalk.fillStyle = 'rgba(0, 0, 0, 0.3)';
+                ctxWalk.arc(floorPt.x, floorPt.y, 4 * dpr, 0, Math.PI*2);
+                ctxWalk.fill();
+            } else {
+                 // Shadow on grid (when on ground)
+                ctxWalk.beginPath();
+                ctxWalk.fillStyle = 'rgba(0, 0, 0, 0.2)'; 
+                ctxWalk.arc(pt.x, pt.y, 5 * dpr, 0, Math.PI*2);
+                ctxWalk.fill();
+            }
+
+            // Draw exact Coordinate Dot
+            ctxWalk.beginPath();
+            ctxWalk.fillStyle = '#3b82f6';
+            ctxWalk.arc(pt.x, pt.y, 3 * dpr, 0, Math.PI*2);
+            ctxWalk.fill();
+
+            // Draw Bird Emoji centered
+            ctxWalk.font = `${24 * dpr}px serif`;
             ctxWalk.textAlign = 'center';
             ctxWalk.textBaseline = 'middle';
-            ctxWalk.fillText('🐦', pt.x, pt.y - 10); // Offset up slightly
+            ctxWalk.fillText('🐦', pt.x, pt.y);
+            
+            // Draw Coordinates Text (Debugging Helper)
+            ctxWalk.font = `bold ${10 * dpr}px monospace`;
+            ctxWalk.fillStyle = '#64748b';
+            ctxWalk.fillText(`(${birdPos.x}, ${birdPos.y}, ${birdPos.z})`, pt.x, pt.y - (15 * dpr));
         }
 
         // 2. Draw Heatmap
-        const w2 = cvsHeat.offsetWidth;
-        const h2 = cvsHeat.offsetHeight;
+        const w2 = cvsHeat.width;
+        const h2 = cvsHeat.height;
         drawGrid(ctxHeat, w2, h2);
 
         // Calculate Max Prob
@@ -652,18 +705,15 @@
         labels.maxProb.textContent = (maxP*100).toFixed(1) + "%";
 
         // Sort by depth (Painter's Algo)
-        // Depth in iso: (x+y) roughly
         points.sort((a,b) => (a.x+a.y) - (b.x+b.y));
 
         for(let pt of points) {
             const screen = project(pt.x, pt.y, pt.z, w2, h2);
             const intensity = pt.p / maxP;
             
-            // Color Mapping: Blue(0) -> Red(1)
-            // Hue: 240 (Blue) -> 0 (Red)
             const hue = 240 - (intensity * 240);
             const alpha = 0.2 + (intensity * 0.8);
-            const radius = (state.viewScale/3) * (0.5 + intensity);
+            const radius = (state.viewScale * dpr / 3) * (0.5 + intensity);
 
             ctxHeat.fillStyle = `hsla(${hue}, 80%, 50%, ${alpha})`;
             ctxHeat.beginPath();
