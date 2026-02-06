@@ -27,6 +27,16 @@ categories: [Puzzle, Mathematics, ComputerScience]
   loading="lazy">
 </iframe>
 
+## 3 D Random Walk on a 3D lattice
+
+<iframe
+  src="/_codes/Post15/3DRandomWalk.html"
+  width="100%"
+  height="600"
+  style="border: none; border-radius: 12px;"
+  loading="lazy">
+</iframe>
+
 ## Quantum Walk
 
 <iframe
