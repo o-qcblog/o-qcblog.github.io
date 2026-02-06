@@ -7,7 +7,17 @@ categories: [Puzzle, Mathematics, ComputerScience]
 
 *Amazing interactive visual simulating random walk. A blog post inspired by [Robin Baumgarten's Quantum Jungle](https://www.wobblylabs.com/quantum-jungle).*
 
-## Interactive quantum walk
+## 1 D Random Walk on Integer Number Line
+
+<iframe
+  src="/_codes/Post15/1DRandomWalk.md"
+  width="100%"
+  height="600"
+  style="border: none; border-radius: 12px;"
+  loading="lazy">
+</iframe>
+
+## Quantum Walk
 
 <iframe
   src="/_codes/Post15/QuantumRandomWalk.html"
