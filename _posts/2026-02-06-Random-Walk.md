@@ -17,7 +17,7 @@ categories: [Puzzle, Mathematics, ComputerScience]
   loading="lazy">
 </iframe>
 
-## 2 D Random Walk on a Grid
+## 2 D Random Walk on a 2D lattice
 
 <iframe
   src="/_codes/Post15/2DRandomWalk.html"
