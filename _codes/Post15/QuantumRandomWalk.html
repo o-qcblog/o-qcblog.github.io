@@ -18,10 +18,11 @@ const DT = 0.03;
 let psi = [];
 let psiNext = [];
 
-/* ---------- EXPERIMENT PHASE ---------- */
+/* ---------- STATE ---------- */
 
-let phase = "prepare"; // prepare | evolve | measured
+let phase = "prepare"; // prepare → evolve → measured
 let measuredState = null;
+let isPointerDown = false;
 
 /* ---------- INIT ---------- */
 
@@ -33,46 +34,46 @@ function zeroGrid() {
 }
 zeroGrid();
 
-/* ---------- PREPARATION CORE ---------- */
+/* ---------- PREPARATION ---------- */
 
-function prepareAt(clientX, clientY) {
+function prepareAt(xPix, yPix) {
   if (phase !== "prepare") return;
 
-  const x = Math.floor(clientX / canvas.width * NX);
-  const y = Math.floor(clientY / canvas.height * NY);
+  const x = Math.floor(xPix / canvas.width * NX);
+  const y = Math.floor(yPix / canvas.height * NY);
 
   if (x >= 0 && x < NX && y >= 0 && y < NY) {
-    psi[x][y].re += 0.5;
+    psi[x][y].re += 0.6;
   }
 }
 
-/* ---------- DESKTOP INPUT ---------- */
+/* ---------- POINTER EVENTS (FIX) ---------- */
 
-canvas.addEventListener("mousemove", e => {
+canvas.addEventListener("pointerdown", e => {
+  e.preventDefault();
+  isPointerDown = true;
+
+  if (phase === "prepare") {
+    prepareAt(e.clientX, e.clientY);
+  } else {
+    advancePhase();
+  }
+});
+
+canvas.addEventListener("pointermove", e => {
+  if (!isPointerDown) return;
   prepareAt(e.clientX, e.clientY);
 });
 
-/* ---------- MOBILE INPUT ---------- */
+canvas.addEventListener("pointerup", () => {
+  isPointerDown = false;
+});
 
-canvas.addEventListener("touchstart", e => {
-  e.preventDefault();
-  const t = e.touches[0];
-  prepareAt(t.clientX, t.clientY);
-}, { passive: false });
+canvas.addEventListener("pointerleave", () => {
+  isPointerDown = false;
+});
 
-canvas.addEventListener("touchmove", e => {
-  e.preventDefault();
-  const t = e.touches[0];
-  prepareAt(t.clientX, t.clientY);
-}, { passive: false });
-
-/* ---------- CLICK / TAP STATE MACHINE ---------- */
-
-canvas.addEventListener("click", advancePhase);
-canvas.addEventListener("touchend", e => {
-  e.preventDefault();
-  advancePhase();
-}, { passive: false });
+/* ---------- STATE MACHINE ---------- */
 
 function advancePhase() {
   if (phase === "prepare") {
@@ -96,15 +97,15 @@ function advancePhase() {
 /* ---------- MEASUREMENT ---------- */
 
 function measure() {
-  let probs = [];
   let sum = 0;
+  let probs = [];
 
   for (let x = 0; x < NX; x++) {
     for (let y = 0; y < NY; y++) {
-      let p = psi[x][y].re**2 + psi[x][y].im**2;
+      const p = psi[x][y].re**2 + psi[x][y].im**2;
       if (p > 0) {
-        probs.push({ x, y, p });
         sum += p;
+        probs.push({ x, y, p });
       }
     }
   }
@@ -126,24 +127,24 @@ function measure() {
   psi[measuredState.x][measuredState.y].re = 2;
 }
 
-/* ---------- SCHRÖDINGER STEP ---------- */
+/* ---------- SCHRÖDINGER ---------- */
 
 function laplacian(x, y) {
-  let c = psi[x][y];
-  let sumRe = 0, sumIm = 0;
-  const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
+  const c = psi[x][y];
+  let re = 0, im = 0;
 
+  const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
   for (let [dx,dy] of dirs) {
-    let nx = (x + dx + NX) % NX;
-    let ny = (y + dy + NY) % NY;
-    sumRe += psi[nx][ny].re;
-    sumIm += psi[nx][ny].im;
+    const nx = (x + dx + NX) % NX;
+    const ny = (y + dy + NY) % NY;
+    re += psi[nx][ny].re;
+    im += psi[nx][ny].im;
   }
 
-  sumRe -= 4 * c.re;
-  sumIm -= 4 * c.im;
-
-  return { re: sumRe, im: sumIm };
+  return {
+    re: re - 4*c.re,
+    im: im - 4*c.im
+  };
 }
 
 function evolve() {
@@ -151,7 +152,7 @@ function evolve() {
 
   for (let x = 0; x < NX; x++) {
     for (let y = 0; y < NY; y++) {
-      let lap = laplacian(x, y);
+      const lap = laplacian(x, y);
       psiNext[x][y].re = psi[x][y].re - DT * lap.im;
       psiNext[x][y].im = psi[x][y].im + DT * lap.re;
     }
@@ -160,15 +161,15 @@ function evolve() {
   [psi, psiNext] = [psiNext, psi];
 }
 
-/* ---------- VISUALIZATION ---------- */
+/* ---------- VISUAL ---------- */
 
 function colorFromPsi(re, im, highlight=false) {
-  if (highlight) return "rgb(255,255,120)";
+  if (highlight) return "rgb(255,255,140)";
 
-  let mag = Math.sqrt(re*re + im*im);
-  let phase = Math.atan2(im, re);
-  let hue = (phase / (2*Math.PI) + 1) * 180;
-  let light = Math.min(75, 10 + mag * 300);
+  const mag = Math.sqrt(re*re + im*im);
+  const phase = Math.atan2(im, re);
+  const hue = (phase / (2*Math.PI) + 1) * 180;
+  const light = Math.min(80, 12 + mag * 320);
 
   return `hsl(${hue},100%,${light}%)`;
 }
@@ -190,7 +191,6 @@ function draw() {
         psi[x][y].im,
         isMeasured
       );
-
       ctx.fillRect(x*w, y*h, w+1, h+1);
     }
   }
