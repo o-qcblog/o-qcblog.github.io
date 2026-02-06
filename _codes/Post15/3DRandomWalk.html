@@ -246,7 +246,7 @@
     <div class="viz-column">
         <!-- 3D Walk Canvas -->
         <div class="canvas-wrapper">
-            <div class="canvas-label">3D Random Walk (Bird)</div>
+            <div class="canvas-label">3D Random Walk</div>
             <canvas id="walkCanvas"></canvas>
         </div>
 
@@ -384,6 +384,23 @@
         pz: document.getElementById('posZ')
     };
 
+    /* --- Mascot Logic --- */
+    const mascotImg = new Image();
+    // Using the raw GitHub content URL so it loads directly
+    mascotImg.src = "https://raw.githubusercontent.com/o-qcblog/o-qcblog.github.io/master/images/mascot_transparent.png"; 
+    let mascotLoaded = false;
+    
+    mascotImg.onload = () => { 
+        mascotLoaded = true; 
+        console.log("Mascot loaded successfully");
+        draw(); 
+    };
+    mascotImg.onerror = () => {
+        console.warn("Mascot image failed to load. Using fallback emoji.");
+        mascotLoaded = false;
+        draw();
+    };
+
     /* --- Initialization --- */
     function init() {
         resize();
@@ -410,8 +427,6 @@
         [cvsWalk, cvsHeat].forEach(c => {
             const rect = c.parentElement.getBoundingClientRect();
             // We set the actual internal resolution to match screen density
-            // BUT we do NOT use context.scale(). We will scale manually in project().
-            // This avoids coordinate mismatches between offsetWidth and internal width.
             c.width = Math.floor(rect.width * dpr);
             c.height = Math.floor(rect.height * dpr);
             
@@ -675,16 +690,37 @@
             ctxWalk.arc(pt.x, pt.y, 3 * dpr, 0, Math.PI*2);
             ctxWalk.fill();
 
-            // Draw Bird Emoji centered
-            ctxWalk.font = `${24 * dpr}px serif`;
-            ctxWalk.textAlign = 'center';
-            ctxWalk.textBaseline = 'middle';
-            ctxWalk.fillText('🐦', pt.x, pt.y);
+            // --- DRAW MASCOT OR FALLBACK ---
+            if (mascotLoaded) {
+                // Calculate aspect ratio to prevent squeezing
+                const targetSize = 50 * dpr;
+                const ratio = mascotImg.width / mascotImg.height;
+                let drawW, drawH;
+
+                if (ratio > 1) {
+                    // Wider than tall
+                    drawW = targetSize;
+                    drawH = targetSize / ratio;
+                } else {
+                    // Taller than wide
+                    drawH = targetSize;
+                    drawW = targetSize * ratio;
+                }
+
+                ctxWalk.drawImage(mascotImg, pt.x - drawW/2, pt.y - drawH/2, drawW, drawH);
+            } else {
+                // Draw Bird Emoji centered
+                ctxWalk.font = `${24 * dpr}px serif`;
+                ctxWalk.textAlign = 'center';
+                ctxWalk.textBaseline = 'middle';
+                ctxWalk.fillText('🐦', pt.x, pt.y);
+            }
             
             // Draw Coordinates Text (Debugging Helper)
             ctxWalk.font = `bold ${10 * dpr}px monospace`;
             ctxWalk.fillStyle = '#64748b';
-            ctxWalk.fillText(`(${birdPos.x}, ${birdPos.y}, ${birdPos.z})`, pt.x, pt.y - (15 * dpr));
+            ctxWalk.textAlign = 'center';
+            ctxWalk.fillText(`(${birdPos.x}, ${birdPos.y}, ${birdPos.z})`, pt.x, pt.y - (25 * dpr));
         }
 
         // 2. Draw Heatmap
