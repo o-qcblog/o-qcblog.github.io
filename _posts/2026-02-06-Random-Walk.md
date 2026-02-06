@@ -51,6 +51,31 @@ The above quantum walk visual interaction is inspired from the idea presented in
 
 Coming Soon! Until then play with the above visual and try to figure out what it is doing.
 
+<html>
+  <head>
+    <title>Random Walk</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Random Walk",
+      "image": [
+        "{{ site.baseurl}}/images/logo.png"
+       ],
+      "datePublished": "2026-02-06T08:00:00+05:30",
+      "dateModified": "2026-02-06T08:00:00+05:30",
+      "author": [{
+          "@type": "Person",
+          "name": "Padmapriya S",
+          "url": "https://o-qcblog.github.io/about/"
+        }]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
 
 
 
