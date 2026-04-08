@@ -32,14 +32,14 @@ Note that there are various other simpler and more general algebraic structure t
 ### Groups $(G,*)$
 A *group* is a set $G$ along with a binary operation $*$ such that,
 - $G$ is *closed* under $*$: $g * h \in G, \forall g,h \in G$.
-- $*$ is *associative*: $(g * h) * l = g * (h * l)$.
+- $ * $ is *associative* : $(g * h) * l = g * (h * l)$.
 - $G$ has an *identity*: $\exists e \in G$ such that $e * g =g, \forall g \in G$.
 - Every element in $G$ has an *inverse*: $\forall g \in G, \exists g^{-1} \in G$ such that $g * g^{-1}=e$.
 
 Adding one more axion, *commutativity*, we get an *abelian group*.
 
 ##### Abelian Group  $(G,*)$
-An *abelian group* is a group $(G, * )$ with$\ *$ being *commutative*. That is $h * g = g * h, \forall h,g \in G$.
+An *abelian group* is a group $(G, * )$ with $ * $ being *commutative*. That is $h * g = g * h, \forall h,g \in G$.
 
 <div class="hint-box info">
 <div class="hint-box-header"> <b>Example:</b> Consider the same set $S$ from the previous example, which is a collection of all ordered pairs of real numbers of the form $(a,b)$ where $a,b \in \mathbb{R}.$ Define a binary operation $+$ such that $(a, b) + (c, d) = (a + c, b + d)$ for all $a,b,c,d \in S$. One could check that $(S, +)$ forms a group.
