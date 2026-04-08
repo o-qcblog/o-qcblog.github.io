@@ -32,7 +32,7 @@ Note that there are various other simpler and more general algebraic structure t
 ### Groups $(G,*)$
 A *group* is a set $G$ along with a binary operation $*$ such that,
 - $G$ is *closed* under \*: $g * h \in G, \forall g,h \in G$.
-- \* is *associative*: $(g*h)*l = g*(h*l)$.
+- $\*$ is *associative*: $(g*h)*l = g*(h*l)$.
 - $G$ has an *identity*: $\exists e \in G$ such that $e *g =g, \forall g \in G$.
 - Every element in $G$ has an *inverse*: $\forall g \in G, \exists g^{-1} \in G$ such that $g*g^{-1}=e$.
 
