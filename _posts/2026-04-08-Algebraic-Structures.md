@@ -31,15 +31,15 @@ Note that there are various other simpler and more general algebraic structure t
 
 ### Groups $(G,*)$
 A *group* is a set $G$ along with a binary operation $*$ such that,
-- $G$ is *closed* under \*: $g * h \in G, \forall g,h \in G$.
-- $\*$ is *associative*: $(g*h)*l = g*(h*l)$.
-- $G$ has an *identity*: $\exists e \in G$ such that $e *g =g, \forall g \in G$.
-- Every element in $G$ has an *inverse*: $\forall g \in G, \exists g^{-1} \in G$ such that $g*g^{-1}=e$.
+- $G$ is *closed* under $*$: $g * h \in G, \forall g,h \in G$.
+- $*$ is *associative*: $(g * h) * l = g * (h * l)$.
+- $G$ has an *identity*: $\exists e \in G$ such that $e * g =g, \forall g \in G$.
+- Every element in $G$ has an *inverse*: $\forall g \in G, \exists g^{-1} \in G$ such that $g * g^{-1}=e$.
 
 Adding one more axion, *commutativity*, we get an *abelian group*.
 
 ##### Abelian Group  $(G,*)$
-An *abelian group* is a group $(G,*)$ with $*$ being *commutative*. That is $h*g = g*h, \forall h,g \in G$.
+An *abelian group* is a group $(G, * )$ with $*$ being *commutative*. That is $h * g = g * h, \forall h,g \in G$.
 
 <div class="hint-box info">
 <div class="hint-box-header"> <b>Example:</b> Consider the same set $S$ from the previous example, which is a collection of all ordered pairs of real numbers of the form $(a,b)$ where $a,b \in \mathbb{R}.$ Define a binary operation $+$ such that $(a, b) + (c, d) = (a + c, b + d)$ for all $a,b,c,d \in S$. One could check that $(S, +)$ forms a group.
@@ -86,14 +86,14 @@ With two binary operations satisfying different set of axioms we get a different
 A *ring* is a set $R$ with two binary operations $+$ and $*$ such that,
 - $(R, +)$ is an abelian group: $(R, +)$ is a group with $s + r = r + s, \forall s,r \in R$ .
 - $R$ is closed under $*$: $s * r \in R, \forall s,r \in R$.
-- $*$ is associative: $(s*r)*t = s*(r*t), \forall s,r,t \in R$.
-- $*$ distributes over $+$: $s*(r+t) = (s*r) + (s*t), \forall s,r,t \in R$.
-- Identity with respective to $*$: $\exists e \in R$ such that $s *e =e, \forall s \in R$.
+- $*$ is associative: $(s * r) * t = s * (r * t), \forall s,r,t \in R$.
+- $*$ distributes over $+$: $s * (r+t) = (s * r) + (s * t), \forall s,r,t \in R$.
+- Identity with respective to $*$: $\exists e \in R$ such that $s * e =e, \forall s \in R$.
 
 Adding further axioms one gets two important types of rings: *commutative ring* and *division ring*.
 
-- **Commutative ring**: A ring $(R, +, *)$ where $*$ is commutative, that is $s*r =r *s, \forall s,r \in R.$
-- **Division ring**: A ring $(R, +, *)$ such that every element of the ring has an inverse in the ring with respect to $*$. That is $\forall r \in R, \exists r^{-1}$ such that $r * r^{-1} = e$, where $e$ is the identity element with respect to $*$ ( $e * e^{-1} = e$).
+- **Commutative ring**: A ring $(R, +, * )$ where $*$ is commutative, that is $s * r =r * s, \forall s,r \in R.$
+- **Division ring**: A ring $(R, +, * )$ such that every element of the ring has an inverse in the ring with respect to $*$. That is $\forall r \in R, \exists r^{-1}$ such that $r * r^{-1} = e$, where $e$ is the identity element with respect to $*$ ($e * e^{-1} = e$).
 
 In theoretical computer science, especially algebraic complexity theory, one important example of a ring that is often studied is a *polynomial ring* (also referred to as just *polynomials*).
 
@@ -109,7 +109,7 @@ A *polynomial* in single variable over a ring $R$ is a *formal sum* $a_n x^n + \
 <div class="hint-box-header"> We saw Boolean algebra under lattice, surprisingly they can also be viewed as a ring. As an exercise try to see how. Click for the solution.
 </div>
 <div class="hint-box-content">
-One tempting way to view Boolean algebra as ring might be to map $\lor$ to $+$ and $\land$ to $*$. But it is worth noting that in a ring $*$ distributes over $+$ but the other way need not hold. Whereas if we consider the above map then both $\lor$ and $\land$ distributes over each other. Note that here $\lor$ and $\land$ are bitwise OR and bitwise AND respectively. 
+One tempting way to view Boolean algebra as ring might be to map $\lor$ to $+$ and $\land$ to$\ *$. But it is worth noting that in a ring $\ *$ distributes over $+$ but the other way need not hold. Whereas if we consider the above map then both $\lor$ and $\land$ distributes over each other. Note that here $\lor$ and $\land$ are bitwise OR and bitwise AND respectively. 
 
 So to view a Boolean algebra $(B, \vee, \wedge, \neg)$ as a ring, we instead map $+$ to *XOR*. That is for all $a,b \in B$ we define the binary operation $+$ to be,
 $$a + b = (a \wedge \neg b) \vee (\neg a \wedge b) = a \oplus b$$
@@ -118,7 +118,7 @@ $$a * b = a \wedge b$$
 for all $a,b \in B$.
 
 Note that this definition of $*$ makes it a commutative ring. Also Boolean algebra turns out to be a special ring where with following two properties,
-- <i>Idempotency</i> ($x^2 = x *x = x$): If you bitwise AND a string with itself, you just get the exact same string back.
+- <i>Idempotency</i> ($x^2 = x * x = x$): If you bitwise AND a string with itself, you just get the exact same string back.
 - <i>Characteristic 2</i> ($x + x = 0$): If you bitwise XOR a string with itself, every $1$ cancels out its matching $1$, resulting in all zeros. Every element is its own additive inverse.
 </div>
 </div>
@@ -126,20 +126,20 @@ Note that this definition of $*$ makes it a commutative ring. Also Boolean algeb
 <div class="hint-box info">
 <div class="hint-box-header"> <b>Example:</b> Once again considering the $S$ of all ordered pairs of real numbers of the form $(a,b)$ where $a,b \in \mathbb{R}$, along with the binary operation $+$ such that $(a, b) + (c, d) = (a + c, b + d)$ holds for all $a,b,c,d \in S$. Note this is an abelian group. Let us try to make it a ring by adding another binary operation $*$.
 
-There are many ways to define $*$ to make $(S,+,*)$ a ring. One non-trivial way is to define such that $(a, b) \cdot (c, d) = (ac - bd, ad + bc)$ holds for all $a,b,c,d \in S$. Checking this forms a ring is left as an exercise. 
+There are many ways to define $*$ to make $(S,+, * )$ a ring. One non-trivial way is to define such that $(a, b) \cdot (c, d) = (ac - bd, ad + bc)$ holds for all $a,b,c,d \in S$. Checking this forms a ring is left as an exercise. 
 </div>
 </div>
 
 ### Fields $(F,+,*)$
 A *field* is a commutative division ring. 
 
-Equivalently one can say that $(F,+)$ and $(F,*)$ are abelian groups.
+Equivalently one can say that $(F,+)$ and $(F,* )$ are abelian groups.
 
 <div class="hint-box info">
 <div class="hint-box-header"> Boolean algebra as fields! Click to learn more.
 </div>
 <div class="hint-box-content">
-In abstract algebra, the set $\{0,1\}$ with XOR and AND is actually the simplest possible Field, known as the finite field of two elements, denoted as $\mathbb{F}_2$ (or $\mathbb{Z}_2$).When you look at the set $\{0,1\}^n$, you are looking at the direct product of $n$ copies of this field:$$\mathbb{F}_2 \times \mathbb{F}_2 \times \dots \times \mathbb{F}_2 = \mathbb{F}_2^n$$While $\mathbb{F}_2$ on its own is a Field (and therefore a Division Ring), the product space $\mathbb{F}_2^n$ is not a Field. It drops down the hierarchy to become just a Commutative Ring (specifically, a Boolean Ring). This happens because it has "zero divisors." For example, 1000 $\cdot$ 0111 $=$ 0000, which means non-zero elements can multiply together to create zero, something strictly forbidden in Fields and Division Rings.
+In abstract algebra, the set $\{0,1\}$ with XOR and AND is actually the simplest possible Field, known as the finite field of two elements, denoted as $\mathbb{F}_2$ (or $\mathbb{Z}_2$).When you look at the set $\{0,1\}^n$, you are looking at the direct product of $n$ copies of this field:$$\mathbb{F}_2 \times \mathbb{F}_2 \times \dots \times \mathbb{F}_2 = \mathbb{F}_2^n$$. While $\mathbb{F}_2$ on its own is a Field (and therefore a Division Ring), the product space $\mathbb{F}_2^n$ is not a Field. It drops down the hierarchy to become just a Commutative Ring (specifically, a Boolean Ring). This happens because it has "zero divisors." For example, 1000 $\cdot$ 0111 $=$ 0000, which means non-zero elements can multiply together to create zero, something strictly forbidden in Fields and Division Rings.
 </div>
 </div>
 
@@ -161,7 +161,7 @@ Although polynomials over a field lets us talk about gcd of two polynomials, not
 -  $(a, b) \cdot (c, d) = (ac - bd, ad + bc)$
 where $S$ is the set of all ordered pairs of real numbers of the form $(a,b)$ where $a,b \in \mathbb{R}$.
 
-To make this a valid field, let us add commutativity of $*$ as an axiom. Note that $(1,0)$ serves as identity with respect to $*$ and for every $(a, b)$ there exists an inverse with respect to $*$ which is $\left(\frac{a}{a^2 + b^2}, \frac{-b}{a^2 + b^2}\right)$. These makes $(S, +, *)$ a field.
+To make this a valid field, let us add commutativity of $*$ as an axiom. Note that $(1,0)$ serves as identity with respect to $*$ and for every $(a, b)$ there exists an inverse with respect to $*$ which is $\left(\frac{a}{a^2 + b^2}, \frac{-b}{a^2 + b^2}\right)$. These makes $(S, +, * )$ a field.
 
 A keen observer might note that this is none other than the field of complex numbers $\mathbb{C}$! 
 </div>
