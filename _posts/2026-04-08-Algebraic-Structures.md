@@ -17,7 +17,7 @@ The notion of *set* is very fundamental to mathematics and giving a precise defi
 
 Returning to sets, a set is itself a mathematical object, often described informally as a collection of mathematical objects. Of course, this raises a natural question: what exactly is a “mathematical object”? Exploring this question leads to a rich and fascinating history, culminating in the development of *axiomatic set theory*. But for the purposes of this blog post, it is sufficient to work with this intuitive understanding of a set as a collection of objects.
 
-### Sets $S$
+## Sets $S$
 A *set* can be seen as an algebraic structure with no operations.
 
 <div class="hint-box info">
@@ -29,7 +29,7 @@ Adding to a set a single binary operation with some axioms gives a *group*.
 
 Note that there are various other simpler and more general algebraic structure than the group. But here we will only look at the ones that are frequently encountered in theoretical computer science.
 
-### Groups $(G,*)$
+## Groups $(G,*)$
 A *group* is a set $G$ along with a binary operation $*$ such that,
 - $G$ is *closed* under $*$: $g * h \in G, \forall g,h \in G$.
 - $ * $ is *associative* : $(g * h) * l = g * (h * l)$.
@@ -48,7 +48,7 @@ An *abelian group* is a group $(G, * )$ with $ * $ being *commutative*. That is 
 
 Groups are algebraic structures with single operation. Adding more operations to a set gives other fascinating structures.
 
-### Lattice $(L, \lor, \land)$
+## Lattice $(L, \lor, \land)$
 A *lattice* is a set $L$ along with two binary, associative and commutative operations,  *join* denoted as $\lor$ and *meet* denoted as $\land$, such that $\forall a, b \in L$ the following is satisfied,
 - *Absorption Law*: $a \lor (a \land b ) =a$ and $a \land (a \lor b ) =a$.
 - *Idempotent Law*: $a \lor a = a$ and $a \land a = a$.
@@ -79,10 +79,13 @@ A *Boolean algebra* is a complemented distributive lattice with $L = \{0,1\}^n$,
 Is element in $L$ is referred to as Boolean string or just *string*. The set $L = \{0,1\}^n$ can be represented as a *Boolean hypercube* as shown in the below figure. 
 
 <!-- Figure -->
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post14/Post14_3.png" alt="" width="600" class="zoom-image">
+</div>
 
 With two binary operations satisfying different set of axioms we get a different algebraic structure, a *ring*. Unlike lattice which are quite different from groups, a ring can be thought of adding a new binary operation to an abelian group. 
 
-### Rings $(R, +, *)$
+## Rings $(R, +, *)$
 A *ring* is a set $R$ with two binary operations $+$ and $*$ such that,
 - $(R, +)$ is an abelian group: $(R, +)$ is a group with $s + r = r + s, \forall s,r \in R$ .
 - $R$ is closed under $*$: $s * r \in R, \forall s,r \in R$.
@@ -130,7 +133,7 @@ There are many ways to define $*$ to make $(S,+, * )$ a ring. One non-trivial wa
 </div>
 </div>
 
-### Fields $(F,+,*)$
+## Fields $(F,+,*)$
 A *field* is a commutative division ring. 
 
 Equivalently one can say that $(F,+)$ and $(F,* )$ are abelian groups.
@@ -171,7 +174,7 @@ A keen observer might note that this is none other than the field of complex num
   <img src="{{ site.baseurl}}/images/Post14/Post14_1.png" alt="" width="600" class="zoom-image">
 </div>
 
-### Modules $(M,+,*)$ over a ring $R$
+## Modules $(M,+,*)$ over a ring $R$
 
 Consider a ring $(R,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *left-$R$ module* $(M,+,* )$ is abelian group with respect to $+$ and the operation $ * $, often referred to as *scalar multiplication*, is defined as a function $R \times M \rightarrow M$ such that $\forall r,s \in R$ and $x,y \in M$, 
 - Scalar multiplication $*$ distributes over $+$ of module elements (on the left): $r * (x +y) = (r * x)+(r * y), \forall r \in R, \forall x,y \in M.$
@@ -190,7 +193,7 @@ A module can be left and right modules of two different rings simultaneously. Th
 <!-- Example-->
 
 <!-- Close Example-->
-### Vector space $(V, +, *)$ over a field $F$
+## Vector space $(V, +, *)$ over a field $F$
 Consider a field $(F,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *vector space* $(V,+,* )$ is abelian group with respect to $+$ and the operation $ * $, often referred to as *scalar multiplication*, is defined as a function $F \times M \rightarrow M$ such that $\forall r,s \in F$ and $x,y \in V$, 
 - Scalar multiplication $ * $ distributes over $+$ of vector space elements: $r * (x +y) = (r * x)+(r * y), \forall r \in F, \forall x,y \in V$.
 - Scalar multiplication $*$ distributes over $\oplus$ of field elements: $(r \oplus s) * x =(r * x) + (s * x), \forall r,s \in F, \forall x \in V.$
@@ -204,13 +207,14 @@ A careful reader can instantly notice the similarity between modules and vector 
 <!-- Close Example-->
 
 Our mathematical curiosity needn't stop here. What if we add another operation to the vector space which is over a field? 
-### Algebra $(A, +,\cdot,*)$ over a field $F$
+
+## Algebra $(A, +,\cdot,*)$ over a field $F$
 
 Consider a field $F$. An *algebra* $(A, +,\cdot,* )$ is a vector space $(A, +,\cdot)$ over $F$ with another operation $ * : A \times A \rightarrow A$ such that for all $a,b,c \in A$ and $r,s \in F$,
 - $*$ left and right distributes over $+$: $a * (b +c) = (a * b) + (a * c)$ and $(a + b) * c = (a * c) + ( b * c)$.
-- $*$ is *compatible* with the scalar multiplication $\cdot$: $(r \cdot a) * (s \cdot b) = (r \cdot s)\cdot (a * b)$.
+- $ * $ is *compatible* with the scalar multiplication $\cdot$: $(r \cdot a) * (s \cdot b) = (r \cdot s)\cdot (a * b)$.
 
-When $*$ is associative, that is $a *( b * c) = (a * b) * c$, we have *associative algebra*.
+When $ * $ is associative, that is $a *( b * c) = (a * b) * c$, we have *associative algebra*.
 
 <!-- Example-->
 
