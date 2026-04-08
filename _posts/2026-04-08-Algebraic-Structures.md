@@ -171,6 +171,54 @@ A keen observer might note that this is none other than the field of complex num
   <img src="{{ site.baseurl}}/images/Post14/Post14_1.png" alt="" width="600" class="zoom-image">
 </div>
 
+### Modules $(M,+,*)$ over a ring $R$
+
+Consider a ring $(R,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *left-$R$ module* $(M,+,* )$ is abelian group with respect to $+$ and the operation $*$, often referred to as *scalar multiplication*, is defined as a function $R \times M \rightarrow M$ such that $\forall r,s \in R$ and $x,y \in M$, 
+- Scalar multiplication $*$ distributes over $+$ of module elements (on the left): $r * (x +y) = (r * x)+(r * y), \forall r \in R, \forall x,y \in M.$
+- Scalar multiplication $*$ distributes over $\oplus$ of ring elements (on the left): $(r \oplus s) * x =(r * x) + (s * x), \forall r,s \in R, \forall x \in M.$
+- Scaling is associative: $(r\cdot s) * x = r * (s * x), \forall r,s \in R, \forall x \in M.$
+- Ring identity with respect to $\cdot$ is the identity for scalar multiplication $*$ (on the left): $e * x = x \forall x \in M.$
+
+A *right-$R$ module* $(M,+,* )$ is defined exactly the same way except that the scalar multiplication is defined a function $M \times R \rightarrow M$ with all the above axioms holding but on the right. 
+
+Note that in standard textbooks, the “addition” and “multiplication” operations of a ring (denoted here by $\oplus$ and $\cdot$) are typically not distinguished notationally from those of a module (denoted here by $+$ and $*$). In practice, the same symbols, usually $+$ and $\cdot$, are used for both structures. This abuse of notation is generally preferred for the sake of simplicity, with the intended meaning inferred from the context (namely, the objects on which the operations act).
+
+However, this can be confusing for a new learner. For this reason, the presentation here is deliberately more pedantic, using different symbols to emphasize that these operations act on fundamentally different objects. In this case, a ring and a module.
+
+A module can be left and right modules of two different rings simultaneously. These are called $(L,R)$-bimodule, where $L$ and $R$ are the corresponding rings. When the module is over a commutative ring $R$ then by default it becomes $(R,R)$-bimodule, referred to as $R$-module.
+
+<!-- Example-->
+
+<!-- Close Example-->
+### Vector space $(V, +, *)$ over a field $F$
+Consider a field $(F,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *vector space* $(V,+,*)$ is abelian group with respect to $+$ and the operation $*$, often referred to as *scalar multiplication*, is defined as a function $F \times M \rightarrow M$ such that $\forall r,s \in F$ and $x,y \in V$, 
+- Scalar multiplication $*$ distributes over $+$ of vector space elements: $r * (x +y) = (r * x)+(r * y), \forall r \in F, \forall x,y \in V$.
+- Scalar multiplication $*$ distributes over $\oplus$ of field elements: $(r \oplus s) * x =(r * x) + (s * x), \forall r,s \in F, \forall x \in V.$
+- Scaling is associative: $(r\cdot s) * x = r * (s * x), \forall r,s \in F, \forall x \in V.$
+- Field identity with respect to $\cdot$ is the identity for scalar multiplication $*$: $e * x = x \forall x \in M.$
+
+A careful reader can instantly notice the similarity between modules and vector spaces. Modules are generalized vector spaces, where the scalars are elements of a ring instead of a field. $F$-module is a vector space when $F$ is a field.
+
+<!-- Example-->
+
+<!-- Close Example-->
+
+Our mathematical curiosity needn't stop here. What if we add another operation to the vector space which is over a field? 
+### Algebra $(A, +,\cdot,*)$ over a field $F$
+
+Consider a field $F$. An *algebra* $(A, +,\cdot,*)$ is a vector space $(A, +,\cdot)$ over $F$ with another operation $*: A \times A \rightarrow A$ such that for all $a,b,c \in A$ and $r,s \in F$,
+- $*$ left and right distributes over $+$: $a * (b +c) = (a * b) + (a * c)$ and $(a + b) * c = (a * c) + ( b * c)$.
+- $*$ is *compatible* with the scalar multiplication $\cdot$: $(r \cdot a) * (s \cdot b) = (r \cdot s)\cdot (a * b)$.
+
+When $*$ is associative, that is $a *( b * c) = (a * b) * c$, we have **associative algebra**.
+
+<!-- Example-->
+
+<!-- Close Example-->
+
+<div class="image-container">
+  <img src="{{ site.baseurl}}/images/Post14/Post14_2.png" alt="" width="600" class="zoom-image">
+</div>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <html>
