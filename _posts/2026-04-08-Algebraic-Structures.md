@@ -214,7 +214,7 @@ Consider a field $F$. An *algebra* $(A, +,\cdot,* )$ is a vector space $(A, +,\c
 - $*$ left and right distributes over $+$: $a * (b +c) = (a * b) + (a * c)$ and $(a + b) * c = (a * c) + ( b * c)$.
 - $ * $ is *compatible* with the scalar multiplication $\cdot$: $(r \cdot a) * (s \cdot b) = (r \cdot s)\cdot (a * b)$.
 
-When $ * $ is associative, that is $a *( b * c) = (a * b) * c$, we have *associative algebra*.
+When $ * $ is associative, that is $a * ( b * c) = (a * b) * c$, we have *associative algebra*.
 
 <!-- Example-->
 
