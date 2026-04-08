@@ -173,7 +173,7 @@ A keen observer might note that this is none other than the field of complex num
 
 ### Modules $(M,+,*)$ over a ring $R$
 
-Consider a ring $(R,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *left-$R$ module* $(M,+,* )$ is abelian group with respect to $+$ and the operation $*$, often referred to as *scalar multiplication*, is defined as a function $R \times M \rightarrow M$ such that $\forall r,s \in R$ and $x,y \in M$, 
+Consider a ring $(R,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *left-$R$ module* $(M,+,* )$ is abelian group with respect to $+$ and the operation $ * $, often referred to as *scalar multiplication*, is defined as a function $R \times M \rightarrow M$ such that $\forall r,s \in R$ and $x,y \in M$, 
 - Scalar multiplication $*$ distributes over $+$ of module elements (on the left): $r * (x +y) = (r * x)+(r * y), \forall r \in R, \forall x,y \in M.$
 - Scalar multiplication $*$ distributes over $\oplus$ of ring elements (on the left): $(r \oplus s) * x =(r * x) + (s * x), \forall r,s \in R, \forall x \in M.$
 - Scaling is associative: $(r\cdot s) * x = r * (s * x), \forall r,s \in R, \forall x \in M.$
@@ -191,8 +191,8 @@ A module can be left and right modules of two different rings simultaneously. Th
 
 <!-- Close Example-->
 ### Vector space $(V, +, *)$ over a field $F$
-Consider a field $(F,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *vector space* $(V,+,*)$ is abelian group with respect to $+$ and the operation $*$, often referred to as *scalar multiplication*, is defined as a function $F \times M \rightarrow M$ such that $\forall r,s \in F$ and $x,y \in V$, 
-- Scalar multiplication $*$ distributes over $+$ of vector space elements: $r * (x +y) = (r * x)+(r * y), \forall r \in F, \forall x,y \in V$.
+Consider a field $(F,\oplus,\cdot)$ with $e$ being the identity with respect to $\cdot$, then a *vector space* $(V,+,* )$ is abelian group with respect to $+$ and the operation $ * $, often referred to as *scalar multiplication*, is defined as a function $F \times M \rightarrow M$ such that $\forall r,s \in F$ and $x,y \in V$, 
+- Scalar multiplication $ * $ distributes over $+$ of vector space elements: $r * (x +y) = (r * x)+(r * y), \forall r \in F, \forall x,y \in V$.
 - Scalar multiplication $*$ distributes over $\oplus$ of field elements: $(r \oplus s) * x =(r * x) + (s * x), \forall r,s \in F, \forall x \in V.$
 - Scaling is associative: $(r\cdot s) * x = r * (s * x), \forall r,s \in F, \forall x \in V.$
 - Field identity with respect to $\cdot$ is the identity for scalar multiplication $*$: $e * x = x \forall x \in M.$
@@ -206,11 +206,11 @@ A careful reader can instantly notice the similarity between modules and vector 
 Our mathematical curiosity needn't stop here. What if we add another operation to the vector space which is over a field? 
 ### Algebra $(A, +,\cdot,*)$ over a field $F$
 
-Consider a field $F$. An *algebra* $(A, +,\cdot,*)$ is a vector space $(A, +,\cdot)$ over $F$ with another operation $*: A \times A \rightarrow A$ such that for all $a,b,c \in A$ and $r,s \in F$,
+Consider a field $F$. An *algebra* $(A, +,\cdot,* )$ is a vector space $(A, +,\cdot)$ over $F$ with another operation $ * : A \times A \rightarrow A$ such that for all $a,b,c \in A$ and $r,s \in F$,
 - $*$ left and right distributes over $+$: $a * (b +c) = (a * b) + (a * c)$ and $(a + b) * c = (a * c) + ( b * c)$.
 - $*$ is *compatible* with the scalar multiplication $\cdot$: $(r \cdot a) * (s \cdot b) = (r \cdot s)\cdot (a * b)$.
 
-When $*$ is associative, that is $a *( b * c) = (a * b) * c$, we have **associative algebra**.
+When $*$ is associative, that is $a *( b * c) = (a * b) * c$, we have *associative algebra*.
 
 <!-- Example-->
 
