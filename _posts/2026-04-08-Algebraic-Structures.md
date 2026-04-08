@@ -238,7 +238,7 @@ As a playful exercise, the reader is encouraged to begin with a simple set and o
       "@type": "BlogPosting",
       "headline": "Algebraic Structures",
       "image": [
-        ""
+        "{{ site.baseurl}}/images/Post14/Post14_1.png"
        ],
       "datePublished": "2026-04-08T08:00:00+05:30",
       "dateModified": "2026-04-08T08:00:00+05:30",
