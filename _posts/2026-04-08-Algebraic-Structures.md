@@ -220,6 +220,10 @@ When $*$ is associative, that is $a *( b * c) = (a * b) * c$, we have **associat
   <img src="{{ site.baseurl}}/images/Post14/Post14_2.png" alt="" width="600" class="zoom-image">
 </div>
 
+One can go on adding new operations and axiom making a structure richer or, conversely, strip away axioms to study the underlying, more general framework. In the vast landscape of mathematics, this process can be carried on indefinitely.
+
+As a playful exercise, the reader is encouraged to begin with a simple set and ornament it with their own operations and axioms, taking care to ensure consistency. Such explorations can lead to surprisingly interesting, elegant, and rich discoveries.
+
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <html>
   <head>
