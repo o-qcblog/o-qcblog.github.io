@@ -95,7 +95,7 @@ Adding further axioms one gets two important types of rings: *commutative ring* 
 - **Commutative ring**: A ring $(R, +, * )$ where $*$ is commutative, that is $s * r =r * s, \forall s,r \in R.$
 - **Division ring**: A ring $(R, +, * )$ such that every element of the ring has an inverse in the ring with respect to$\ *$. That is $\forall r \in R, \exists r^{-1}$ such that $r * r^{-1} = e$, where $e$ is the identity element with respect to$\ *$ ($e * e^{-1} = e$).
 
-In theoretical computer science, especially algebraic complexity theory, one important example of a ring that is often studied is a *polynomial ring* (also referred to as just *polynomials*).
+In theoretical computer science, especially algebraic complexity theory, one important example of a ring that is often studied is a *polynomial ring*  (also referred to as just *polynomials*).
 
 <div class="hint-box info">
 <div class="hint-box-header"> Note that the $+$ and $*$ operations are loosely referred to as "addition" and "multiplication" operations though they might not refer to the usual high school addition or multiplication.
